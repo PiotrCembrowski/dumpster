@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+<<<<<<< HEAD
 import { Menu, X, Phone, MapPin } from "lucide-react";
+=======
+import { Menu, X, Phone } from "lucide-react";
+>>>>>>> seo-optimization
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -19,6 +23,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
               <span className="text-xl font-bold text-primary-foreground">
+<<<<<<< HEAD
                 P
               </span>
             </div>
@@ -29,10 +34,23 @@ export function Header() {
               </span>
               <span className="text-xs text-muted-foreground">
                 Parking Lot Striping
+=======
+                D
+              </span>
+            </div>
+
+            <div className="flex flex-col leading-tight">
+              <span className="text-lg font-semibold tracking-tight text-foreground">
+                Dumpster Direct
+              </span>
+              <span className="text-xs text-muted-foreground">
+                Dumpster Rental Services
+>>>>>>> seo-optimization
               </span>
             </div>
           </Link>
 
+<<<<<<< HEAD
           {/* Desktop Nav */}
           <div className="hidden md:flex md:items-center md:gap-8">
             <Link
@@ -100,6 +118,51 @@ export function Header() {
                 </Link>
               </div>
             </div>
+=======
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex md:items-center md:gap-8">
+            <Link
+              href="/dumpster-rental"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Dumpster Rental
+            </Link>
+
+            <Link
+              href="/#sizes"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Dumpster Sizes
+            </Link>
+
+            <Link
+              href="/#services"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Services
+            </Link>
+
+            <Link
+              href="/#process"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              How It Works
+            </Link>
+
+            <Link
+              href="/locations"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Locations
+            </Link>
+
+            <Link
+              href="/blog"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Blog
+            </Link>
+>>>>>>> seo-optimization
 
             <Link
               href="/contact"
@@ -109,6 +172,7 @@ export function Header() {
             </Link>
           </div>
 
+<<<<<<< HEAD
           {/* Phone + CTA */}
           <div className="hidden md:flex md:items-center md:gap-4">
             <a
@@ -121,6 +185,20 @@ export function Header() {
 
             <Button asChild>
               <Link href="/contact">Free Quote</Link>
+=======
+          {/* CTA */}
+          <div className="hidden md:flex md:items-center md:gap-4">
+            <a
+              href="tel:1-800-555-DUMP"
+              className="flex items-center gap-2 text-sm text-primary"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="font-medium">Call For Dumpster Quote</span>
+            </a>
+
+            <Button asChild>
+              <Link href="/contact">Get Dumpster Quote</Link>
+>>>>>>> seo-optimization
             </Button>
           </div>
 
@@ -144,6 +222,7 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-4 space-y-3">
+<<<<<<< HEAD
             <Link href="/services" className="block text-sm">
               Striping Services
             </Link>
@@ -189,6 +268,68 @@ export function Header() {
 
               <Button asChild className="w-full">
                 <Link href="/contact">Free Quote</Link>
+=======
+            <Link
+              href="/dumpster-rental"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Dumpster Rental
+            </Link>
+
+            <Link
+              href="/#sizes"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Dumpster Sizes
+            </Link>
+
+            <Link
+              href="/#services"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Services
+            </Link>
+
+            <Link
+              href="/#process"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              How It Works
+            </Link>
+
+            <Link
+              href="/locations"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Locations
+            </Link>
+
+            <Link
+              href="/blog"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Blog
+            </Link>
+
+            <Link
+              href="/contact"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Contact
+            </Link>
+
+            <div className="pt-3 border-t border-border">
+              <a
+                href="tel:1-800-555-DUMP"
+                className="flex items-center gap-2 text-sm text-primary mb-3"
+              >
+                <Phone className="h-4 w-4" />
+                <span className="font-medium">Call For Dumpster Quote</span>
+              </a>
+
+              <Button asChild className="w-full">
+                <Link href="/contact">Get Dumpster Quote</Link>
+>>>>>>> seo-optimization
               </Button>
             </div>
           </div>
