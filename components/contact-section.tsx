@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Truck } from "lucide-react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    console.log("Dumpster Quote Request:", formData);
   };
 
   return (
@@ -26,21 +26,23 @@ export function ContactSection() {
           {/* Left Side */}
           <div>
             <p className="text-primary font-medium tracking-widest uppercase text-sm mb-4">
-              Dumpster Rental Contact
+              Dumpster Rental Quote
             </p>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6 text-balance">
-              Get Your Free Dumpster Rental Quote
+              Get Fast Dumpster Rental in Wichita, KS
             </h2>
 
             <p className="text-muted-foreground leading-relaxed mb-10">
-              Need a roll off dumpster for construction, home cleanouts, or
-              commercial projects? Contact us today for fast delivery,
-              affordable pricing, and reliable dumpster rental services.
+              Looking for a reliable roll off dumpster rental in Wichita? We
+              provide fast delivery, affordable pricing, and flexible rental
+              periods for construction, home cleanouts, roofing, demolition, and
+              commercial projects.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-6">
+              {/* Service Area */}
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary flex-shrink-0">
                   <MapPin className="h-5 w-5 text-primary" />
@@ -50,37 +52,44 @@ export function ContactSection() {
                     Service Area
                   </h3>
                   <p className="text-muted-foreground">
-                    Wichita, Kansas & Surrounding Areas
+                    Wichita, Kansas & Nearby Cities
                     <br />
                     Same-Day Dumpster Delivery Available
                   </p>
                 </div>
               </div>
 
+              {/* Phone */}
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary flex-shrink-0">
                   <Phone className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">Phone</h3>
+                  <h3 className="font-semibold text-foreground">
+                    Call for Immediate Service
+                  </h3>
                   <p className="text-muted-foreground">
-                    Call for Same-Day Dumpster Rental
+                    Speak with a dumpster rental specialist
                   </p>
                 </div>
               </div>
 
+              {/* Email */}
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary flex-shrink-0">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">Email</h3>
+                  <h3 className="font-semibold text-foreground">
+                    Request Quote Online
+                  </h3>
                   <p className="text-muted-foreground">
-                    Request Dumpster Pricing & Availability
+                    Fast response within minutes
                   </p>
                 </div>
               </div>
 
+              {/* Hours */}
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary flex-shrink-0">
                   <Clock className="h-5 w-5 text-primary" />
@@ -94,7 +103,22 @@ export function ContactSection() {
                     <br />
                     Sat: 8:00 AM - 4:00 PM
                     <br />
-                    Same-Day Delivery Available
+                    Emergency & Same-Day Delivery Available
+                  </p>
+                </div>
+              </div>
+
+              {/* Delivery */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary flex-shrink-0">
+                  <Truck className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">
+                    Fast Delivery
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Same-day & next-day dumpster rentals
                   </p>
                 </div>
               </div>
@@ -102,27 +126,22 @@ export function ContactSection() {
           </div>
 
           {/* Form */}
-          <div className="rounded-lg border border-border bg-card p-8">
+          <div className="rounded-xl border border-border bg-card p-8 shadow-sm">
             <h3 className="text-xl font-semibold text-foreground mb-2">
-              Request a Free Dumpster Quote
+              Request Free Dumpster Quote
             </h3>
 
             <p className="text-sm text-muted-foreground mb-6">
-              Tell us about your project and we'll recommend the best dumpster
+              Tell us about your project and we'll recommend the right dumpster
               size.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Full Name
                 </label>
                 <Input
-                  id="name"
-                  type="text"
                   placeholder="John Smith"
                   value={formData.name}
                   onChange={(e) =>
@@ -133,16 +152,12 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Email Address
                 </label>
                 <Input
-                  id="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="john@email.com"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -152,14 +167,10 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Phone Number
                 </label>
                 <Input
-                  id="phone"
                   type="tel"
                   placeholder="(316) 555-1234"
                   value={formData.phone}
@@ -171,16 +182,12 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-foreground mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Project Details
                 </label>
                 <Textarea
-                  id="message"
-                  placeholder="Example: 20 yard dumpster for home renovation in Wichita..."
                   rows={4}
+                  placeholder="Example: 20 yard dumpster for home renovation in Wichita..."
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
@@ -193,15 +200,22 @@ export function ContactSection() {
                 Get Free Dumpster Quote
               </Button>
             </form>
+
+            {/* Trust Text */}
+            <p className="text-xs text-muted-foreground mt-4 text-center">
+              No obligation. Fast response. Same-day availability.
+            </p>
           </div>
         </div>
 
-        {/* Bottom SEO Text */}
+        {/* SEO Footer Text */}
         <div className="mt-16 max-w-3xl mx-auto text-center">
-          <p className="text-muted-foreground">
-            We provide residential dumpster rentals, construction dumpsters,
-            demolition dumpsters, and commercial roll off dumpster rentals with
-            fast delivery and competitive pricing.
+          <p className="text-muted-foreground leading-relaxed">
+            We provide roll off dumpster rentals for residential cleanouts,
+            construction debris, roofing projects, demolition waste, yard
+            cleanup, and commercial jobs. Choose from 10 yard, 20 yard, 30 yard,
+            and 40 yard dumpsters with fast delivery and reliable pickup in
+            Wichita and surrounding areas.
           </p>
         </div>
       </div>

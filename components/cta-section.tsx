@@ -1,25 +1,33 @@
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, Truck } from "lucide-react";
 
 export function CTASection() {
   return (
-    <section className="py-24 lg:py-32 bg-primary">
+    <section
+      id="get-quote"
+      className="py-24 lg:py-32 bg-primary relative overflow-hidden"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         {/* Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary-foreground mb-6 text-balance">
-          Get Your Dumpster Rental Delivered Today
+          Affordable Dumpster Rental Near You — Fast Delivery Available
         </h2>
 
         {/* Subtext */}
-        <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-10">
-          Need a roll off dumpster for construction, home cleanouts, or
-          commercial projects? Get a fast, affordable dumpster rental with
-          same-day delivery and flexible rental periods.
+        <p className="text-lg text-primary-foreground/90 max-w-3xl mx-auto mb-10 leading-relaxed">
+          Rent a roll-off dumpster for home cleanouts, construction debris,
+          roofing projects, yard waste, and commercial jobs. We offer same-day
+          dumpster delivery, flexible rental periods, and competitive pricing
+          for residential and commercial customers.
         </p>
 
-        {/* Buttons */}
+        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" variant="secondary" className="text-base px-8">
+          <Button
+            size="lg"
+            variant="secondary"
+            className="text-base px-8 shadow-lg"
+          >
             Get Free Dumpster Quote
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -34,12 +42,26 @@ export function CTASection() {
           </Button>
         </div>
 
-        {/* SEO Supporting Text */}
-        <div className="mt-10 max-w-3xl mx-auto">
-          <p className="text-primary-foreground/70 text-sm">
-            We provide residential dumpster rentals, construction dumpsters,
-            demolition dumpsters, and commercial roll off dumpster rentals with
-            fast delivery and reliable pickup.
+        {/* Trust Signals */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-primary-foreground/80 text-sm">
+          <div className="flex items-center gap-2">
+            <Truck className="h-4 w-4" />
+            Same-Day Delivery Available
+          </div>
+
+          <div>Flexible Rental Periods</div>
+          <div>Affordable Local Pricing</div>
+          <div>Residential & Commercial</div>
+        </div>
+
+        {/* SEO Supporting Content */}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <p className="text-primary-foreground/70 text-sm leading-relaxed">
+            Our roll-off dumpster rentals are ideal for home renovations,
+            construction sites, demolition projects, garage cleanouts, yard
+            waste removal, and commercial debris. Choose from multiple dumpster
+            sizes including 10-yard, 20-yard, 30-yard, and 40-yard dumpsters
+            with fast delivery and reliable pickup.
           </p>
         </div>
       </div>
