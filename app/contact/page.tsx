@@ -16,59 +16,11 @@ import {
   MessageSquare,
 } from "lucide-react";
 
-const CITY = "Your City"; // later dynamic for multi-city scaling
+interface ContactPageProps {
+  city?: string;
+}
 
-const contactMethods = [
-  {
-    icon: Phone,
-    title: "Call For Immediate Quote",
-    description: "Fastest way to book your dumpster",
-    value: "Call Now",
-    href: "tel:+18005553867",
-    action: "Call Now",
-  },
-  {
-    icon: Mail,
-    title: "Email Us",
-    description: "Get a quote within 1-2 hours",
-    value: "info@dumpsterdirect.com",
-    href: "mailto:info@dumpsterdirect.com",
-    action: "Send Email",
-  },
-  {
-    icon: MessageSquare,
-    title: "Request Online",
-    description: "Quick online quote form",
-    value: "Available 24/7",
-    href: "#form",
-    action: "Get Quote",
-  },
-];
-
-const faqs = [
-  {
-    question: "How fast can you deliver a dumpster?",
-    answer:
-      "We offer same-day dumpster delivery in most areas. In some cases, we can deliver within a few hours depending on availability.",
-  },
-  {
-    question: "What size dumpster do I need?",
-    answer:
-      "Most home cleanouts use a 20-yard dumpster. Roofing and construction projects typically require 30-yard or 40-yard dumpsters.",
-  },
-  {
-    question: "How long can I keep the dumpster?",
-    answer:
-      "Standard rental includes 7-10 days. Extended rentals are available at low daily rates.",
-  },
-  {
-    question: "What items are not allowed?",
-    answer:
-      "Hazardous materials, tires, batteries, chemicals, and paint are typically restricted. Contact us for details.",
-  },
-];
-
-export default function ContactPage() {
+export default function ContactPage({ city = "Your City" }: ContactPageProps) {
   const [submitted, setSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -78,9 +30,55 @@ export default function ContactPage() {
     dumpsterSize: "",
     serviceType: "",
     address: "",
-    projectDate: "",
     message: "",
   });
+
+  const contactMethods = [
+    {
+      icon: Phone,
+      title: "Call For Immediate Quote",
+      description: "Fastest way to book your dumpster",
+      href: "tel:+18005553867",
+      action: "Call Now",
+    },
+    {
+      icon: Mail,
+      title: "Email Us",
+      description: "Get a quote within 1-2 hours",
+      href: "mailto:info@dumpsterdirect.com",
+      action: "Send Email",
+    },
+    {
+      icon: MessageSquare,
+      title: "Request Online",
+      description: "Quick online quote form",
+      href: "#form",
+      action: "Get Quote",
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "How fast can you deliver a dumpster?",
+      answer:
+        "We offer same-day dumpster delivery in most areas. In some cases, we can deliver within a few hours depending on availability.",
+    },
+    {
+      question: "What size dumpster do I need?",
+      answer:
+        "Most home cleanouts use a 20-yard dumpster. Roofing and construction projects typically require 30-yard or 40-yard dumpsters.",
+    },
+    {
+      question: "How long can I keep the dumpster?",
+      answer:
+        "Standard rental includes 7-10 days. Extended rentals are available at low daily rates.",
+    },
+    {
+      question: "What items are not allowed?",
+      answer:
+        "Hazardous materials, tires, batteries, chemicals, and paint are typically restricted.",
+    },
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -92,19 +90,19 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-secondary">
+      <section className="pt-32 pb-20 bg-muted">
         <div className="mx-auto max-w-7xl px-4">
           <div className="max-w-3xl">
             <p className="text-primary uppercase tracking-widest text-sm mb-3">
-              Dumpster Rental {CITY}
+              Dumpster Rental {city}
             </p>
 
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Get A Dumpster Rental Quote in {CITY}
+              Get Dumpster Rental Quote in {city}
             </h1>
 
             <p className="text-lg text-muted-foreground">
-              Fast dumpster rental service in {CITY}. Same-day delivery
+              Fast dumpster rental service in {city}. Same-day delivery
               available. Affordable pricing for residential, construction, and
               commercial projects.
             </p>
@@ -119,15 +117,15 @@ export default function ContactPage() {
             {contactMethods.map((method) => (
               <div
                 key={method.title}
-                className="border rounded-lg p-6 bg-card hover:border-primary transition"
+                className="border rounded-xl p-6 bg-card hover:border-primary transition"
               >
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4">
                   <method.icon className="text-primary" />
                 </div>
 
                 <h3 className="font-semibold text-lg mb-1">{method.title}</h3>
 
-                <p className="text-muted-foreground text-sm mb-3">
+                <p className="text-muted-foreground text-sm mb-4">
                   {method.description}
                 </p>
 
@@ -140,7 +138,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main Contact */}
+      {/* Form Section */}
       <section id="form" className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-16">
@@ -155,7 +153,7 @@ export default function ContactPage() {
               </p>
 
               {submitted ? (
-                <div className="border rounded-lg p-8 text-center">
+                <div className="border rounded-xl p-8 text-center">
                   <CheckCircle2 className="mx-auto mb-4 text-primary" />
 
                   <h3 className="text-xl font-semibold mb-2">
@@ -174,7 +172,10 @@ export default function ContactPage() {
                       required
                       value={formData.name}
                       onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
+                        setFormData({
+                          ...formData,
+                          name: e.target.value,
+                        })
                       }
                     />
 
@@ -183,24 +184,29 @@ export default function ContactPage() {
                       required
                       value={formData.phone}
                       onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
+                        setFormData({
+                          ...formData,
+                          phone: e.target.value,
+                        })
                       }
                     />
                   </div>
 
                   <Input
-                    placeholder="Email"
+                    placeholder="Email Address"
                     required
                     value={formData.email}
                     onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
+                      setFormData({
+                        ...formData,
+                        email: e.target.value,
+                      })
                     }
                   />
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <select
                       className="border rounded-md p-2"
-                      value={formData.dumpsterSize}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
@@ -208,7 +214,7 @@ export default function ContactPage() {
                         })
                       }
                     >
-                      <option>Dumpster Size</option>
+                      <option>Select Dumpster Size</option>
                       <option>10 Yard</option>
                       <option>20 Yard</option>
                       <option>30 Yard</option>
@@ -217,7 +223,6 @@ export default function ContactPage() {
 
                     <select
                       className="border rounded-md p-2"
-                      value={formData.serviceType}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
@@ -225,7 +230,7 @@ export default function ContactPage() {
                         })
                       }
                     >
-                      <option>Service Type</option>
+                      <option>Project Type</option>
                       <option>Residential</option>
                       <option>Construction</option>
                       <option>Commercial</option>
@@ -233,7 +238,7 @@ export default function ContactPage() {
                   </div>
 
                   <Input
-                    placeholder="Delivery Address"
+                    placeholder={`Delivery Address in ${city}`}
                     value={formData.address}
                     onChange={(e) =>
                       setFormData({
@@ -264,13 +269,13 @@ export default function ContactPage() {
 
             {/* Right Side */}
             <div className="space-y-6">
-              <div className="border rounded-lg p-6 bg-card">
-                <h3 className="font-semibold mb-4">Dumpster Rental {CITY}</h3>
+              <div className="border rounded-xl p-6 bg-card">
+                <h3 className="font-semibold mb-4">Dumpster Rental {city}</h3>
 
                 <div className="space-y-4">
                   <div className="flex gap-3">
                     <MapPin />
-                    <p>{CITY} & surrounding areas</p>
+                    <p>{city} & surrounding areas</p>
                   </div>
 
                   <div className="flex gap-3">
@@ -286,20 +291,9 @@ export default function ContactPage() {
               </div>
 
               <div className="grid grid-cols-3 gap-4">
-                <div className="border rounded-lg p-4 text-center">
-                  <p className="text-xl font-bold">Same Day</p>
-                  <p className="text-xs text-muted-foreground">Delivery</p>
-                </div>
-
-                <div className="border rounded-lg p-4 text-center">
-                  <p className="text-xl font-bold">Best</p>
-                  <p className="text-xs text-muted-foreground">Pricing</p>
-                </div>
-
-                <div className="border rounded-lg p-4 text-center">
-                  <p className="text-xl font-bold">24/7</p>
-                  <p className="text-xs text-muted-foreground">Booking</p>
-                </div>
+                <Stat label="Same Day" sub="Delivery" />
+                <Stat label="Best" sub="Pricing" />
+                <Stat label="24/7" sub="Booking" />
               </div>
             </div>
           </div>
@@ -307,16 +301,17 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-muted">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Dumpster Rental FAQ
           </h2>
 
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border rounded-lg p-6 bg-card">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border rounded-xl p-6 bg-card">
                 <h3 className="font-semibold mb-2">{faq.question}</h3>
+
                 <p className="text-muted-foreground">{faq.answer}</p>
               </div>
             ))}
@@ -325,6 +320,15 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+    </div>
+  );
+}
+
+function Stat({ label, sub }: { label: string; sub: string }) {
+  return (
+    <div className="border rounded-xl p-4 text-center">
+      <p className="text-xl font-bold">{label}</p>
+      <p className="text-xs text-muted-foreground">{sub}</p>
     </div>
   );
 }
