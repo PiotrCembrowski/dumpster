@@ -33,17 +33,17 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-8">
             <Link
+              href="/"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Home
+            </Link>
+
+            <Link
               href="/#sizes"
               className="block text-sm text-muted-foreground hover:text-foreground"
             >
               Dumpster Sizes
-            </Link>
-
-            <Link
-              href="/locations"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Locations
             </Link>
 
             <Link
@@ -97,17 +97,17 @@ export function Header() {
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-4 space-y-3">
             <Link
+              href="/"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Home
+            </Link>
+
+            <Link
               href="/#sizes"
               className="block text-sm text-muted-foreground hover:text-foreground"
             >
               Dumpster Sizes
-            </Link>
-
-            <Link
-              href="/locations"
-              className="block text-sm text-muted-foreground hover:text-foreground"
-            >
-              Locations
             </Link>
 
             <Link
