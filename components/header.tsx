@@ -33,31 +33,10 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-8">
             <Link
-              href="/dumpster-rental"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Dumpster Rental
-            </Link>
-
-            <Link
               href="/#sizes"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="block text-sm text-muted-foreground hover:text-foreground"
             >
               Dumpster Sizes
-            </Link>
-
-            <Link
-              href="/#services"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Services
-            </Link>
-
-            <Link
-              href="/#process"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              How It Works
             </Link>
 
             <Link
@@ -118,31 +97,10 @@ export function Header() {
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-4 space-y-3">
             <Link
-              href="/dumpster-rental"
-              className="block text-sm text-muted-foreground hover:text-foreground"
-            >
-              Dumpster Rental
-            </Link>
-
-            <Link
               href="/#sizes"
               className="block text-sm text-muted-foreground hover:text-foreground"
             >
               Dumpster Sizes
-            </Link>
-
-            <Link
-              href="/#services"
-              className="block text-sm text-muted-foreground hover:text-foreground"
-            >
-              Services
-            </Link>
-
-            <Link
-              href="/#process"
-              className="block text-sm text-muted-foreground hover:text-foreground"
-            >
-              How It Works
             </Link>
 
             <Link
