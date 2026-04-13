@@ -1,36 +1,73 @@
-import { MetadataRoute } from 'next'
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Pages -->
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://rapiddumpsterrental.site',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: 'https://rapiddumpsterrental.site/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://rapiddumpsterrental.site/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://rapiddumpsterrental.site/contact',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://rapiddumpsterrental.site/blog',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-  ]
-}
+  
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/services</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/contact</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Blog/Articles -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+    <!-- cities -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/dallas</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/orlando</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/phoenix</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/tammpa</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/tulsa-ok</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
