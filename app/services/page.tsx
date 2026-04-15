@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import {
   Home,
@@ -141,8 +139,6 @@ const additionalServices = [
 export default function ServicesPage() {
   return (
     <>
-      <Header />
-
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative py-24 lg:py-32">
@@ -325,8 +321,6 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }

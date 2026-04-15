@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -87,8 +85,6 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       {/* Hero */}
       <section className="pt-32 pb-20 bg-muted">
         <div className="mx-auto max-w-7xl px-4">
@@ -318,8 +314,6 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

@@ -1,10 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { blogPosts, getBlogPost, getRelatedPosts } from "@/lib/blog-data"
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { blogPosts, getBlogPost, getRelatedPosts } from "@/lib/blog-data";
 import {
   ArrowLeft,
   ArrowRight,
@@ -15,51 +13,50 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-} from "lucide-react"
+} from "lucide-react";
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params
-  const post = getBlogPost(slug)
+  const { slug } = await params;
+  const post = getBlogPost(slug);
 
   if (!post) {
     return {
       title: "Post Not Found | Dumpster Direct Services",
-    }
+    };
   }
 
   return {
     title: `${post.title} | Dumpster Direct Services Blog`,
     description: post.excerpt,
-  }
+  };
 }
 
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params
-  const post = getBlogPost(slug)
+  const { slug } = await params;
+  const post = getBlogPost(slug);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
-  const relatedPosts = getRelatedPosts(slug)
+  const relatedPosts = getRelatedPosts(slug);
 
   return (
     <>
-      <Header />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative py-16 lg:py-24">
@@ -96,7 +93,9 @@ export default async function BlogPostPage({
                   <User className="h-5 w-5 text-muted-foreground" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">{post.author.name}</p>
+                  <p className="font-medium text-foreground">
+                    {post.author.name}
+                  </p>
                   <p className="text-xs">{post.author.role}</p>
                 </div>
               </div>
@@ -183,9 +182,9 @@ export default async function BlogPostPage({
                 </h3>
                 <p className="text-sm text-primary mb-2">{post.author.role}</p>
                 <p className="text-sm text-muted-foreground">
-                  Part of the Dumpster Direct Services team, dedicated to helping
-                  customers find the best waste management solutions for their
-                  projects.
+                  Part of the Dumpster Direct Services team, dedicated to
+                  helping customers find the best waste management solutions for
+                  their projects.
                 </p>
               </div>
             </div>
@@ -238,7 +237,7 @@ export default async function BlogPostPage({
                               month: "short",
                               day: "numeric",
                               year: "numeric",
-                            }
+                            },
                           )}
                         </span>
                         <span className="flex items-center gap-1">
@@ -289,7 +288,6 @@ export default async function BlogPostPage({
           </div>
         </section>
       </main>
-      <Footer />
     </>
-  )
+  );
 }

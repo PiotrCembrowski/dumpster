@@ -1,24 +1,21 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { blogPosts } from "@/lib/blog-data"
-import { ArrowRight, Calendar, Clock, User } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { blogPosts } from "@/lib/blog-data";
+import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 
 export const metadata = {
   title: "Blog | Dumpster Direct Services",
   description:
     "Expert tips, guides, and industry insights on dumpster rental, waste management, and construction projects.",
-}
+};
 
 export default function BlogPage() {
-  const featuredPost = blogPosts[0]
-  const recentPosts = blogPosts.slice(1)
+  const featuredPost = blogPosts[0];
+  const recentPosts = blogPosts.slice(1);
 
   return (
     <>
-      <Header />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-16 lg:py-24 bg-card">
@@ -42,7 +39,9 @@ export default function BlogPage() {
         <section className="py-16 lg:py-24 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground">Featured Article</h2>
+              <h2 className="text-2xl font-bold text-foreground">
+                Featured Article
+              </h2>
             </div>
             <Link href={`/blog/${featuredPost.slug}`} className="group block">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -64,11 +63,14 @@ export default function BlogPage() {
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                     <span className="flex items-center gap-1.5">
                       <Calendar className="h-4 w-4" />
-                      {new Date(featuredPost.publishedAt).toLocaleDateString("en-US", {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
+                      {new Date(featuredPost.publishedAt).toLocaleDateString(
+                        "en-US",
+                        {
+                          month: "long",
+                          day: "numeric",
+                          year: "numeric",
+                        },
+                      )}
                     </span>
                     <span className="flex items-center gap-1.5">
                       <Clock className="h-4 w-4" />
@@ -110,7 +112,9 @@ export default function BlogPage() {
         <section className="py-16 lg:py-24 bg-card">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-foreground">Recent Articles</h2>
+              <h2 className="text-2xl font-bold text-foreground">
+                Recent Articles
+              </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recentPosts.map((post) => (
@@ -137,11 +141,14 @@ export default function BlogPage() {
                       <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-3.5 w-3.5" />
-                          {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
+                          {new Date(post.publishedAt).toLocaleDateString(
+                            "en-US",
+                            {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            },
+                          )}
                         </span>
                         <span className="flex items-center gap-1">
                           <Clock className="h-3.5 w-3.5" />
@@ -180,8 +187,8 @@ export default function BlogPage() {
                     Subscribe to our newsletter
                   </h2>
                   <p className="text-muted-foreground">
-                    Get the latest tips, guides, and industry news delivered straight
-                    to your inbox. No spam, just valuable content.
+                    Get the latest tips, guides, and industry news delivered
+                    straight to your inbox. No spam, just valuable content.
                   </p>
                 </div>
                 <div>
@@ -224,7 +231,6 @@ export default function BlogPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
-  )
+  );
 }
