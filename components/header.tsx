@@ -47,6 +47,13 @@ export function Header() {
             </Link>
 
             <Link
+              href="/tulsa-ok"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Tulsa
+            </Link>
+
+            <Link
               href="/blog"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
