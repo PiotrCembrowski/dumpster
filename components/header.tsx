@@ -47,10 +47,17 @@ export function Header() {
             </Link>
 
             <Link
-              href="/tulsa-ok"
+              href="/dumpster-rental/tulsa-ok"
               className="block text-sm text-muted-foreground hover:text-foreground"
             >
               Tulsa
+            </Link>
+
+            <Link
+              href="/dumpster-rental/dallas"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              Dallas
             </Link>
 
             <Link
