@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Contact Dumpster Direct Services today for a fast quote.</p>
     `,
-    image: "/images/blog/dumpster-cost.jpg",
+    image: "/images/blog/dumpster-sizes-guide.jpg",
     category: "Pricing",
     author: {
       name: "Michael Davis",
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Need help choosing? Contact Dumpster Direct Services today.</p>
     `,
-    image: "/images/blog/dumpster-size.jpg",
+    image: "/images/blog/dumpster-size-guide.jpg",
     category: "Guides",
     author: {
       name: "Jessica Parker",
@@ -128,7 +128,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Always check with Dumpster Direct Services for restrictions.</p>
     `,
-    image: "/images/blog/what-can-you-throw.jpg",
+    image: "/images/blog/eco-friendly-disposal.jpg",
     category: "Guides",
     author: {
       name: "Robert Miller",
@@ -162,7 +162,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Contact Dumpster Direct Services today.</p>
     `,
-    image: "/images/blog/home-cleanout.jpg",
+    image: "/images/blog/home-renovation-tips.jpg",
     category: "Residential",
     author: {
       name: "Amanda Lewis",
@@ -197,7 +197,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Dumpster Direct Services offers fast delivery.</p>
     `,
-    image: "/images/blog/construction-dumpster.jpg",
+    image: "/images/blog/construction-safety.jpg",
     category: "Construction",
     author: {
       name: "Daniel White",
