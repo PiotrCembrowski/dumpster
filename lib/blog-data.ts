@@ -206,6 +206,190 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-03-05",
     readTime: "8 min read",
   },
+  {
+    slug: "what-size-dumpster-do-i-need",
+    title: "What Size Dumpster Do I Need? (Complete 2026 Guide)",
+    excerpt:
+      "Not sure what size dumpster you need? Compare 10, 20, 30, and 40 yard dumpsters and choose the right size for your project. Complete 2026 guide.",
+    image: "/images/blog/dumpster-sizes-guide.jpg",
+    category: "Dumpster Sizes",
+    publishedAt: "2026-01-10",
+    readTime: "12 min read",
+    author: {
+      name: "Dumpster Direct Team",
+      role: "Waste Management Experts",
+    },
+    content: `
+  
+<h2>What Size Dumpster Do I Need?</h2>
+
+<p>Choosing the right dumpster size is one of the most important decisions when planning a cleanup, renovation, or construction project. If the dumpster is too small, you may need a second rental and pay additional delivery fees. If it's too large, you might spend more than necessary.</p>
+
+<p>Whether you're cleaning out a garage, remodeling your kitchen, replacing a roof, or managing a construction site, understanding dumpster sizes helps you save money and complete your project efficiently.</p>
+
+<h2>Dumpster Sizes Explained</h2>
+
+<p>Most dumpster rental companies offer four main roll-off dumpster sizes:</p>
+
+<ul>
+<li>10 Yard Dumpster</li>
+<li>20 Yard Dumpster</li>
+<li>30 Yard Dumpster</li>
+<li>40 Yard Dumpster</li>
+</ul>
+
+<h2>10 Yard Dumpster — Best for Small Projects</h2>
+
+<p>A 10 yard dumpster is ideal for small cleanouts and light renovation projects.</p>
+
+<h3>Best Projects for 10 Yard</h3>
+
+<ul>
+<li>Garage cleanouts</li>
+<li>Small bathroom remodels</li>
+<li>Yard debris removal</li>
+<li>Small roofing jobs</li>
+</ul>
+
+<h3>Typical Capacity</h3>
+
+<p>About 3 pickup truck loads of debris.</p>
+
+<h3>Typical Cost</h3>
+
+<p>$250 – $450 depending on location.</p>
+
+<h2>20 Yard Dumpster — Most Popular Size</h2>
+
+<p>The 20 yard dumpster is the most commonly rented size and works well for most homeowners.</p>
+
+<h3>Best Projects for 20 Yard</h3>
+
+<ul>
+<li>Kitchen remodels</li>
+<li>Roof replacements</li>
+<li>Basement cleanouts</li>
+<li>Deck removal</li>
+</ul>
+
+<h3>Capacity</h3>
+
+<p>About 6 pickup truck loads.</p>
+
+<h3>Typical Cost</h3>
+
+<p>$350 – $550</p>
+
+<h2>30 Yard Dumpster — Large Projects</h2>
+
+<p>30 yard dumpsters are designed for large renovation and construction projects.</p>
+
+<h3>Best Projects</h3>
+
+<ul>
+<li>Whole house cleanouts</li>
+<li>Large remodels</li>
+<li>Construction projects</li>
+<li>Commercial cleanups</li>
+</ul>
+
+<h3>Capacity</h3>
+
+<p>About 9 pickup truck loads.</p>
+
+<h2>40 Yard Dumpster — Major Projects</h2>
+
+<p>The largest standard dumpster available.</p>
+
+<h3>Best Projects</h3>
+
+<ul>
+<li>Commercial construction</li>
+<li>Demolition projects</li>
+<li>Industrial cleanups</li>
+</ul>
+
+<h3>Capacity</h3>
+
+<p>12 pickup truck loads.</p>
+
+<h2>Quick Dumpster Size Chart</h2>
+
+<ul>
+<li>Garage Cleanout — 10 Yard</li>
+<li>Kitchen Remodel — 20 Yard</li>
+<li>Roof Replacement — 20 Yard</li>
+<li>Whole Home Cleanout — 30 Yard</li>
+<li>Construction Project — 30–40 Yard</li>
+</ul>
+
+<h2>How to Choose the Right Dumpster Size</h2>
+
+<p>Consider these factors:</p>
+
+<ul>
+<li>Project size</li>
+<li>Type of debris</li>
+<li>Available space</li>
+<li>Weight limits</li>
+</ul>
+
+<p>When in doubt, choose one size larger to avoid extra costs.</p>
+
+<h2>How Long Can You Keep a Dumpster?</h2>
+
+<p>Most rentals include 7–10 days. Extra days usually cost $10–$25 per day.</p>
+
+<h2>What Can You Throw in a Dumpster?</h2>
+
+<ul>
+<li>Furniture</li>
+<li>Construction debris</li>
+<li>Yard waste</li>
+<li>Household junk</li>
+</ul>
+
+<h3>Restricted Items</h3>
+
+<ul>
+<li>Tires</li>
+<li>Paint</li>
+<li>Batteries</li>
+<li>Hazardous materials</li>
+</ul>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Choosing too small</li>
+<li>Overloading dumpster</li>
+<li>Ignoring weight limits</li>
+</ul>
+
+<h2>Dumpster Pricing Guide</h2>
+
+<ul>
+<li>10 Yard: $250–$450</li>
+<li>20 Yard: $350–$550</li>
+<li>30 Yard: $450–$650</li>
+<li>40 Yard: $550–$750</li>
+</ul>
+
+<h2>Get a Free Dumpster Quote</h2>
+
+<p>Need help choosing the right dumpster? Our team can recommend the perfect size and provide fast delivery.</p>
+
+<ul>
+<li>Same-day delivery available</li>
+<li>Affordable pricing</li>
+<li>Multiple dumpster sizes</li>
+<li>Residential & construction projects</li>
+</ul>
+
+<p>Contact us today to get your free dumpster rental quote.</p>
+
+`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
