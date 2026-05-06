@@ -2,63 +2,84 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+
+const locations = [
+  { name: "Tulsa, OK", href: "/locations/tulsa" },
+  { name: "Oklahoma City, OK", href: "/locations/oklahoma-city" },
+  { name: "Dallas, TX", href: "/locations/dallas" },
+  { name: "Houston, TX", href: "/locations/houston" },
+  { name: "Austin, TX", href: "/locations/austin" },
+  { name: "Kansas City, MO", href: "/locations/kansas-city" },
+];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
               <span className="text-xl font-bold text-primary-foreground">
                 D
               </span>
             </div>
+            <span className="text-lg font-semibold tracking-tight text-foreground">
+              Dumpster Direct
+            </span>
+          </div>
 
-            <div className="flex flex-col leading-tight">
-              <span className="text-lg font-semibold tracking-tight text-foreground">
-                Dumpster Direct
-              </span>
-              <span className="text-xs text-muted-foreground">
-                Dumpster Rental Services
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-8">
             <Link
-              href="/"
-              className="block text-sm text-muted-foreground hover:text-foreground"
+              href="/services"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Home
+              Services
             </Link>
-
             <Link
               href="/#sizes"
-              className="block text-sm text-muted-foreground hover:text-foreground"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Dumpster Sizes
             </Link>
-
             <Link
-              href="/dumpster-rental/tulsa-ok"
-              className="block text-sm text-muted-foreground hover:text-foreground"
+              href="/#process"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Tulsa
+              How It Works
             </Link>
 
-            <Link
-              href="/dumpster-rental/dallas"
-              className="block text-sm text-muted-foreground hover:text-foreground"
-            >
-              Dallas
-            </Link>
+            <NavigationMenu.Root className="relative">
+              <NavigationMenu.List>
+                <NavigationMenu.Item>
+                  <NavigationMenu.Trigger className="group flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    Locations
+                    <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  </NavigationMenu.Trigger>
+                  <NavigationMenu.Content className="absolute top-full left-0 mt-2 w-56 rounded-md border border-border bg-card shadow-lg">
+                    <ul className="py-2">
+                      {locations.map((location) => (
+                        <li key={location.href}>
+                          <NavigationMenu.Link asChild>
+                            <Link
+                              href={location.href}
+                              className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                            >
+                              {location.name}
+                            </Link>
+                          </NavigationMenu.Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenu.Content>
+                </NavigationMenu.Item>
+              </NavigationMenu.List>
+            </NavigationMenu.Root>
 
             <Link
               href="/blog"
@@ -66,7 +87,6 @@ export function Header() {
             >
               Blog
             </Link>
-
             <Link
               href="/contact"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -75,22 +95,19 @@ export function Header() {
             </Link>
           </div>
 
-          {/* CTA */}
           <div className="hidden md:flex md:items-center md:gap-4">
             <a
               href="tel:1-800-555-DUMP"
               className="flex items-center gap-2 text-sm text-primary"
             >
               <Phone className="h-4 w-4" />
-              <span className="font-medium">Call For Dumpster Quote</span>
+              <span className="font-medium">1-800-555-DUMP</span>
             </a>
-
             <Button asChild>
-              <Link href="/contact">Get Dumpster Quote</Link>
+              <Link href="/contact">Get a Quote</Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             type="button"
             className="md:hidden"
@@ -106,23 +123,52 @@ export function Header() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-4 space-y-3">
             <Link
-              href="/"
+              href="/services"
               className="block text-sm text-muted-foreground hover:text-foreground"
             >
-              Home
+              Services
             </Link>
-
             <Link
               href="/#sizes"
               className="block text-sm text-muted-foreground hover:text-foreground"
             >
               Dumpster Sizes
             </Link>
+            <Link
+              href="/#process"
+              className="block text-sm text-muted-foreground hover:text-foreground"
+            >
+              How It Works
+            </Link>
+
+            <div>
+              <button
+                onClick={() => setLocationsOpen(!locationsOpen)}
+                className="flex items-center justify-between w-full text-sm text-muted-foreground hover:text-foreground"
+              >
+                Locations
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${locationsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              {locationsOpen && (
+                <div className="mt-2 ml-4 space-y-2">
+                  {locations.map((location) => (
+                    <Link
+                      key={location.href}
+                      href={location.href}
+                      className="block text-sm text-muted-foreground hover:text-foreground"
+                    >
+                      {location.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               href="/blog"
@@ -130,25 +176,22 @@ export function Header() {
             >
               Blog
             </Link>
-
             <Link
               href="/contact"
               className="block text-sm text-muted-foreground hover:text-foreground"
             >
               Contact
             </Link>
-
             <div className="pt-3 border-t border-border">
               <a
                 href="tel:1-800-555-DUMP"
                 className="flex items-center gap-2 text-sm text-primary mb-3"
               >
                 <Phone className="h-4 w-4" />
-                <span className="font-medium">Call For Dumpster Quote</span>
+                <span className="font-medium">1-800-555-DUMP</span>
               </a>
-
               <Button asChild className="w-full">
-                <Link href="/contact">Get Dumpster Quote</Link>
+                <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
           </div>
