@@ -7,16 +7,57 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Truck } from "lucide-react";
 
 export function ContactSection() {
+  const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Dumpster Quote Request:", formData);
+    if (!formspreeEndpoint) {
+      setSubmitStatus("error");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          subject: "Dumpster Quote Request",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit quote request.");
+      }
+
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -196,7 +237,12 @@ export function ContactSection() {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full"
+                disabled={isSubmitting}
+              >
                 Get Free Dumpster Quote
               </Button>
             </form>
@@ -205,6 +251,18 @@ export function ContactSection() {
             <p className="text-xs text-muted-foreground mt-4 text-center">
               No obligation. Fast response. Same-day availability.
             </p>
+
+            {submitStatus === "success" && (
+              <p className="text-xs text-center mt-3 text-primary">
+                Thanks! Your quote request has been sent.
+              </p>
+            )}
+
+            {submitStatus === "error" && (
+              <p className="text-xs text-center mt-3 text-destructive">
+                Unable to send right now. Please try again.
+              </p>
+            )}
           </div>
         </div>
 
