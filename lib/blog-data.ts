@@ -57,51 +57,6 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-04-01",
     readTime: "6 min read",
   },
-
-  {
-    slug: "what-size-dumpster-do-i-need",
-    title: "What Size Dumpster Do I Need? Complete Guide",
-    excerpt:
-      "Not sure which dumpster size to rent? This guide helps you choose the right dumpster for your project.",
-    content: `
-      <p>Choosing the right dumpster size ensures your project runs smoothly and avoids additional costs.</p>
-
-      <h2>10 Yard Dumpster</h2>
-      <ul>
-        <li>Small cleanouts</li>
-        <li>Garage cleanups</li>
-      </ul>
-
-      <h2>20 Yard Dumpster</h2>
-      <ul>
-        <li>Roofing projects</li>
-        <li>Home renovations</li>
-      </ul>
-
-      <h2>30 Yard Dumpster</h2>
-      <ul>
-        <li>Construction debris</li>
-        <li>Large home cleanouts</li>
-      </ul>
-
-      <h2>40 Yard Dumpster</h2>
-      <ul>
-        <li>Commercial jobs</li>
-        <li>Demolition projects</li>
-      </ul>
-
-      <p>Need help choosing? Contact Dumpster Direct Services today.</p>
-    `,
-    image: "/images/blog/dumpster-size-guide.jpg",
-    category: "Guides",
-    author: {
-      name: "Jessica Parker",
-      role: "Rental Specialist",
-    },
-    publishedAt: "2026-03-28",
-    readTime: "7 min read",
-  },
-
   {
     slug: "what-can-you-put-in-a-dumpster",
     title: "What Can You Put in a Dumpster? Full Guide",
@@ -390,18 +345,6 @@ export const blogPosts: BlogPost[] = [
 
 `,
   },
-
-  // ─────────────────────────────────────────────────────────────────────────────
-  // NEW POST — "What Size Dumpster Do I Need for a Roof Replacement?"
-  //
-  // WHY THIS POST:
-  //   • "dumpster for roof replacement" gets ~3,600 searches/mo nationally — low competition
-  //   • Roofing is the #1 most common dumpster use case; targets contractors + homeowners
-  //   • Naturally links to /dumpster-rental/tulsa-ok and /dumpster-rental/dallas
-  //   • Long-form content (1,800+ words in the HTML) with a pricing table — featured snippet bait
-  //   • FAQPage schema added inline via data attributes so the blog renderer can extract it
-  //   • Every H2 targets a standalone long-tail query Google can rank independently
-  // ─────────────────────────────────────────────────────────────────────────────
   {
     slug: "what-size-dumpster-for-roof-replacement",
     title: "What Size Dumpster Do I Need for a Roof Replacement? (2026 Guide)",
