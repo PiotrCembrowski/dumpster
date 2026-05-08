@@ -19,7 +19,10 @@ interface ContactPageProps {
 }
 
 export default function ContactPage({ city = "Your City" }: ContactPageProps) {
+  const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -78,9 +81,49 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!formspreeEndpoint) {
+      setSubmitError("Form is not configured yet. Please try again later.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          city,
+          subject: `Dumpster Quote Request - ${city}`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        dumpsterSize: "",
+        serviceType: "",
+        address: "",
+        message: "",
+      });
+    } catch {
+      setSubmitError("Unable to send your quote request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -256,9 +299,18 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     }
                   />
 
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
                     Get Free Quote
                   </Button>
+
+                  {submitError && (
+                    <p className="text-sm text-destructive">{submitError}</p>
+                  )}
                 </form>
               )}
             </div>
