@@ -14,6 +14,10 @@ export function ContactSection() {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-background">
