@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Truck } from "lucide-react";
 
 export function ContactSection() {
-  const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+  const formspreeEndpoint = "https://formspree.io/f/mqenyeek";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,47 +18,6 @@ export function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formspreeEndpoint) {
-      setSubmitStatus("error");
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      const response = await fetch(formspreeEndpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          subject: "Dumpster Quote Request",
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to submit quote request.");
-      }
-
-      setSubmitStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-background">
@@ -177,7 +136,12 @@ export function ContactSection() {
               size.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form
+              action={formspreeEndpoint}
+              method="POST"
+              className="space-y-5"
+            >
+              <input type="hidden" name="_subject" value="Dumpster Quote Request" />
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Full Name
@@ -245,7 +209,6 @@ export function ContactSection() {
                 type="submit"
                 size="lg"
                 className="w-full"
-                disabled={isSubmitting}
               >
                 Get Free Dumpster Quote
               </Button>
@@ -256,17 +219,6 @@ export function ContactSection() {
               No obligation. Fast response. Same-day availability.
             </p>
 
-            {submitStatus === "success" && (
-              <p className="text-xs text-center mt-3 text-primary">
-                Thanks! Your quote request has been sent.
-              </p>
-            )}
-
-            {submitStatus === "error" && (
-              <p className="text-xs text-center mt-3 text-destructive">
-                Unable to send right now. Please try again.
-              </p>
-            )}
           </div>
         </div>
 
