@@ -81,7 +81,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
     },
   ];
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formspreeEndpoint) {
       setSubmitError("Form is not configured yet. Please try again later.");
@@ -92,16 +92,17 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
     setSubmitError("");
 
     try {
-      const submissionData = new FormData(e.currentTarget);
-      submissionData.append("city", city);
-      submissionData.append("_subject", `Dumpster Quote Request - ${city}`);
-
       const response = await fetch(formspreeEndpoint, {
         method: "POST",
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: submissionData,
+        body: JSON.stringify({
+          ...formData,
+          city,
+          subject: `Dumpster Quote Request - ${city}`,
+        }),
       });
 
       if (!response.ok) {

@@ -19,7 +19,7 @@ export function ContactSection() {
     "idle" | "success" | "error"
   >("idle");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formspreeEndpoint) {
       setSubmitStatus("error");
@@ -30,15 +30,16 @@ export function ContactSection() {
     setSubmitStatus("idle");
 
     try {
-      const submissionData = new FormData(e.currentTarget);
-      submissionData.append("_subject", "Dumpster Quote Request");
-
       const response = await fetch(formspreeEndpoint, {
         method: "POST",
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: submissionData,
+        body: JSON.stringify({
+          ...formData,
+          subject: "Dumpster Quote Request",
+        }),
       });
 
       if (!response.ok) {
