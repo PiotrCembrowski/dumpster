@@ -258,6 +258,10 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   >
                     Get Free Quote
                   </Button>
+
+                  {submitError && (
+                    <p className="text-sm text-destructive">{submitError}</p>
+                  )}
                 </form>
             </div>
 
