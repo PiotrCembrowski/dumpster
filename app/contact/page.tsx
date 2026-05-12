@@ -19,7 +19,6 @@ interface ContactPageProps {
 
 export default function ContactPage({ city = "Your City" }: ContactPageProps) {
   const formspreeEndpoint = "https://formspree.io/f/mqenyeek";
-  const submitError = "";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +29,42 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
     address: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const payload = new FormData(e.currentTarget);
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: payload,
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit.");
+      }
+
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        dumpsterSize: "",
+        serviceType: "",
+        address: "",
+        message: "",
+      });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const contactMethods = [
     {
@@ -146,6 +181,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
               <form
                 action={formspreeEndpoint}
                 method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-5"
               >
                   <input type="hidden" name="_subject" value={`Dumpster Quote Request - ${city}`} />
@@ -255,12 +291,19 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     type="submit"
                     size="lg"
                     className="w-full"
+                    disabled={isSubmitting}
                   >
                     Get Free Quote
                   </Button>
-
-                  {submitError && (
-                    <p className="text-sm text-destructive">{submitError}</p>
+                  {submitStatus === "success" && (
+                    <p className="text-sm text-primary">
+                      Your message was sent successfully.
+                    </p>
+                  )}
+                  {submitStatus === "error" && (
+                    <p className="text-sm text-destructive">
+                      Unable to send right now. Please try again.
+                    </p>
                   )}
                 </form>
             </div>

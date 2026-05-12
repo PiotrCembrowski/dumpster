@@ -14,6 +14,34 @@ export function ContactSection() {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const payload = new FormData(e.currentTarget);
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: payload,
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit.");
+      }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-background">
@@ -135,6 +163,7 @@ export function ContactSection() {
             <form
               action={formspreeEndpoint}
               method="POST"
+              onSubmit={handleSubmit}
               className="space-y-5"
             >
               <input type="hidden" name="_subject" value="Dumpster Quote Request" />
@@ -205,6 +234,7 @@ export function ContactSection() {
                 type="submit"
                 size="lg"
                 className="w-full"
+                disabled={isSubmitting}
               >
                 Get Free Dumpster Quote
               </Button>
@@ -214,6 +244,16 @@ export function ContactSection() {
             <p className="text-xs text-muted-foreground mt-4 text-center">
               No obligation. Fast response. Same-day availability.
             </p>
+            {submitStatus === "success" && (
+              <p className="text-xs text-center mt-3 text-primary">
+                Your message was sent successfully.
+              </p>
+            )}
+            {submitStatus === "error" && (
+              <p className="text-xs text-center mt-3 text-destructive">
+                Unable to send right now. Please try again.
+              </p>
+            )}
 
           </div>
         </div>
