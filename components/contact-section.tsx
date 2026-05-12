@@ -7,16 +7,40 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Truck } from "lucide-react";
 
 export function ContactSection() {
+  const formspreeEndpoint = "https://formspree.io/f/mqenyeek";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Dumpster Quote Request:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const payload = new FormData(e.currentTarget);
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: payload,
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit.");
+      }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -136,12 +160,19 @@ export function ContactSection() {
               size.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form
+              action={formspreeEndpoint}
+              method="POST"
+              onSubmit={handleSubmit}
+              className="space-y-5"
+            >
+              <input type="hidden" name="_subject" value="Dumpster Quote Request" />
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Full Name
                 </label>
                 <Input
+                  name="name"
                   placeholder="John Smith"
                   value={formData.name}
                   onChange={(e) =>
@@ -156,6 +187,7 @@ export function ContactSection() {
                   Email Address
                 </label>
                 <Input
+                  name="email"
                   type="email"
                   placeholder="john@email.com"
                   value={formData.email}
@@ -171,6 +203,7 @@ export function ContactSection() {
                   Phone Number
                 </label>
                 <Input
+                  name="phone"
                   type="tel"
                   placeholder="(316) 555-1234"
                   value={formData.phone}
@@ -186,6 +219,7 @@ export function ContactSection() {
                   Project Details
                 </label>
                 <Textarea
+                  name="message"
                   rows={4}
                   placeholder="Example: 20 yard dumpster for home renovation in Wichita..."
                   value={formData.message}
@@ -196,7 +230,12 @@ export function ContactSection() {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full"
+                disabled={isSubmitting}
+              >
                 Get Free Dumpster Quote
               </Button>
             </form>
@@ -205,6 +244,17 @@ export function ContactSection() {
             <p className="text-xs text-muted-foreground mt-4 text-center">
               No obligation. Fast response. Same-day availability.
             </p>
+            {submitStatus === "success" && (
+              <p className="text-xs text-center mt-3 text-primary">
+                Your message was sent successfully.
+              </p>
+            )}
+            {submitStatus === "error" && (
+              <p className="text-xs text-center mt-3 text-destructive">
+                Unable to send right now. Please try again.
+              </p>
+            )}
+
           </div>
         </div>
 

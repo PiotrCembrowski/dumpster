@@ -10,7 +10,6 @@ import {
   Mail,
   Clock,
   Truck,
-  CheckCircle2,
   MessageSquare,
 } from "lucide-react";
 
@@ -19,7 +18,7 @@ interface ContactPageProps {
 }
 
 export default function ContactPage({ city = "Your City" }: ContactPageProps) {
-  const [submitted, setSubmitted] = useState(false);
+  const formspreeEndpoint = "https://formspree.io/f/mqenyeek";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +29,42 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
     address: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const payload = new FormData(e.currentTarget);
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: payload,
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit.");
+      }
+
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        dumpsterSize: "",
+        serviceType: "",
+        address: "",
+        message: "",
+      });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const contactMethods = [
     {
@@ -77,11 +112,6 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
         "Hazardous materials, tires, batteries, chemicals, and paint are typically restricted.",
     },
   ];
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -148,22 +178,17 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                 Fill out the form below and we'll contact you within minutes.
               </p>
 
-              {submitted ? (
-                <div className="border rounded-xl p-8 text-center">
-                  <CheckCircle2 className="mx-auto mb-4 text-primary" />
-
-                  <h3 className="text-xl font-semibold mb-2">
-                    Quote Request Sent
-                  </h3>
-
-                  <p className="text-muted-foreground">
-                    Our team will contact you shortly.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+              <form
+                action={formspreeEndpoint}
+                method="POST"
+                onSubmit={handleSubmit}
+                className="space-y-5"
+              >
+                  <input type="hidden" name="_subject" value={`Dumpster Quote Request - ${city}`} />
+                  <input type="hidden" name="city" value={city} />
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Input
+                      name="name"
                       placeholder="Full Name"
                       required
                       value={formData.name}
@@ -176,6 +201,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     />
 
                     <Input
+                      name="phone"
                       placeholder="Phone Number"
                       required
                       value={formData.phone}
@@ -189,6 +215,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   </div>
 
                   <Input
+                    name="email"
                     placeholder="Email Address"
                     required
                     value={formData.email}
@@ -202,6 +229,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <select
+                      name="dumpsterSize"
                       className="border rounded-md p-2"
                       onChange={(e) =>
                         setFormData({
@@ -218,6 +246,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     </select>
 
                     <select
+                      name="serviceType"
                       className="border rounded-md p-2"
                       onChange={(e) =>
                         setFormData({
@@ -234,6 +263,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   </div>
 
                   <Input
+                    name="address"
                     placeholder={`Delivery Address in ${city}`}
                     value={formData.address}
                     onChange={(e) =>
@@ -245,6 +275,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   />
 
                   <Textarea
+                    name="message"
                     placeholder="Project Details"
                     rows={4}
                     value={formData.message}
@@ -256,11 +287,25 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     }
                   />
 
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
                     Get Free Quote
                   </Button>
+                  {submitStatus === "success" && (
+                    <p className="text-sm text-primary">
+                      Your message was sent successfully.
+                    </p>
+                  )}
+                  {submitStatus === "error" && (
+                    <p className="text-sm text-destructive">
+                      Unable to send right now. Please try again.
+                    </p>
+                  )}
                 </form>
-              )}
             </div>
 
             {/* Right Side */}
