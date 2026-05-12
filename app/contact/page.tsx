@@ -19,7 +19,10 @@ interface ContactPageProps {
 }
 
 export default function ContactPage({ city = "Your City" }: ContactPageProps) {
+  const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -78,9 +81,48 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!formspreeEndpoint) {
+      setSubmitError("Form is not configured yet. Please try again later.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const submissionData = new FormData(e.currentTarget);
+      submissionData.append("city", city);
+      submissionData.append("_subject", `Dumpster Quote Request - ${city}`);
+
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: submissionData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        dumpsterSize: "",
+        serviceType: "",
+        address: "",
+        message: "",
+      });
+    } catch {
+      setSubmitError("Unable to send your quote request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -164,6 +206,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Input
+                      name="name"
                       placeholder="Full Name"
                       required
                       value={formData.name}
@@ -176,6 +219,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     />
 
                     <Input
+                      name="phone"
                       placeholder="Phone Number"
                       required
                       value={formData.phone}
@@ -189,6 +233,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   </div>
 
                   <Input
+                    name="email"
                     placeholder="Email Address"
                     required
                     value={formData.email}
@@ -202,6 +247,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <select
+                      name="dumpsterSize"
                       className="border rounded-md p-2"
                       onChange={(e) =>
                         setFormData({
@@ -218,6 +264,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     </select>
 
                     <select
+                      name="serviceType"
                       className="border rounded-md p-2"
                       onChange={(e) =>
                         setFormData({
@@ -234,6 +281,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   </div>
 
                   <Input
+                    name="address"
                     placeholder={`Delivery Address in ${city}`}
                     value={formData.address}
                     onChange={(e) =>
@@ -245,6 +293,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   />
 
                   <Textarea
+                    name="message"
                     placeholder="Project Details"
                     rows={4}
                     value={formData.message}
@@ -256,9 +305,18 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     }
                   />
 
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
                     Get Free Quote
                   </Button>
+
+                  {submitError && (
+                    <p className="text-sm text-destructive">{submitError}</p>
+                  )}
                 </form>
               )}
             </div>
