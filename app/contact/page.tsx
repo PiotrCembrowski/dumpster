@@ -207,6 +207,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Input
+                      name="name"
                       placeholder="Full Name"
                       required
                       value={formData.name}
@@ -219,6 +220,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     />
 
                     <Input
+                      name="phone"
                       placeholder="Phone Number"
                       required
                       value={formData.phone}
@@ -232,6 +234,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   </div>
 
                   <Input
+                    name="email"
                     placeholder="Email Address"
                     required
                     value={formData.email}
@@ -245,6 +248,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <select
+                      name="dumpsterSize"
                       className="border rounded-md p-2"
                       onChange={(e) =>
                         setFormData({
@@ -261,6 +265,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                     </select>
 
                     <select
+                      name="serviceType"
                       className="border rounded-md p-2"
                       onChange={(e) =>
                         setFormData({
@@ -277,6 +282,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   </div>
 
                   <Input
+                    name="address"
                     placeholder={`Delivery Address in ${city}`}
                     value={formData.address}
                     onChange={(e) =>
@@ -288,6 +294,7 @@ export default function ContactPage({ city = "Your City" }: ContactPageProps) {
                   />
 
                   <Textarea
+                    name="message"
                     placeholder="Project Details"
                     rows={4}
                     value={formData.message}

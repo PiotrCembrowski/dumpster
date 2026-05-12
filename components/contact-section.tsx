@@ -183,6 +183,7 @@ export function ContactSection() {
                   Full Name
                 </label>
                 <Input
+                  name="name"
                   placeholder="John Smith"
                   value={formData.name}
                   onChange={(e) =>
@@ -197,6 +198,7 @@ export function ContactSection() {
                   Email Address
                 </label>
                 <Input
+                  name="email"
                   type="email"
                   placeholder="john@email.com"
                   value={formData.email}
@@ -212,6 +214,7 @@ export function ContactSection() {
                   Phone Number
                 </label>
                 <Input
+                  name="phone"
                   type="tel"
                   placeholder="(316) 555-1234"
                   value={formData.phone}
@@ -227,6 +230,7 @@ export function ContactSection() {
                   Project Details
                 </label>
                 <Textarea
+                  name="message"
                   rows={4}
                   placeholder="Example: 20 yard dumpster for home renovation in Wichita..."
                   value={formData.message}
