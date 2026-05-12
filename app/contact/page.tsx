@@ -19,6 +19,7 @@ interface ContactPageProps {
 
 export default function ContactPage({ city = "Your City" }: ContactPageProps) {
   const formspreeEndpoint = "https://formspree.io/f/mqenyeek";
+  const submitError = "";
 
   const [formData, setFormData] = useState({
     name: "",

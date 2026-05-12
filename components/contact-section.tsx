@@ -14,10 +14,6 @@ export function ContactSection() {
     phone: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-background">
@@ -141,11 +137,7 @@ export function ContactSection() {
               method="POST"
               className="space-y-5"
             >
-              <input
-                type="hidden"
-                name="_subject"
-                value="Dumpster Quote Request"
-              />
+              <input type="hidden" name="_subject" value="Dumpster Quote Request" />
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Full Name
@@ -209,7 +201,11 @@ export function ContactSection() {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full"
+              >
                 Get Free Dumpster Quote
               </Button>
             </form>
@@ -218,6 +214,7 @@ export function ContactSection() {
             <p className="text-xs text-muted-foreground mt-4 text-center">
               No obligation. Fast response. Same-day availability.
             </p>
+
           </div>
         </div>
 
