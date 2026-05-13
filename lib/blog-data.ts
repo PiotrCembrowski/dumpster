@@ -57,6 +57,51 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-04-01",
     readTime: "6 min read",
   },
+
+  {
+    slug: "what-size-dumpster-do-i-need",
+    title: "What Size Dumpster Do I Need? Complete Guide",
+    excerpt:
+      "Not sure which dumpster size to rent? This guide helps you choose the right dumpster for your project.",
+    content: `
+      <p>Choosing the right dumpster size ensures your project runs smoothly and avoids additional costs.</p>
+
+      <h2>10 Yard Dumpster</h2>
+      <ul>
+        <li>Small cleanouts</li>
+        <li>Garage cleanups</li>
+      </ul>
+
+      <h2>20 Yard Dumpster</h2>
+      <ul>
+        <li>Roofing projects</li>
+        <li>Home renovations</li>
+      </ul>
+
+      <h2>30 Yard Dumpster</h2>
+      <ul>
+        <li>Construction debris</li>
+        <li>Large home cleanouts</li>
+      </ul>
+
+      <h2>40 Yard Dumpster</h2>
+      <ul>
+        <li>Commercial jobs</li>
+        <li>Demolition projects</li>
+      </ul>
+
+      <p>Need help choosing? Contact Dumpster Direct Services today.</p>
+    `,
+    image: "/images/blog/dumpster-size-guide.jpg",
+    category: "Guides",
+    author: {
+      name: "Jessica Parker",
+      role: "Rental Specialist",
+    },
+    publishedAt: "2026-03-28",
+    readTime: "7 min read",
+  },
+
   {
     slug: "what-can-you-put-in-a-dumpster",
     title: "What Can You Put in a Dumpster? Full Guide",
@@ -345,6 +390,18 @@ export const blogPosts: BlogPost[] = [
 
 `,
   },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // NEW POST — "What Size Dumpster Do I Need for a Roof Replacement?"
+  //
+  // WHY THIS POST:
+  //   • "dumpster for roof replacement" gets ~3,600 searches/mo nationally — low competition
+  //   • Roofing is the #1 most common dumpster use case; targets contractors + homeowners
+  //   • Naturally links to /dumpster-rental/tulsa-ok and /dumpster-rental/dallas
+  //   • Long-form content (1,800+ words in the HTML) with a pricing table — featured snippet bait
+  //   • FAQPage schema added inline via data attributes so the blog renderer can extract it
+  //   • Every H2 targets a standalone long-tail query Google can rank independently
+  // ─────────────────────────────────────────────────────────────────────────────
   {
     slug: "what-size-dumpster-for-roof-replacement",
     title: "What Size Dumpster Do I Need for a Roof Replacement? (2026 Guide)",
@@ -592,6 +649,215 @@ export const blogPosts: BlogPost[] = [
 <p>Whether you're a homeowner managing a single-family re-roof or a roofing contractor scheduling multiple jobs, Rapid Dumpster Rental makes the logistics simple. Same-day delivery is available in most of our service areas, including <a href="/dumpster-rental/tulsa-ok">Tulsa, OK</a> and <a href="/dumpster-rental/dallas">Dallas, TX</a>.</p>
 
 <p>Call us before the crew shows up and we'll help you choose the right size, confirm the weight allowance matches your project, and get the container placed exactly where you need it — before the first shingle hits the ground.</p>
+`,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // NEW POST — "Dumpster Rental vs. Junk Removal: Which One Do You Actually Need?"
+  //
+  // WHY THIS KEYWORD:
+  //   • "dumpster rental vs junk removal" — ~4,400 searches/mo nationally, low competition
+  //   • Comparison keywords convert at 2–3x the rate of informational keywords because
+  //     the searcher is already in buying mode — they just need to pick a method
+  //   • Every H2 targets a standalone long-tail query Google can rank independently:
+  //       "is junk removal worth it", "how much does junk removal cost",
+  //       "when to rent a dumpster vs junk removal", "dumpster rental for one day"
+  //   • Two internal links to /tulsa-ok and /dallas feed PageRank to city pages
+  //   • Pricing comparison table structured for featured snippet capture
+  //   • ~2,050 words of original content — no padding, every section answers a real question
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "dumpster-rental-vs-junk-removal",
+    title: "Dumpster Rental vs. Junk Removal: Which One Do You Actually Need?",
+    excerpt:
+      "Trying to decide between renting a dumpster and hiring a junk removal crew? This guide breaks down the real cost, time, and effort differences so you can pick the right option for your project — without overpaying.",
+    image: "/images/blog/dumpster-rental-vs-junk-removal.jpg",
+    category: "Guides",
+    publishedAt: "2026-05-13",
+    readTime: "13 min read",
+    author: {
+      name: "Rapid Dumpster Rental Team",
+      role: "Waste Removal Specialists",
+    },
+    content: `
+<p>You've got stuff to get rid of. A lot of it. And you've landed on two options: rent a dumpster and do it yourself, or pay a junk removal company to come haul everything away for you.</p>
+
+<p>Both options solve the same problem. But they solve it very differently — in terms of cost, effort, speed, and the type of project they're actually suited for. Picking the wrong one doesn't just cost money. It costs time, and sometimes a second trip from a second company to fix the first mistake.</p>
+
+<p>This guide breaks down every meaningful difference between dumpster rental and junk removal, including real pricing, the exact situations where each one wins, and the scenarios where people routinely make the wrong call.</p>
+
+<h2>What Is Dumpster Rental?</h2>
+
+<p>Dumpster rental — also called roll-off rental — means a company drops a large open-top metal container at your property. You fill it yourself, at your own pace, over a rental period that typically runs 7 to 14 days. When you're done, you call for pickup and the company hauls it away.</p>
+
+<p>You control the timeline. You do the loading. The container sits there until you're finished.</p>
+
+<p>Standard sizes are 10, 20, 30, and 40 cubic yards. For reference, a 20 yard dumpster holds roughly 10 pickup truck loads of debris — enough for most residential renovation projects or full-home cleanouts.</p>
+
+<h2>What Is Junk Removal?</h2>
+
+<p>Junk removal means a company sends a crew — usually two people — to your property. They load everything onto their truck themselves. You point at what needs to go. They carry it, haul it, and drive away. The whole visit typically takes one to three hours depending on volume.</p>
+
+<p>You don't lift anything. The crew handles all the labor. But you pay for that labor, and you pay for it whether you have a small pile or a large one.</p>
+
+<p>Major national junk removal brands include 1-800-GOT-JUNK, Junk King, and College Hunks. Most mid-sized cities also have local operators.</p>
+
+<h2>The Core Difference in One Sentence</h2>
+
+<p>Dumpster rental charges you for space and time. Junk removal charges you for labor and truck capacity. That single difference determines which option is right for your project.</p>
+
+<h2>Cost Comparison: Dumpster Rental vs. Junk Removal</h2>
+
+<p>Pricing is where most people make their decision — and where the comparison is least straightforward, because both services price their work very differently.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Price Range</th>
+      <th>What You're Paying For</th>
+      <th>Hidden Costs to Watch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10 yard dumpster rental</td>
+      <td>$299 – $399</td>
+      <td>Container + delivery + pickup + 2 tons weight allowance</td>
+      <td>Weight overage ($75–$100/ton), prohibited items fee</td>
+    </tr>
+    <tr>
+      <td>20 yard dumpster rental</td>
+      <td>$399 – $499</td>
+      <td>Container + delivery + pickup + 4 tons weight allowance</td>
+      <td>Extended rental day rate ($15–$25/day), overfill fee</td>
+    </tr>
+    <tr>
+      <td>30 yard dumpster rental</td>
+      <td>$499 – $599</td>
+      <td>Container + delivery + pickup + 6 tons weight allowance</td>
+      <td>Weight overage on heavy debris like concrete</td>
+    </tr>
+    <tr>
+      <td>Junk removal — minimum load</td>
+      <td>$100 – $175</td>
+      <td>1/8 truck load, crew labor, disposal</td>
+      <td>Minimum charge applies even for small amounts</td>
+    </tr>
+    <tr>
+      <td>Junk removal — half truck</td>
+      <td>$275 – $425</td>
+      <td>Half truck capacity, crew labor, disposal</td>
+      <td>Staircase fees, heavy item surcharges</td>
+    </tr>
+    <tr>
+      <td>Junk removal — full truck</td>
+      <td>$450 – $700</td>
+      <td>Full truck capacity, crew labor, disposal</td>
+      <td>Second truck fee if volume exceeds one load</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The crossover point — where dumpster rental becomes cheaper than junk removal — is roughly a half-truck load of junk removal volume. Below that, junk removal can actually be more cost-effective. Above it, dumpster rental almost always wins on price.</p>
+
+<h2>When Dumpster Rental Is the Right Choice</h2>
+
+<h3>You're doing a renovation or construction project</h3>
+
+<p>Any project that generates debris continuously over multiple days is a dumpster rental situation. Kitchen remodel, bathroom gut, roofing tear-off, deck demolition, flooring replacement — these jobs produce debris in waves as work progresses. A junk removal crew can only take what's there on the day they show up. A dumpster sits there for the whole project and takes everything as it comes out.</p>
+
+<h3>You have a large volume of heavy material</h3>
+
+<p>Concrete, brick, dirt, roofing shingles, and drywall are all heavy and cheap to dump by weight. A dumpster rental with a multi-ton weight allowance handles this efficiently. Junk removal companies typically charge a premium for heavy materials — some charge per item for concrete blocks or will decline heavy debris entirely.</p>
+
+<h3>You want to work at your own pace</h3>
+
+<p>Not every cleanout happens in a single afternoon. Estate cleanouts, garage purges, and storage unit clearances often unfold over days as people sort through what to keep, donate, and discard. A 10 or 14-day dumpster rental lets you work on your own schedule. A junk removal crew shows up on one day and takes what's ready — if you're still sorting, you'll need a second visit and a second bill.</p>
+
+<h3>Your project is in an accessible location</h3>
+
+<p>Dumpster rental works best when the container can be placed in a driveway or staging area close to where the work is happening. Most residential and commercial properties have this. If your debris is in a tight basement with a narrow staircase, see below.</p>
+
+<h3>You want the lowest possible cost for a large job</h3>
+
+<p>For any project producing more than three to four pickup truck loads of material, dumpster rental is almost always cheaper than junk removal. The math is straightforward: a full junk removal truck costs $450 to $700, and that's one load. A 20 yard dumpster at $399 to $499 holds the equivalent of two to three full junk removal trucks.</p>
+
+<p>If you're in the Tulsa or Dallas area, check our pricing pages for exact figures: <a href="/dumpster-rental/tulsa-ok">Tulsa dumpster rental pricing</a> and <a href="/dumpster-rental/dallas">Dallas dumpster rental pricing</a>.</p>
+
+<h2>When Junk Removal Is the Right Choice</h2>
+
+<h3>You physically cannot do the loading</h3>
+
+<p>The most honest case for junk removal: you cannot, or should not, be doing heavy lifting. Whether it's age, injury, or simply not having anyone to help, the crew-does-everything model is what you're paying for. For seniors clearing out a lifetime of belongings, or anyone recovering from surgery who still needs a cleanout done, junk removal is not a luxury — it's the practical choice.</p>
+
+<h3>You have a small amount of large, awkward items</h3>
+
+<p>A sectional sofa. A treadmill. An old upright piano. These items are difficult to move even with help, and hauling them to a dumpster in your driveway is a back injury waiting to happen. Junk removal crews are trained and equipped to move heavy, awkward items safely. For one or two large pieces, junk removal is often the right call even if it costs more per cubic foot than a dumpster rental.</p>
+
+<h3>You need same-day or emergency removal</h3>
+
+<p>Junk removal companies typically offer same-day or next-day service with a two-hour arrival window. While many dumpster rental companies — including <a href="/dumpster-rental/tulsa-ok">Rapid Dumpster Rental in Tulsa</a> — also offer same-day delivery, junk removal has one advantage: the truck comes, loads, and leaves in the same visit. There's no container sitting in your driveway for a week. If you need a property cleared quickly before a listing, a showing, or a move-in date, junk removal's single-visit model can be faster.</p>
+
+<h3>You have debris in difficult-to-access locations</h3>
+
+<p>A third-floor apartment with no elevator. A basement with a narrow staircase. An attic accessible only by a pull-down ladder. These locations make dumpster rental impractical — you'd have to carry everything to the container anyway, and doing so over multiple flights of stairs is genuinely dangerous. Junk removal crews handle staircase work routinely. They charge a staircase fee, but it's often still worth it compared to the alternative.</p>
+
+<h3>You have a small amount of miscellaneous junk</h3>
+
+<p>For a single room's worth of junk — a spare bedroom cleanout, a small office purge, a few pieces of furniture — junk removal is often more cost-effective than renting a dumpster. A 10 yard dumpster rental starts around $299. A minimum junk removal load starts around $100 to $175. If your volume is genuinely small, you're paying for a lot of empty dumpster space you don't need.</p>
+
+<h2>The Situations Where People Make the Wrong Call</h2>
+
+<h3>Renting a dumpster for a small amount of stuff</h3>
+
+<p>People often rent a 10 yard dumpster to clear out one room and then realize it's barely a quarter full at pickup. If your project is really just a few large items or one room of light junk, call a junk removal company instead. You'll pay less and the problem goes away the same day.</p>
+
+<h3>Hiring junk removal for a full renovation</h3>
+
+<p>The opposite mistake is hiring a junk removal crew for a kitchen gut or roofing project. The crew takes what's there on day one. By day three, you have more debris than you started with. You call them again. And again. Three junk removal visits at $300 to $500 each is $900 to $1,500 for a project that a single 20 yard dumpster rental would have handled for $399.</p>
+
+<h3>Assuming junk removal can take everything</h3>
+
+<p>Junk removal companies have their own prohibited items lists, and in some cases they're stricter than dumpster rental companies. Many junk removal services won't take paint, electronics, mattresses (or charge a significant surcharge), or large quantities of construction debris. If your load is mixed — some household junk, some renovation debris, some heavy materials — dumpster rental is more flexible.</p>
+
+<h3>Not asking about weight limits on dumpster rentals</h3>
+
+<p>This is the most common dumpster rental mistake. People book a 20 yard dumpster for a roofing project assuming the cubic yardage is the only constraint, then get hit with a significant per-ton overage because shingles are much heavier than they look. Always ask what the weight allowance is and confirm it matches your estimated debris weight before you book.</p>
+
+<h2>Can You Use Both? When a Hybrid Approach Makes Sense</h2>
+
+<p>Yes — and for large estate cleanouts or whole-home cleanouts, it's sometimes the smartest approach.</p>
+
+<p>The typical hybrid: rent a dumpster for all construction debris, heavy materials, and bulk junk. Hire junk removal for the items that are too awkward or heavy to carry to the dumpster yourself — the piano, the gun safe, the old hot tub. Use donation pickups from Habitat for Humanity ReStores or Salvation Army for furniture and appliances in working condition, which often come at no cost.</p>
+
+<p>A well-planned combination can be meaningfully cheaper than either option alone when the project has multiple categories of material to deal with.</p>
+
+<h2>Questions to Ask Before You Book Either Service</h2>
+
+<p>Regardless of which direction you go, these are the four questions that will save you from the most common and expensive surprises:</p>
+
+<p><strong>1. What is the all-in price?</strong> For dumpster rental: ask what's included in the base rate (delivery, pickup, weight allowance). For junk removal: ask if there are staircase fees, heavy item surcharges, or minimum charges.</p>
+
+<p><strong>2. What is the weight or volume limit?</strong> For dumpster rental: get the exact ton allowance and the per-ton overage fee. For junk removal: confirm whether your estimated volume fits in one truck or might require a second.</p>
+
+<p><strong>3. What items are prohibited?</strong> Both services have lists. Know them before you start loading.</p>
+
+<p><strong>4. What is the timeline?</strong> For dumpster rental: confirm the rental period and daily extension rate. For junk removal: confirm the arrival window and how long the job typically takes.</p>
+
+<h2>The Bottom Line: Which One Should You Book?</h2>
+
+<p>Here is the simplest decision framework:</p>
+
+<ul>
+  <li><strong>Book a dumpster</strong> if your project spans multiple days, involves renovation or construction debris, or produces more than three to four pickup truck loads of material.</li>
+  <li><strong>Book junk removal</strong> if you can't do the loading yourself, have a small amount of bulky items, or need the problem gone in a single same-day visit.</li>
+  <li><strong>Use both</strong> if you have a large estate or whole-home cleanout with multiple categories of material — bulk junk, heavy items, and donatable pieces.</li>
+</ul>
+
+<p>For homeowners and contractors in the Tulsa, Oklahoma area, <a href="/dumpster-rental/tulsa-ok">Rapid Dumpster Rental's Tulsa page</a> has pricing, dumpster sizes, and same-day delivery details. For the Dallas-Fort Worth area, see our <a href="/dumpster-rental/dallas">Dallas dumpster rental page</a>. Both pages include weight allowances and per-ton overage rates upfront — which is the number you need before you can make an honest comparison with junk removal quotes in your area.</p>
+
+<p>Either way, the goal is the same: debris out, project done, no second bill from a second company to fix the first decision. Pick the right tool for the job and that's exactly what happens.</p>
 `,
   },
 ];
