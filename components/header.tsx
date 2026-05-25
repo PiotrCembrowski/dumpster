@@ -7,12 +7,11 @@ import { Button } from "@/components/ui/button";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 const locations = [
-  { name: "Tulsa, OK", href: "/locations/tulsa" },
-  { name: "Oklahoma City, OK", href: "/locations/oklahoma-city" },
-  { name: "Dallas, TX", href: "/locations/dallas" },
-  { name: "Houston, TX", href: "/locations/houston" },
-  { name: "Austin, TX", href: "/locations/austin" },
-  { name: "Kansas City, MO", href: "/locations/kansas-city" },
+  { name: "Dallas, TX", href: "/dumpster-rental/dallas" },
+  { name: "Orlando, FL", href: "/dumpster-rental/orlando" },
+  { name: "Phoenix, AZ", href: "/dumpster-rental/phoenix" },
+  { name: "Tampa, FL", href: "/dumpster-rental/tampa" },
+  { name: "Tulsa, OK", href: "/dumpster-rental/tulsa-ok" },
 ];
 
 export function Header() {

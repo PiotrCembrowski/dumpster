@@ -14,10 +14,11 @@ const navigation = {
     { name: "40 Yard Dumpster Rental", href: "/#sizes" },
   ],
   locations: [
-    { name: "Tulsa Dumpster Rental", href: "/locations/tulsa" },
-    { name: "Omaha Dumpster Rental", href: "/locations/omaha" },
-    { name: "Boise Dumpster Rental", href: "/locations/boise" },
-    { name: "Wichita Dumpster Rental", href: "/locations/wichita" },
+    { name: "Dallas Dumpster Rental", href: "/dumpster-rental/dallas" },
+    { name: "Orlando Dumpster Rental", href: "/dumpster-rental/orlando" },
+    { name: "Phoenix Dumpster Rental", href: "/dumpster-rental/phoenix" },
+    { name: "Tampa Dumpster Rental", href: "/dumpster-rental/tampa" },
+    { name: "Tulsa Dumpster Rental", href: "/dumpster-rental/tulsa-ok" },
   ],
   company: [
     { name: "About Dumpster Direct", href: "/about" },
@@ -172,7 +173,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
             Dumpster Direct provides residential dumpster rental, construction
             dumpster rental, commercial dumpsters, and same-day dumpster
-            delivery in Tulsa, Omaha, Boise, Wichita, and surrounding areas.
+            delivery in Dallas, Orlando, Phoenix, Tampa, Tulsa, and surrounding areas.
           </p>
         </div>
       </div>
