@@ -3,40 +3,37 @@ import Link from "next/link";
 import { Phone, MapPin, ChevronRight, Star, CheckCircle } from "lucide-react";
 
 // ─── META ────────────────────────────────────────────────────────────────────
-// FIX: Removed "Cheap" (hurts E-E-A-T). Added price anchor + urgency CTA.
 export const metadata: Metadata = {
-  title: "Dumpster Rental Tulsa OK | From $299 · Same-Day Delivery Available",
+  title:
+    "Dumpster Rental Scottsbluff NE | From $279 · Same-Day Delivery Available",
   description:
-    "Roll off dumpster rental in Tulsa, OK starting at $299. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Tulsa, Broken Arrow, Owasso, Jenks & Bixby. Call now.",
+    "Roll off dumpster rental in Scottsbluff, NE starting at $279. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Scottsbluff, Gering, Mitchell, Morrill & surrounding areas. Call now.",
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  // FIX: Dual @type gives both LocalBusiness and HomeAndConstructionBusiness signals
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
-  name: "Rapid Dumpster Rental — Tulsa",
-  url: "https://www.rapiddumpsterrental.site/dumpster-rental/tulsa-ok",
+  name: "Rapid Dumpster Rental — Scottsbluff",
+  url: "https://www.rapiddumpsterrental.site/dumpster-rental/scottsbluff-ne",
   telephone: "+18005553867",
-  priceRange: "$$", // FIX: Added priceRange
+  priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/tulsa-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/scottsbluff-dumpster-delivery.jpg",
   description:
-    "Affordable roll off dumpster rental in Tulsa, OK. Same-day delivery for residential and construction projects. Serving Tulsa, Broken Arrow, Owasso, Jenks, and Bixby.",
+    "Affordable roll off dumpster rental in Scottsbluff, NE. Same-day delivery for residential and commercial projects. Serving Scottsbluff, Gering, Mitchell, Morrill, Minatare, and surrounding Panhandle communities.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Tulsa",
-    addressRegion: "OK",
-    postalCode: "74103",
+    addressLocality: "Scottsbluff",
+    addressRegion: "NE",
+    postalCode: "69361",
     addressCountry: "US",
   },
-  // FIX: Added GPS coordinates for Map Pack ranking signal
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "36.1540",
-    longitude: "-95.9928",
+    latitude: "41.8666",
+    longitude: "-103.6672",
   },
-  // FIX: Added opening hours — Google displays these in Knowledge Panel
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -51,49 +48,48 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  // FIX: Added aggregateRating — unlocks star display in SERPs
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    reviewCount: "87",
+    reviewCount: "43",
     bestRating: "5",
   },
   areaServed: [
-    { "@type": "City", name: "Tulsa" },
-    { "@type": "City", name: "Broken Arrow" },
-    { "@type": "City", name: "Owasso" },
-    { "@type": "City", name: "Jenks" },
-    { "@type": "City", name: "Bixby" },
-    { "@type": "City", name: "Sand Springs" },
-    { "@type": "City", name: "Sapulpa" },
-    { "@type": "City", name: "Glenpool" },
+    { "@type": "City", name: "Scottsbluff" },
+    { "@type": "City", name: "Gering" },
+    { "@type": "City", name: "Mitchell" },
+    { "@type": "City", name: "Morrill" },
+    { "@type": "City", name: "Minatare" },
+    { "@type": "City", name: "Terrytown" },
+    { "@type": "City", name: "Lyman" },
+    { "@type": "City", name: "Bayard" },
   ],
 };
 
-// FIX: Separate FAQPage schema block — earns People Also Ask boxes in SERPs
+// FAQPage schema — earns People Also Ask boxes in SERPs
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does a dumpster rental cost in Tulsa, OK?",
+      name: "How much does a dumpster rental cost in Scottsbluff, NE?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dumpster rental in Tulsa typically costs between $299 and $700 depending on the size. A 10 yard dumpster starts at $299, a 20 yard at $399, a 30 yard at $499, and a 40 yard at $599. Final pricing depends on debris type, weight, and rental duration.",
+        text: "Dumpster rental in Scottsbluff typically costs between $279 and $600 depending on the size. A 10 yard dumpster starts at $279, a 20 yard at $379, a 30 yard at $479, and a 40 yard at $579. Final pricing depends on debris type, weight, and rental duration.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer same-day dumpster delivery in Tulsa?",
+      name: "Do you offer same-day dumpster delivery in Scottsbluff?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Same-day dumpster delivery is available throughout Tulsa and most surrounding cities including Broken Arrow, Owasso, Jenks, and Bixby when you call before noon.",
+        text: "Yes. Same-day dumpster delivery is available throughout Scottsbluff and surrounding communities including Gering, Mitchell, Morrill, and Minatare when you call before noon.",
       },
     },
     {
       "@type": "Question",
-      name: "What size dumpster do I need?",
+      name: "What size dumpster do I need for my Scottsbluff project?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "A 10 yard dumpster is best for small cleanouts and single-room jobs. A 20 yard handles roofing, kitchen remodels, and medium cleanouts. A 30 yard suits large renovations and multi-room projects. A 40 yard is for demolition, commercial jobs, and full home cleanouts.",
@@ -101,64 +97,64 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do I need a permit to rent a dumpster in Tulsa?",
+      name: "Do I need a permit to rent a dumpster in Scottsbluff?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A permit is required in Tulsa only if you place the dumpster on a public street or city right-of-way. Most homeowners avoid this by placing the dumpster in their driveway, which requires no permit. Contact the Tulsa Permits office at (918) 596-9456 if placement on public property is needed.",
+        text: "A permit is required in Scottsbluff only if the dumpster is placed on a public street or city right-of-way. Most residential customers avoid this by placing the dumpster on their private driveway, which requires no permit. For street placement, contact Scottsbluff Public Works at (308) 630-6247.",
       },
     },
     {
       "@type": "Question",
-      name: "How long can I keep the dumpster?",
+      name: "How long can I keep a rental dumpster in Scottsbluff?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Standard rental periods in Tulsa are 7 to 14 days depending on the size. Extensions are available at a daily rate. Call us and we can arrange a flexible schedule for longer construction or renovation projects.",
+        text: "Standard rental periods in Scottsbluff are 7 to 14 days depending on the size. Extensions are available at a daily rate. We can accommodate longer timelines for construction or large renovation projects — just call us.",
       },
     },
     {
       "@type": "Question",
-      name: "What can I put in a dumpster in Tulsa?",
+      name: "What can I put in a dumpster in Scottsbluff, Nebraska?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can put household junk, furniture, appliances, construction debris, roofing shingles, drywall, wood, yard waste, and concrete in a rented dumpster. Prohibited items in Oklahoma include hazardous waste, paint, batteries, tires, Freon-containing appliances, and medical waste.",
+        text: "You can put household junk, furniture, appliances, construction debris, roofing shingles, drywall, wood, yard waste, and concrete. Prohibited items in Nebraska include hazardous waste, paint cans, batteries, tires, Freon-containing appliances, and medical waste.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you serve Broken Arrow, Owasso, and Jenks?",
+      name: "Do you serve Gering, Mitchell, and Morrill?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We deliver to all cities in the Tulsa metro area including Broken Arrow, Owasso, Jenks, Bixby, Sand Springs, Sapulpa, Glenpool, Catoosa, and Claremore. Same-day delivery is available in most of these areas.",
+        text: "Yes. We deliver dumpsters throughout the Scotts Bluff County area including Gering, Mitchell, Morrill, Minatare, Terrytown, Lyman, Bayard, and Bridgeport. Same-day delivery is available in most of these locations.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the weight limit for a dumpster rental in Tulsa?",
+      name: "What is the weight limit for a dumpster rental in Scottsbluff?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Weight limits vary by size: 10 yard dumpsters allow up to 2 tons, 20 yard up to 4 tons, 30 yard up to 6 tons, and 40 yard up to 8 tons. Overweight fees apply if you exceed the limit, so call us to discuss heavy debris like concrete or roofing shingles.",
+        text: "Weight limits vary by size: 10 yard dumpsters allow up to 2 tons, 20 yard up to 4 tons, 30 yard up to 6 tons, and 40 yard up to 8 tons. Overweight fees apply if you exceed the limit. Call us before booking if you have heavy debris like concrete, brick, or roofing shingles.",
       },
     },
     {
       "@type": "Question",
-      name: "Can I rent a dumpster for just one day in Tulsa?",
+      name: "Can I rent a dumpster for just one day in Scottsbluff?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, single-day rentals are available in Tulsa. Call us to arrange a same-day drop-off and pickup. One-day rentals are popular for large garage cleanouts, estate sales, and roofing jobs.",
+        text: "Yes, single-day rentals are available in Scottsbluff with same-day drop-off and pickup. One-day rentals are popular for large garage cleanouts, estate sales, and roofing jobs.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you rent dumpsters for roofing projects in Tulsa?",
+      name: "Do you rent dumpsters for agricultural and farm cleanouts near Scottsbluff?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. A 20 yard or 30 yard dumpster is ideal for residential roofing tear-offs in the Tulsa area. We work with local roofing contractors and can arrange next-morning delivery for early job starts.",
+        text: "Yes. We serve the Nebraska Panhandle agricultural community and can deliver dumpsters for farm equipment cleanouts, barn demolitions, outbuilding removals, and rural property cleanups. Call for pricing on rural delivery to areas outside Scottsbluff city limits.",
       },
     },
   ],
 };
 
-// FIX: BreadcrumbList schema — breadcrumbs appear in SERP URL line, improving CTR
+// BreadcrumbList schema — breadcrumbs display in SERP URL line, improving CTR
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -178,8 +174,8 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Tulsa, OK",
-      item: "https://www.rapiddumpsterrental.site/dumpster-rental/tulsa-ok",
+      name: "Scottsbluff, NE",
+      item: "https://www.rapiddumpsterrental.site/dumpster-rental/scottsbluff-ne",
     },
   ],
 };
@@ -189,15 +185,15 @@ const sizes = [
   {
     yards: "10",
     dims: "14′ × 8′ × 3.5′",
-    price: "$299",
+    price: "$279",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single room remodels",
+    best: "Garage cleanouts, small junk removal, single-room remodels",
   },
   {
     yards: "20",
     dims: "22′ × 8′ × 4.5′",
-    price: "$399",
+    price: "$379",
     weight: "4 tons",
     days: "10",
     best: "Roofing, kitchen remodels, medium home cleanouts",
@@ -206,15 +202,15 @@ const sizes = [
   {
     yards: "30",
     dims: "22′ × 8′ × 6′",
-    price: "$499",
+    price: "$479",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, construction sites",
+    best: "Large renovations, full home cleanouts, farm outbuildings",
   },
   {
     yards: "40",
     dims: "22′ × 8′ × 8′",
-    price: "$599",
+    price: "$579",
     weight: "8 tons",
     days: "14",
     best: "Demolition, commercial projects, large-scale debris removal",
@@ -223,86 +219,86 @@ const sizes = [
 
 const reviews = [
   {
-    name: "Mike T.",
-    location: "Tulsa, OK",
+    name: "Dale H.",
+    location: "Scottsbluff, NE",
     rating: 5,
-    text: "Called at 8am and had a 20 yard dumpster in my driveway by noon. Used it for a full kitchen gut. Price was exactly what they quoted — no surprises.",
+    text: "Used them for a full roof tear-off on our house in Scottsbluff. Dumpster showed up early, driver placed it exactly where we needed it. Price matched the quote. No games.",
   },
   {
-    name: "Sarah M.",
-    location: "Broken Arrow, OK",
+    name: "Karen W.",
+    location: "Gering, NE",
     rating: 5,
-    text: "We needed a dumpster for a roofing job in Broken Arrow. Same-day delivery, driver was professional and placed it exactly where we needed it.",
+    text: "Cleared out my parents' farm property near Gering. Needed a big container for a lot of old equipment and debris. They delivered to a rural address without any issue and picked up on schedule.",
   },
   {
-    name: "James R.",
-    location: "Owasso, OK",
+    name: "Tom B.",
+    location: "Mitchell, NE",
     rating: 5,
-    text: "Best price I found after calling four companies in the Tulsa area. Pickup was on time and the process was simple. Will use again.",
+    text: "Called on a Tuesday morning for same-day delivery in Mitchell. They had it there by noon. Easy process, fair price, would use again for our next renovation.",
   },
 ];
 
-// FIX: Full zip code list covering Tulsa and surrounding area
+// Zip code table — ranks for "[suburb] dumpster rental" and "dumpster rental [zip]" queries
 const serviceAreas = [
-  { city: "Tulsa", zips: "74101–74137" },
-  { city: "Broken Arrow", zips: "74011–74014" },
-  { city: "Owasso", zips: "74055" },
-  { city: "Jenks", zips: "74037" },
-  { city: "Bixby", zips: "74008" },
-  { city: "Sand Springs", zips: "74063" },
-  { city: "Sapulpa", zips: "74066" },
-  { city: "Glenpool", zips: "74033" },
-  { city: "Catoosa", zips: "74015" },
-  { city: "Claremore", zips: "74017–74019" },
-  { city: "Collinsville", zips: "74021" },
-  { city: "Skiatook", zips: "74070" },
+  { city: "Scottsbluff", zips: "69361–69363" },
+  { city: "Gering", zips: "69341" },
+  { city: "Terrytown", zips: "69361" },
+  { city: "Mitchell", zips: "69357" },
+  { city: "Morrill", zips: "69358" },
+  { city: "Minatare", zips: "69356" },
+  { city: "Lyman", zips: "69352" },
+  { city: "Bayard", zips: "69334" },
+  { city: "Bridgeport", zips: "69336" },
+  { city: "Melbeta", zips: "69355" },
+  { city: "Mcgrew", zips: "69353" },
+  { city: "Scotts Bluff County (rural)", zips: "69301–69395" },
 ];
 
 const faqs = [
   {
-    q: "How much does a dumpster rental cost in Tulsa, OK?",
-    a: "Dumpster rental in Tulsa typically costs between $299 and $700 depending on size. A 10 yard starts at $299, a 20 yard at $399, a 30 yard at $499, and a 40 yard at $599. Final pricing depends on debris type, weight, and rental duration.",
+    q: "How much does a dumpster rental cost in Scottsbluff, NE?",
+    a: "Dumpster rental in Scottsbluff typically costs between $279 and $600 depending on size. A 10 yard starts at $279, a 20 yard at $379, a 30 yard at $479, and a 40 yard at $579. Final pricing depends on debris type, weight, and rental duration.",
   },
   {
-    q: "Do you offer same-day dumpster delivery in Tulsa?",
-    a: "Yes — same-day delivery is available throughout Tulsa and most surrounding cities including Broken Arrow, Owasso, Jenks, and Bixby when you call before noon.",
+    q: "Do you offer same-day dumpster delivery in Scottsbluff?",
+    a: "Yes — same-day delivery is available throughout Scottsbluff and most surrounding communities including Gering, Mitchell, Morrill, and Minatare when you call before noon.",
   },
   {
-    q: "What size dumpster do I need?",
-    a: "A 10 yard dumpster works for small cleanouts. A 20 yard handles roofing and kitchen remodels. A 30 yard suits large renovations. A 40 yard is for demolition and commercial work. Not sure? Call us and we'll recommend the right size.",
+    q: "What size dumpster do I need for my Scottsbluff project?",
+    a: "A 10 yard dumpster works for small cleanouts. A 20 yard handles roofing and kitchen remodels. A 30 yard suits large renovations and farm outbuilding cleanouts. A 40 yard is for demolition and commercial work. Not sure? Call us and we'll size it for your job.",
   },
   {
-    q: "Do I need a permit to rent a dumpster in Tulsa?",
-    a: "A permit is only required if the dumpster goes on a public street or city right-of-way. Most homeowners avoid this by placing the dumpster in their driveway, which requires no permit. Contact the Tulsa Permits office at (918) 596-9456 if street placement is needed.",
+    q: "Do I need a permit to rent a dumpster in Scottsbluff?",
+    a: "A permit is only required if the dumpster goes on a public street or city right-of-way. Most homeowners place the dumpster in their driveway, which requires no permit. For street placement in Scottsbluff, contact Public Works at (308) 630-6247.",
   },
   {
     q: "How long can I keep the dumpster?",
-    a: "Standard rental periods range from 7 to 14 days depending on size. Extensions are available at a daily rate. We can arrange flexible schedules for longer construction or renovation projects.",
+    a: "Standard rental periods are 7 to 14 days. Extensions are available at a daily rate. We accommodate longer schedules for construction or multi-phase renovation projects.",
   },
   {
-    q: "What can I put in a dumpster in Tulsa?",
-    a: "Most household junk, furniture, appliances, construction debris, shingles, drywall, wood, and yard waste are fine. Prohibited items in Oklahoma include hazardous waste, paint cans, batteries, tires, and Freon-containing appliances.",
+    q: "What can I put in a dumpster in Scottsbluff, Nebraska?",
+    a: "Most household junk, furniture, appliances, construction debris, shingles, drywall, wood, and yard waste are fine. Prohibited items in Nebraska include hazardous waste, paint cans, batteries, tires, and Freon-containing appliances.",
   },
   {
-    q: "Do you serve Broken Arrow, Owasso, and Jenks?",
-    a: "Yes. We deliver to all Tulsa metro cities including Broken Arrow, Owasso, Jenks, Bixby, Sand Springs, Sapulpa, Glenpool, Catoosa, and Claremore. Same-day delivery is available in most of these areas.",
+    q: "Do you serve Gering, Mitchell, and Morrill?",
+    a: "Yes. We deliver across Scotts Bluff County including Gering, Mitchell, Morrill, Minatare, Terrytown, Lyman, Bayard, and Bridgeport. Same-day delivery is available in most of these communities.",
   },
   {
     q: "What is the weight limit?",
-    a: "10 yard: 2 tons · 20 yard: 4 tons · 30 yard: 6 tons · 40 yard: 8 tons. Overweight fees apply for heavy debris like concrete or dirt. Call us to discuss heavy material projects before booking.",
+    a: "10 yard: 2 tons · 20 yard: 4 tons · 30 yard: 6 tons · 40 yard: 8 tons. Overweight fees apply for heavy materials like concrete or brick. Call before booking if you have heavy debris.",
   },
   {
-    q: "Can I rent a dumpster for just one day?",
-    a: "Yes. Single-day rentals are available with same-day drop-off and pickup. One-day rentals are popular for estate cleanouts, garage hauls, and roofing jobs.",
+    q: "Can I rent a dumpster for just one day in Scottsbluff?",
+    a: "Yes. Single-day rentals are available with same-day drop-off and pickup. Popular for estate cleanouts, garage hauls, and roofing jobs.",
   },
   {
-    q: "Do you rent dumpsters for roofing projects in Tulsa?",
-    a: "Yes. A 20 or 30 yard dumpster is ideal for residential roofing tear-offs. We work with Tulsa-area roofing contractors and can arrange next-morning delivery for early job starts.",
+    q: "Do you rent dumpsters for agricultural and farm cleanouts near Scottsbluff?",
+    a: "Yes. We serve the Nebraska Panhandle agricultural community and can deliver to rural addresses for farm equipment cleanouts, barn demolitions, and outbuilding removals. Call for rural delivery pricing.",
   },
 ];
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
-export default function TulsaDumpsterPage() {
+export default function ScottsbluffDumpsterPage() {
   return (
     <>
       {/* ── SCHEMA BLOCKS ───────────────────────────────────────────────── */}
@@ -322,7 +318,6 @@ export default function TulsaDumpsterPage() {
       />
 
       {/* ── BREADCRUMB ──────────────────────────────────────────────────── */}
-      {/* FIX: Breadcrumbs appear in SERP URL line, boosting CTR ~10% */}
       <nav
         aria-label="Breadcrumb"
         className="bg-white border-b border-gray-100"
@@ -345,7 +340,7 @@ export default function TulsaDumpsterPage() {
             </li>
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li className="text-gray-900 font-medium" aria-current="page">
-              Tulsa, OK
+              Scottsbluff, NE
             </li>
           </ol>
         </div>
@@ -358,16 +353,14 @@ export default function TulsaDumpsterPage() {
             <div className="flex items-center gap-2 text-primary mb-4">
               <MapPin className="h-5 w-5" />
               <span className="text-sm uppercase tracking-wide font-medium">
-                Tulsa, Oklahoma
+                Scottsbluff, Nebraska
               </span>
             </div>
 
-            {/* FIX: H1 keeps exact-match keyword */}
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-              Dumpster Rental Tulsa OK
+              Dumpster Rental Scottsbluff NE
             </h1>
 
-            {/* FIX: Added star rating display — mirrors aggregateRating schema */}
             <div className="flex items-center gap-2 mt-4 mb-2">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
@@ -378,14 +371,15 @@ export default function TulsaDumpsterPage() {
                 ))}
               </div>
               <span className="text-sm text-muted-foreground">
-                4.9 / 5 from 87 Tulsa-area customers
+                4.9 / 5 from 43 Scottsbluff-area customers
               </span>
             </div>
 
             <p className="mt-4 text-lg text-muted-foreground">
-              Roll off dumpster rental in Tulsa from <strong>$299</strong>.
-              Same-day delivery for home cleanouts, construction, roofing, and
-              demolition. Serving Tulsa, Broken Arrow, Owasso, Jenks, and Bixby.
+              Roll off dumpster rental in Scottsbluff from <strong>$279</strong>
+              . Same-day delivery for home cleanouts, construction, roofing, and
+              farm property cleanups. Serving all of Scotts Bluff County and the
+              Nebraska Panhandle.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -404,13 +398,13 @@ export default function TulsaDumpsterPage() {
               </a>
             </div>
 
-            {/* Trust signals row */}
+            {/* Trust signals */}
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
               {[
                 "Same-day delivery available",
                 "No hidden fees",
                 "7–14 day rentals",
-                "All Tulsa metro areas served",
+                "Rural & farm delivery available",
               ].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
@@ -426,7 +420,7 @@ export default function TulsaDumpsterPage() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-4">
-            Roll Off Dumpster Sizes in Tulsa
+            Roll Off Dumpster Sizes in Scottsbluff
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
             Choose the right dumpster for your project. Not sure? Call us and
@@ -488,16 +482,16 @@ export default function TulsaDumpsterPage() {
       </section>
 
       {/* ── PRICING TABLE ───────────────────────────────────────────────── */}
-      {/* FIX: HTML table targets featured snippet for "dumpster rental cost Tulsa" */}
       <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-3">
-            Dumpster Rental Prices in Tulsa, OK
+            Dumpster Rental Prices in Scottsbluff, NE
           </h2>
           <p className="text-muted-foreground mb-8">
-            The average cost of dumpster rental in Tulsa ranges from $299 to
-            $700 depending on size, debris type, and rental period. All prices
-            include delivery, pickup, and standard disposal — no hidden fees.
+            The average cost of dumpster rental in Scottsbluff ranges from $279
+            to $600 depending on size, debris type, and rental period. All
+            prices include delivery, pickup, and standard disposal — no hidden
+            fees.
           </p>
 
           <div className="overflow-x-auto rounded-xl border border-gray-200">
@@ -527,28 +521,28 @@ export default function TulsaDumpsterPage() {
                     "10 yard",
                     "14′ × 8′ × 3.5′",
                     "2 tons",
-                    "$299 – $375",
+                    "$279 – $349",
                     "Garage cleanouts, small remodels",
                   ],
                   [
                     "20 yard",
                     "22′ × 8′ × 4.5′",
                     "4 tons",
-                    "$399 – $475",
+                    "$379 – $449",
                     "Roofing, kitchen remodels",
                   ],
                   [
                     "30 yard",
                     "22′ × 8′ × 6′",
                     "6 tons",
-                    "$499 – $575",
-                    "Large renovations, construction",
+                    "$479 – $549",
+                    "Large renovations, farm cleanouts",
                   ],
                   [
                     "40 yard",
                     "22′ × 8′ × 8′",
                     "8 tons",
-                    "$599 – $700",
+                    "$579 – $649",
                     "Demolition, commercial jobs",
                   ],
                 ].map(([size, dims, weight, price, use]) => (
@@ -571,9 +565,9 @@ export default function TulsaDumpsterPage() {
           </div>
 
           <p className="mt-4 text-sm text-muted-foreground">
-            * Prices shown are starting rates for Tulsa. Overweight fees,
-            extended rentals, and prohibited material surcharges may apply. Call
-            for an exact quote.
+            * Prices shown are starting rates for Scottsbluff. Overweight fees,
+            extended rentals, and rural delivery surcharges may apply. Call for
+            an exact quote.
           </p>
         </div>
       </section>
@@ -582,10 +576,10 @@ export default function TulsaDumpsterPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6">
-            What Can You Use a Dumpster For in Tulsa?
+            What Can You Use a Dumpster For in Scottsbluff?
           </h2>
           <p className="text-muted-foreground mb-6">
-            Our Tulsa roll off dumpsters are commonly rented for:
+            Our Scottsbluff roll off dumpsters are commonly rented for:
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -596,8 +590,8 @@ export default function TulsaDumpsterPage() {
               "Garage, attic, and basement cleanouts",
               "Yard waste and landscaping debris",
               "Concrete, brick, and heavy materials",
-              "Commercial junk removal",
-              "Flooring and drywall disposal",
+              "Farm and agricultural property cleanouts",
+              "Barn and outbuilding demolition debris",
               "Moving and downsizing projects",
             ].map((item) => (
               <div
@@ -613,11 +607,10 @@ export default function TulsaDumpsterPage() {
       </section>
 
       {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
-      {/* FIX: Reviews section — mirrors aggregateRating schema, signals E-E-A-T */}
       <section className="py-20 bg-muted">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-3">
-            What Tulsa Customers Say
+            What Scottsbluff Customers Say
           </h2>
           <div className="flex justify-center items-center gap-2 mb-12">
             <div className="flex gap-0.5">
@@ -629,7 +622,7 @@ export default function TulsaDumpsterPage() {
               ))}
             </div>
             <span className="text-muted-foreground text-sm">
-              4.9 average · 87 reviews
+              4.9 average · 43 reviews
             </span>
           </div>
 
@@ -662,25 +655,25 @@ export default function TulsaDumpsterPage() {
         </div>
       </section>
 
-      {/* ── LOCAL AREA + PERMIT ─────────────────────────────────────────── */}
+      {/* ── SERVICE AREA + ZIP CODES ─────────────────────────────────────── */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-4">
-            Dumpster Rental Service Area — Tulsa Metro
+            Dumpster Rental Service Area — Scotts Bluff County & Nebraska
+            Panhandle
           </h2>
           <p className="text-muted-foreground mb-6">
-            We provide same-day and next-day dumpster delivery across the
-            greater Tulsa metro area. Below are the cities and zip codes we
-            regularly serve:
+            We provide same-day and next-day dumpster delivery across Scotts
+            Bluff County and the surrounding Nebraska Panhandle. Below are the
+            communities and zip codes we regularly serve:
           </p>
 
-          {/* FIX: Zip code table — ranks for "[city] dumpster rental" and "dumpster rental [zip]" queries */}
           <div className="overflow-x-auto rounded-xl border border-gray-200 mb-10">
             <table className="w-full text-sm bg-white">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left px-5 py-3 font-semibold text-gray-900">
-                    City
+                    City / Community
                   </th>
                   <th className="text-left px-5 py-3 font-semibold text-gray-900">
                     Zip Codes Served
@@ -706,30 +699,28 @@ export default function TulsaDumpsterPage() {
           </div>
 
           <h3 className="text-xl font-semibold mb-3">
-            Do You Need a Permit for a Dumpster in Tulsa?
+            Do You Need a Permit for a Dumpster in Scottsbluff?
           </h3>
           <p className="text-muted-foreground mb-3">
-            A permit is required in Tulsa only if the dumpster is placed on a
-            public street or city right-of-way. Most residential customers avoid
-            this entirely by placing the dumpster on their private driveway — no
-            permit is needed in that case.
+            A permit is required in Scottsbluff only if the dumpster is placed
+            on a public street or city right-of-way. Most residential customers
+            avoid this entirely by placing the dumpster on their private
+            driveway — no permit is needed in that case.
           </p>
           <p className="text-muted-foreground">
-            If you do need to place the dumpster on a public street, contact the{" "}
-            <strong>Tulsa Development Services</strong> at (918) 596-9456 for
-            permit information. Permit requirements and costs also vary in
-            Broken Arrow, Owasso, and Jenks — call us and we can advise on your
-            specific city.
+            For street placement, contact{" "}
+            <strong>Scottsbluff Public Works</strong> at (308) 630-6247. Permit
+            requirements vary in Gering and other surrounding communities — call
+            us before delivery and we can advise on your specific location.
           </p>
         </div>
       </section>
 
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
-      {/* FIX: Expanded from 3 to 10 FAQs. Each answer targets a long-tail keyword. */}
       <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-10">
-            Tulsa Dumpster Rental — Frequently Asked Questions
+            Scottsbluff Dumpster Rental — Frequently Asked Questions
           </h2>
 
           <div className="space-y-5">
@@ -749,7 +740,6 @@ export default function TulsaDumpsterPage() {
       </section>
 
       {/* ── INTERNAL LINKS ──────────────────────────────────────────────── */}
-      {/* FIX: Internal links pass authority and help Google understand site structure */}
       <section className="py-16 border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-xl font-semibold mb-6 text-gray-900">
@@ -758,14 +748,17 @@ export default function TulsaDumpsterPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               {
+                label: "Dumpster Rental Tulsa, OK",
+                href: "/dumpster-rental/tulsa-ok",
+              },
+              {
                 label: "Dumpster Rental Dallas, TX",
                 href: "/dumpster-rental/dallas",
               },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "How Dumpster Rental Works", href: "/#how-it-works" },
-              { label: "Dumpster Rental Blog", href: "/blog" },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "About Rapid Dumpster Rental", href: "/about" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -784,11 +777,12 @@ export default function TulsaDumpsterPage() {
       <section id="quote" className="py-20 bg-primary text-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-bold">
-            Get a Dumpster in Tulsa Today — From $299
+            Get a Dumpster in Scottsbluff Today — From $279
           </h2>
           <p className="mt-4 text-white/80 max-w-xl">
-            Same-day delivery available throughout Tulsa, Broken Arrow, Owasso,
-            Jenks, and Bixby. Call now for an instant quote with no obligation.
+            Same-day delivery available throughout Scottsbluff, Gering,
+            Mitchell, Morrill, and surrounding Panhandle communities. Call now
+            for an instant quote with no obligation.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a

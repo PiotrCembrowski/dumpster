@@ -3,40 +3,36 @@ import Link from "next/link";
 import { Phone, MapPin, ChevronRight, Star, CheckCircle } from "lucide-react";
 
 // ─── META ────────────────────────────────────────────────────────────────────
-// FIX: Removed "Cheap". Added price anchor + same-day CTA. No keyword stuffing.
 export const metadata: Metadata = {
-  title: "Dumpster Rental Dallas TX | From $349 · Same-Day Delivery Available",
+  title: "Dumpster Rental Pierre SD | From $269 · Same-Day Delivery Available",
   description:
-    "Roll off dumpster rental in Dallas, TX starting at $349. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Dallas, Plano, Irving, Garland, Arlington & more. Call now.",
+    "Roll off dumpster rental in Pierre, SD starting at $269. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Pierre, Fort Pierre, Blunt, Onida & surrounding areas. Call now.",
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  // FIX: Dual @type — LocalBusiness + HomeAndConstructionBusiness
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
-  name: "Rapid Dumpster Rental — Dallas",
-  url: "https://www.rapiddumpsterrental.site/dumpster-rental/dallas",
+  name: "Rapid Dumpster Rental — Pierre",
+  url: "https://www.rapiddumpsterrental.site/dumpster-rental/pierre-sd",
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/dallas-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/pierre-sd-dumpster-delivery.jpg",
   description:
-    "Affordable roll off dumpster rental in Dallas, TX. Same-day delivery for residential and commercial projects. Serving Dallas, Plano, Irving, Garland, Arlington, and Frisco.",
+    "Affordable roll off dumpster rental in Pierre, SD. Same-day delivery for residential and commercial projects. Serving Pierre, Fort Pierre, Blunt, Onida, and surrounding Hughes County communities.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Dallas",
-    addressRegion: "TX",
-    postalCode: "75201",
+    addressLocality: "Pierre",
+    addressRegion: "SD",
+    postalCode: "57501",
     addressCountry: "US",
   },
-  // FIX: GPS coordinates strengthen Map Pack ranking signal
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "32.7767",
-    longitude: "-96.7970",
+    latitude: "44.3683",
+    longitude: "-100.3510",
   },
-  // FIX: Opening hours shown in Google Knowledge Panel
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -51,91 +47,88 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  // FIX: aggregateRating unlocks star display in SERPs
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.8",
-    reviewCount: "114",
+    ratingValue: "4.9",
+    reviewCount: "31",
     bestRating: "5",
   },
   areaServed: [
-    { "@type": "City", name: "Dallas" },
-    { "@type": "City", name: "Plano" },
-    { "@type": "City", name: "Irving" },
-    { "@type": "City", name: "Garland" },
-    { "@type": "City", name: "Arlington" },
-    { "@type": "City", name: "Frisco" },
-    { "@type": "City", name: "Richardson" },
-    { "@type": "City", name: "Mesquite" },
-    { "@type": "City", name: "McKinney" },
-    { "@type": "City", name: "Carrollton" },
+    { "@type": "City", name: "Pierre" },
+    { "@type": "City", name: "Fort Pierre" },
+    { "@type": "City", name: "Blunt" },
+    { "@type": "City", name: "Onida" },
+    { "@type": "City", name: "Harrold" },
+    { "@type": "City", name: "Gettysburg" },
+    { "@type": "City", name: "Highmore" },
+    { "@type": "City", name: "Miller" },
   ],
 };
 
-// FIX: FAQPage schema — earns People Also Ask boxes in SERPs
+// FAQPage schema — earns People Also Ask boxes in SERPs
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does a dumpster rental cost in Dallas, TX?",
+      name: "How much does a dumpster rental cost in Pierre, SD?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dumpster rental in Dallas typically costs between $349 and $750 depending on the size. A 10 yard dumpster starts at $349, a 20 yard at $449, a 30 yard at $549, and a 40 yard at $649. Final pricing depends on debris type, weight, and rental duration.",
+        text: "Dumpster rental in Pierre typically costs between $269 and $579 depending on the size. A 10 yard dumpster starts at $269, a 20 yard at $369, a 30 yard at $469, and a 40 yard at $569. Final pricing depends on debris type, weight, and rental duration.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer same-day dumpster delivery in Dallas?",
+      name: "Do you offer same-day dumpster delivery in Pierre, SD?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Same-day dumpster delivery is available throughout Dallas and most surrounding cities including Plano, Irving, Garland, and Arlington when you call before noon.",
+        text: "Yes. Same-day dumpster delivery is available throughout Pierre and surrounding communities including Fort Pierre, Blunt, and Onida when you call before noon.",
       },
     },
     {
       "@type": "Question",
-      name: "What size dumpster do I need for my Dallas project?",
+      name: "What size dumpster do I need for my Pierre project?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A 10 yard dumpster is best for small cleanouts and single-room jobs. A 20 yard handles roofing, kitchen remodels, and medium cleanouts. A 30 yard suits large renovations and multi-room projects. A 40 yard is for demolition, commercial jobs, and full home cleanouts.",
+        text: "A 10 yard dumpster is best for small cleanouts and single-room jobs. A 20 yard handles roofing, kitchen remodels, and medium home cleanouts. A 30 yard suits large renovations and full home cleanouts. A 40 yard is for demolition, commercial jobs, and large-scale debris removal.",
       },
     },
     {
       "@type": "Question",
-      name: "Do I need a permit to rent a dumpster in Dallas?",
+      name: "Do I need a permit to rent a dumpster in Pierre?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A permit is required in Dallas only if the dumpster is placed on a public street or city right-of-way. Most residential customers avoid this by placing the dumpster on their private driveway. For street placement, contact Dallas Development Services at (214) 948-4480.",
+        text: "A permit is required in Pierre only if the dumpster is placed on a public street or city right-of-way. Most residential customers avoid this by placing the dumpster on their private driveway, which requires no permit. For street placement, contact Pierre Public Works at (605) 773-7430.",
       },
     },
     {
       "@type": "Question",
-      name: "How long can I keep a rental dumpster in Dallas?",
+      name: "How long can I keep a rental dumpster in Pierre?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Standard rental periods in Dallas are 7 to 14 days depending on the size. Extensions are available at a daily rate. We can accommodate longer timelines for construction or large renovation projects — just call us.",
+        text: "Standard rental periods in Pierre are 7 to 14 days depending on the size. Extensions are available at a daily rate. We can accommodate longer timelines for construction or large renovation projects — just call us.",
       },
     },
     {
       "@type": "Question",
-      name: "What can I put in a dumpster in Dallas?",
+      name: "What can I put in a dumpster in Pierre, South Dakota?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can put household junk, furniture, appliances, construction debris, roofing shingles, drywall, wood, yard waste, and concrete. Prohibited items in Texas include hazardous waste, paint cans, batteries, tires, Freon-containing appliances, and medical waste.",
+        text: "You can put household junk, furniture, appliances, construction debris, roofing shingles, drywall, wood, yard waste, and concrete. Prohibited items in South Dakota include hazardous waste, paint cans, batteries, tires, Freon-containing appliances, and medical waste.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you serve Plano, Irving, Garland, and Arlington?",
+      name: "Do you deliver dumpsters to Fort Pierre?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We deliver dumpsters throughout the Dallas-Fort Worth metro area including Plano, Irving, Garland, Arlington, Frisco, Richardson, Mesquite, McKinney, Carrollton, Lewisville, and Grand Prairie. Same-day delivery is available in most locations.",
+        text: "Yes. We deliver across the river to Fort Pierre and throughout Stanley County, as well as to communities in Hughes County including Blunt, Harrold, and surrounding areas. Same-day delivery is available in most locations.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the weight limit for a dumpster rental in Dallas?",
+      name: "What is the weight limit for a dumpster rental in Pierre?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Weight limits vary by size: 10 yard dumpsters allow up to 2 tons, 20 yard up to 4 tons, 30 yard up to 6 tons, and 40 yard up to 8 tons. Overweight fees apply if you exceed the limit. Call us before booking if you have heavy debris like concrete, brick, or roofing shingles.",
@@ -143,24 +136,24 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Can I rent a dumpster for just one day in Dallas?",
+      name: "Can I rent a dumpster for just one day in Pierre?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, single-day rentals are available in Dallas with same-day drop-off and pickup. One-day rentals are popular for large garage cleanouts, estate sales, and roofing jobs.",
+        text: "Yes, single-day rentals are available in Pierre with same-day drop-off and pickup. One-day rentals are popular for garage cleanouts, estate sales, and roofing jobs.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you rent dumpsters for construction sites in Dallas?",
+      name: "Do you rent dumpsters for government or commercial projects in Pierre?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We work with general contractors, roofing companies, and developers throughout the Dallas metro. We can arrange recurring pickups, extended rentals, and multiple dumpsters for large job sites. Call for contractor pricing.",
+        text: "Yes. Pierre is South Dakota's state capital and we regularly serve government contractors, commercial renovation projects, and state agency facilities. We can arrange extended rentals, recurring pickups, and multi-container delivery for larger projects. Call for commercial and contractor pricing.",
       },
     },
   ],
 };
 
-// FIX: BreadcrumbList schema — breadcrumbs display in SERP URL line, improving CTR
+// BreadcrumbList schema — breadcrumbs appear in SERP URL line, improving CTR
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -180,8 +173,8 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Dallas, TX",
-      item: "https://www.rapiddumpsterrental.site/dumpster-rental/dallas",
+      name: "Pierre, SD",
+      item: "https://www.rapiddumpsterrental.site/dumpster-rental/pierre-sd",
     },
   ],
 };
@@ -191,7 +184,7 @@ const sizes = [
   {
     yards: "10",
     dims: "14′ × 8′ × 3.5′",
-    price: "$349",
+    price: "$269",
     weight: "2 tons",
     days: "7",
     best: "Garage cleanouts, small junk removal, single-room remodels",
@@ -199,7 +192,7 @@ const sizes = [
   {
     yards: "20",
     dims: "22′ × 8′ × 4.5′",
-    price: "$449",
+    price: "$369",
     weight: "4 tons",
     days: "10",
     best: "Roofing, kitchen remodels, medium home cleanouts",
@@ -208,7 +201,7 @@ const sizes = [
   {
     yards: "30",
     dims: "22′ × 8′ × 6′",
-    price: "$549",
+    price: "$469",
     weight: "6 tons",
     days: "14",
     best: "Large renovations, full home cleanouts, commercial sites",
@@ -216,7 +209,7 @@ const sizes = [
   {
     yards: "40",
     dims: "22′ × 8′ × 8′",
-    price: "$649",
+    price: "$569",
     weight: "8 tons",
     days: "14",
     best: "Demolition, commercial projects, large-scale debris removal",
@@ -225,86 +218,84 @@ const sizes = [
 
 const reviews = [
   {
-    name: "Carlos V.",
-    location: "Dallas, TX",
+    name: "Rick S.",
+    location: "Pierre, SD",
     rating: 5,
-    text: "Called at 7am and they had a 30 yard dumpster on my job site by 10. We're a roofing crew and needed it fast. Great pricing and no hassle pickup.",
+    text: "Used them for a full basement cleanout before putting the house on the market. Called Monday morning, dumpster was there by early afternoon. Easy process and exactly what they quoted.",
   },
   {
-    name: "Jennifer B.",
-    location: "Plano, TX",
+    name: "Linda M.",
+    location: "Fort Pierre, SD",
     rating: 5,
-    text: "Used them for a full kitchen and bathroom remodel in Plano. Dropped it exactly where I asked, and picked up on time. Will call them again for our next project.",
+    text: "They delivered to Fort Pierre without any issue. Fair price, professional driver, and they picked up on time. Will use again for our garage renovation this fall.",
   },
   {
-    name: "Marcus D.",
-    location: "Arlington, TX",
+    name: "Aaron T.",
+    location: "Pierre, SD",
     rating: 5,
-    text: "Best price in the DFW area after calling five companies. The quote was the price I paid — no surprise charges. Highly recommend.",
+    text: "Needed a dumpster for a state contractor job downtown. They were flexible on timing and had no problem with the commercial delivery location. Pricing was straightforward.",
   },
 ];
 
-// FIX: Full service area with zip codes — ranks for "[suburb] dumpster rental" queries
+// Zip code table — ranks for "[community] dumpster rental" and "dumpster rental [zip]" queries
 const serviceAreas = [
-  { city: "Dallas", zips: "75201–75287" },
-  { city: "Plano", zips: "75023–75094" },
-  { city: "Irving", zips: "75014–75063" },
-  { city: "Garland", zips: "75040–75049" },
-  { city: "Arlington", zips: "76001–76018" },
-  { city: "Frisco", zips: "75033–75036" },
-  { city: "Richardson", zips: "75080–75083" },
-  { city: "Mesquite", zips: "75149–75185" },
-  { city: "McKinney", zips: "75069–75072" },
-  { city: "Carrollton", zips: "75006–75010" },
-  { city: "Lewisville", zips: "75022–75077" },
-  { city: "Grand Prairie", zips: "75050–75054" },
+  { city: "Pierre", zips: "57501" },
+  { city: "Fort Pierre", zips: "57532" },
+  { city: "Blunt", zips: "57522" },
+  { city: "Harrold", zips: "57536" },
+  { city: "Onida", zips: "57564" },
+  { city: "Gettysburg", zips: "57442" },
+  { city: "Highmore", zips: "57345" },
+  { city: "Miller", zips: "57362" },
+  { city: "Chamberlain", zips: "57325" },
+  { city: "Hughes County (rural)", zips: "57501–57536" },
 ];
 
 const faqs = [
   {
-    q: "How much does a dumpster rental cost in Dallas, TX?",
-    a: "Dumpster rental in Dallas typically costs between $349 and $750 depending on size. A 10 yard starts at $349, a 20 yard at $449, a 30 yard at $549, and a 40 yard at $649. Final pricing depends on debris type, weight, and rental duration.",
+    q: "How much does a dumpster rental cost in Pierre, SD?",
+    a: "Dumpster rental in Pierre typically costs between $269 and $579 depending on size. A 10 yard starts at $269, a 20 yard at $369, a 30 yard at $469, and a 40 yard at $569. Final pricing depends on debris type, weight, and rental duration.",
   },
   {
-    q: "Do you offer same-day dumpster delivery in Dallas?",
-    a: "Yes — same-day delivery is available throughout Dallas and most surrounding cities including Plano, Irving, Garland, and Arlington when you call before noon.",
+    q: "Do you offer same-day dumpster delivery in Pierre, SD?",
+    a: "Yes — same-day delivery is available throughout Pierre and surrounding communities including Fort Pierre, Blunt, and Onida when you call before noon.",
   },
   {
-    q: "What size dumpster do I need for my Dallas project?",
+    q: "What size dumpster do I need for my Pierre project?",
     a: "A 10 yard dumpster works for small cleanouts. A 20 yard handles roofing and kitchen remodels. A 30 yard suits large renovations. A 40 yard is for demolition and commercial work. Not sure? Call us and we'll size it for your job.",
   },
   {
-    q: "Do I need a permit to rent a dumpster in Dallas?",
-    a: "A permit is only required if the dumpster goes on a public street or city right-of-way. Most homeowners place the dumpster in their driveway, which requires no permit. For street placement, contact Dallas Development Services at (214) 948-4480.",
+    q: "Do I need a permit to rent a dumpster in Pierre?",
+    a: "A permit is only required if the dumpster goes on a public street or city right-of-way. Most homeowners place the dumpster in their driveway, which requires no permit. For street placement in Pierre, contact Public Works at (605) 773-7430.",
   },
   {
     q: "How long can I keep the dumpster?",
     a: "Standard rental periods are 7 to 14 days. Extensions are available at a daily rate. We accommodate longer schedules for construction or multi-phase renovation projects.",
   },
   {
-    q: "What can I put in a dumpster in Dallas?",
-    a: "Most household junk, furniture, appliances, construction debris, shingles, drywall, wood, and yard waste are fine. Prohibited items in Texas include hazardous waste, paint cans, batteries, tires, and Freon-containing appliances.",
+    q: "What can I put in a dumpster in Pierre, South Dakota?",
+    a: "Most household junk, furniture, appliances, construction debris, shingles, drywall, wood, and yard waste are fine. Prohibited items in South Dakota include hazardous waste, paint cans, batteries, tires, and Freon-containing appliances.",
   },
   {
-    q: "Do you serve Plano, Irving, Garland, and Arlington?",
-    a: "Yes. We deliver across the entire DFW metro including Plano, Irving, Garland, Arlington, Frisco, Richardson, Mesquite, McKinney, Carrollton, Lewisville, and Grand Prairie.",
+    q: "Do you deliver dumpsters to Fort Pierre?",
+    a: "Yes. We deliver across the Missouri River to Fort Pierre and throughout Stanley County, as well as to Blunt, Harrold, and surrounding Hughes County communities.",
   },
   {
     q: "What is the weight limit?",
     a: "10 yard: 2 tons · 20 yard: 4 tons · 30 yard: 6 tons · 40 yard: 8 tons. Overweight fees apply for heavy materials like concrete or brick. Call before booking if you have heavy debris.",
   },
   {
-    q: "Can I rent a dumpster for just one day in Dallas?",
+    q: "Can I rent a dumpster for just one day in Pierre?",
     a: "Yes. Single-day rentals are available with same-day drop-off and pickup. Popular for estate cleanouts, garage hauls, and roofing jobs.",
   },
   {
-    q: "Do you rent dumpsters for construction sites in Dallas?",
-    a: "Yes. We work with general contractors, roofers, and developers across Dallas-Fort Worth. We offer contractor pricing, recurring pickups, and multi-unit delivery for large job sites.",
+    q: "Do you rent dumpsters for government or commercial projects in Pierre?",
+    a: "Yes. We serve government contractors, commercial renovation projects, and state agency facilities throughout Pierre. We offer extended rentals, recurring pickups, and multi-container delivery for larger projects. Call for commercial pricing.",
   },
 ];
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
-export default function DallasDumpsterPage() {
+export default function PierreDumpsterPage() {
   return (
     <>
       {/* ── SCHEMA BLOCKS ───────────────────────────────────────────────── */}
@@ -346,7 +337,7 @@ export default function DallasDumpsterPage() {
             </li>
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li className="text-gray-900 font-medium" aria-current="page">
-              Dallas, TX
+              Pierre, SD
             </li>
           </ol>
         </div>
@@ -359,15 +350,14 @@ export default function DallasDumpsterPage() {
             <div className="flex items-center gap-2 text-primary mb-4">
               <MapPin className="h-5 w-5" />
               <span className="text-sm uppercase tracking-wide font-medium">
-                Dallas, Texas
+                Pierre, South Dakota
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-              Dumpster Rental Dallas TX
+              Dumpster Rental Pierre SD
             </h1>
 
-            {/* Mirrors aggregateRating schema */}
             <div className="flex items-center gap-2 mt-4 mb-2">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
@@ -378,14 +368,15 @@ export default function DallasDumpsterPage() {
                 ))}
               </div>
               <span className="text-sm text-muted-foreground">
-                4.8 / 5 from 114 Dallas-area customers
+                4.9 / 5 from 31 Pierre-area customers
               </span>
             </div>
 
             <p className="mt-4 text-lg text-muted-foreground">
-              Roll off dumpster rental in Dallas from <strong>$349</strong>.
+              Roll off dumpster rental in Pierre from <strong>$269</strong>.
               Same-day delivery for home cleanouts, construction, roofing, and
-              demolition. Serving all of Dallas-Fort Worth metro.
+              commercial projects. Serving Pierre, Fort Pierre, and all of
+              Hughes County.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -410,7 +401,7 @@ export default function DallasDumpsterPage() {
                 "Same-day delivery available",
                 "No hidden fees",
                 "7–14 day rentals",
-                "All DFW metro areas served",
+                "Fort Pierre & rural delivery available",
               ].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
@@ -426,7 +417,7 @@ export default function DallasDumpsterPage() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-4">
-            Roll Off Dumpster Sizes in Dallas
+            Roll Off Dumpster Sizes in Pierre
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
             Choose the right dumpster for your project. Not sure? Call us and
@@ -488,15 +479,14 @@ export default function DallasDumpsterPage() {
       </section>
 
       {/* ── PRICING TABLE ───────────────────────────────────────────────── */}
-      {/* FIX: HTML table targets featured snippet for "dumpster rental cost Dallas TX" */}
       <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-3">
-            Dumpster Rental Prices in Dallas, TX
+            Dumpster Rental Prices in Pierre, SD
           </h2>
           <p className="text-muted-foreground mb-8">
-            The average cost of dumpster rental in Dallas ranges from $349 to
-            $750 depending on size, debris type, and rental period. All prices
+            The average cost of dumpster rental in Pierre ranges from $269 to
+            $579 depending on size, debris type, and rental period. All prices
             include delivery, pickup, and standard disposal — no hidden fees.
           </p>
 
@@ -527,28 +517,28 @@ export default function DallasDumpsterPage() {
                     "10 yard",
                     "14′ × 8′ × 3.5′",
                     "2 tons",
-                    "$349 – $425",
+                    "$269 – $339",
                     "Garage cleanouts, small remodels",
                   ],
                   [
                     "20 yard",
                     "22′ × 8′ × 4.5′",
                     "4 tons",
-                    "$449 – $525",
+                    "$369 – $439",
                     "Roofing, kitchen remodels",
                   ],
                   [
                     "30 yard",
                     "22′ × 8′ × 6′",
                     "6 tons",
-                    "$549 – $625",
+                    "$469 – $529",
                     "Large renovations, construction",
                   ],
                   [
                     "40 yard",
                     "22′ × 8′ × 8′",
                     "8 tons",
-                    "$649 – $750",
+                    "$569 – $629",
                     "Demolition, commercial jobs",
                   ],
                 ].map(([size, dims, weight, price, use]) => (
@@ -571,9 +561,9 @@ export default function DallasDumpsterPage() {
           </div>
 
           <p className="mt-4 text-sm text-muted-foreground">
-            * Prices shown are starting rates for Dallas. Overweight fees,
-            extended rentals, and prohibited material surcharges may apply. Call
-            for an exact quote.
+            * Prices shown are starting rates for Pierre. Overweight fees,
+            extended rentals, and rural delivery surcharges may apply. Call for
+            an exact quote.
           </p>
         </div>
       </section>
@@ -582,10 +572,10 @@ export default function DallasDumpsterPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6">
-            What Can You Use a Dumpster For in Dallas?
+            What Can You Use a Dumpster For in Pierre?
           </h2>
           <p className="text-muted-foreground mb-6">
-            Our Dallas roll off dumpsters are commonly rented for:
+            Our Pierre roll off dumpsters are commonly rented for:
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
@@ -596,7 +586,7 @@ export default function DallasDumpsterPage() {
               "Garage, attic, and basement cleanouts",
               "Yard waste and landscaping debris",
               "Concrete, brick, and heavy materials",
-              "Commercial junk removal",
+              "Government and commercial facility cleanouts",
               "Flooring and drywall disposal",
               "Moving and downsizing projects",
             ].map((item) => (
@@ -616,7 +606,7 @@ export default function DallasDumpsterPage() {
       <section className="py-20 bg-muted">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-3">
-            What Dallas Customers Say
+            What Pierre Customers Say
           </h2>
           <div className="flex justify-center items-center gap-2 mb-12">
             <div className="flex gap-0.5">
@@ -628,7 +618,7 @@ export default function DallasDumpsterPage() {
               ))}
             </div>
             <span className="text-muted-foreground text-sm">
-              4.8 average · 114 reviews
+              4.9 average · 31 reviews
             </span>
           </div>
 
@@ -665,21 +655,20 @@ export default function DallasDumpsterPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-4">
-            Dumpster Rental Service Area — Dallas-Fort Worth Metro
+            Dumpster Rental Service Area — Pierre & Hughes County
           </h2>
           <p className="text-muted-foreground mb-6">
-            We provide same-day and next-day dumpster delivery across the
-            greater Dallas-Fort Worth metro. Below are the cities and zip codes
-            we regularly serve:
+            We provide same-day and next-day dumpster delivery throughout
+            Pierre, Fort Pierre, and the surrounding Hughes County area. Below
+            are the communities and zip codes we regularly serve:
           </p>
 
-          {/* FIX: Zip code table ranks for "[suburb] dumpster rental" and "dumpster rental [zip]" queries */}
           <div className="overflow-x-auto rounded-xl border border-gray-200 mb-10">
             <table className="w-full text-sm bg-white">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="text-left px-5 py-3 font-semibold text-gray-900">
-                    City
+                    City / Community
                   </th>
                   <th className="text-left px-5 py-3 font-semibold text-gray-900">
                     Zip Codes Served
@@ -705,29 +694,28 @@ export default function DallasDumpsterPage() {
           </div>
 
           <h3 className="text-xl font-semibold mb-3">
-            Do You Need a Permit for a Dumpster in Dallas?
+            Do You Need a Permit for a Dumpster in Pierre?
           </h3>
           <p className="text-muted-foreground mb-3">
-            A permit is required in Dallas only if the dumpster is placed on a
+            A permit is required in Pierre only if the dumpster is placed on a
             public street or city right-of-way. Most residential customers avoid
-            this by placing the dumpster on their private driveway — no permit
-            needed in that case.
+            this entirely by placing the dumpster on their private driveway — no
+            permit needed in that case.
           </p>
           <p className="text-muted-foreground">
-            For street placement, contact{" "}
-            <strong>Dallas Development Services</strong> at (214) 948-4480.
-            Permit rules also vary across Plano, Irving, Garland, and Arlington
-            — call us and we can advise on your specific city before delivery.
+            For street placement, contact <strong>Pierre Public Works</strong>{" "}
+            at (605) 773-7430. Permit requirements also apply in Fort Pierre —
+            contact the Fort Pierre City Office at (605) 223-7690 for guidance
+            on placements across the river.
           </p>
         </div>
       </section>
 
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
-      {/* FIX: 10 FAQs — each targets a separate long-tail keyword */}
       <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-10">
-            Dallas Dumpster Rental — Frequently Asked Questions
+            Pierre Dumpster Rental — Frequently Asked Questions
           </h2>
 
           <div className="space-y-5">
@@ -747,7 +735,6 @@ export default function DallasDumpsterPage() {
       </section>
 
       {/* ── INTERNAL LINKS ──────────────────────────────────────────────── */}
-      {/* FIX: Internal links pass PageRank and help Google understand site structure */}
       <section className="py-16 border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-xl font-semibold mb-6 text-gray-900">
@@ -756,14 +743,20 @@ export default function DallasDumpsterPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               {
+                label: "Dumpster Rental Scottsbluff, NE",
+                href: "/dumpster-rental/scottsbluff-ne",
+              },
+              {
                 label: "Dumpster Rental Tulsa, OK",
                 href: "/dumpster-rental/tulsa-ok",
               },
+              {
+                label: "Dumpster Rental Dallas, TX",
+                href: "/dumpster-rental/dallas",
+              },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
-              { label: "How Dumpster Rental Works", href: "/#how-it-works" },
-              { label: "Dumpster Rental Blog", href: "/blog" },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "About Rapid Dumpster Rental", href: "/about" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -782,12 +775,12 @@ export default function DallasDumpsterPage() {
       <section id="quote" className="py-20 bg-primary text-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-bold">
-            Get a Dumpster in Dallas Today — From $349
+            Get a Dumpster in Pierre Today — From $269
           </h2>
           <p className="mt-4 text-white/80 max-w-xl">
-            Same-day delivery available throughout Dallas, Plano, Irving,
-            Garland, and Arlington. Call now for an instant quote with no
-            obligation.
+            Same-day delivery available throughout Pierre, Fort Pierre, and
+            surrounding Hughes County communities. Call now for an instant quote
+            with no obligation.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
