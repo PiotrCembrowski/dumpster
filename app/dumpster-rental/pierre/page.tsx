@@ -746,14 +746,6 @@ export default function PierreDumpsterPage() {
                 label: "Dumpster Rental Scottsbluff, NE",
                 href: "/dumpster-rental/scottsbluff-ne",
               },
-              {
-                label: "Dumpster Rental Tulsa, OK",
-                href: "/dumpster-rental/tulsa-ok",
-              },
-              {
-                label: "Dumpster Rental Dallas, TX",
-                href: "/dumpster-rental/dallas",
-              },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
               { label: "All Locations", href: "/locations" },

@@ -747,14 +747,6 @@ export default function ScottsbluffDumpsterPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              {
-                label: "Dumpster Rental Tulsa, OK",
-                href: "/dumpster-rental/tulsa-ok",
-              },
-              {
-                label: "Dumpster Rental Dallas, TX",
-                href: "/dumpster-rental/dallas",
-              },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "How Dumpster Rental Works", href: "/#how-it-works" },
               { label: "Contact & Free Quote", href: "/contact" },

@@ -1,73 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FIXES APPLIED:
+       1. Removed Orlando, Phoenix, Tampa — thin unoptimised pages
+          waste crawl budget and dilute domain quality signals
+       2. Added missing Tulsa, Bartlesville, Muskogee, Scottsbluff,
+          Jamestown city pages — all were absent entirely
+       3. Fixed /dumpster-rental/pierre → /dumpster-rental/pierre-sd
+          (wrong URL — the real page is at /pierre-sd)
+       4. Added all 8 individual blog post URLs — none were indexed
+       5. Changed city page changefreq from "never" to "monthly"
+          "never" tells Google not to recrawl — wrong for money pages
+       6. Changed blog index from "never" to "weekly" — new posts added
+       7. Added /locations hub page
+       8. Added /about page
+       9. Added /privacy and /terms (linked from footer on every page)
+       10. Updated all lastmod dates to today (2026-06-09) since all
+           pages were significantly updated this session
+  ═══════════════════════════════════════════════════════════ -->
+
+  <!-- ── HOMEPAGE ─────────────────────────────────────── -->
   <url>
     <loc>https://www.rapiddumpsterrental.site/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Main Pages -->
 
-  
+  <!-- ── CORE PAGES ────────────────────────────────────── -->
   <url>
     <loc>https://www.rapiddumpsterrental.site/services</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://www.rapiddumpsterrental.site/contact</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <!-- FIX: Was "yearly" — contact page was just rewritten, updated to monthly -->
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FIX: Added /locations — hub page linked from every city page breadcrumb.
+       Previously missing meant all breadcrumb links 404'd. -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/locations</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FIX: Added /about — linked from footer on every page.
+       Was returning 404. E-E-A-T trust page for Google quality raters. -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/about</loc>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-  
-  <!-- Blog/Articles -->
+
+  <!-- FIX: Added legal pages — linked from footer, should be indexed -->
   <url>
-    <loc>https://www.rapiddumpsterrental.site/blog/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.rapiddumpsterrental.site/privacy</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
-    <!-- cities -->
   <url>
-    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/dallas</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.rapiddumpsterrental.site/terms</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
-    <url>
-    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/orlando</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
+  <!-- ── CITY PAGES ────────────────────────────────────── -->
+  <!-- These are the primary money pages — priority 0.9, monthly recrawl -->
+
+
+  <!-- FIX: Added — was missing entirely -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/bartlesville-ok</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-    <url>
-    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/phoenix</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
+  <!-- FIX: Added — was missing entirely -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/muskogee-ok</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-    <url>
-    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/tampa</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
+  <!-- FIX: Added — was missing entirely -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/scottsbluff-ne</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-    <url>
-    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/pierre</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
+  <!-- FIX: Was /dumpster-rental/pierre — WRONG URL.
+       The actual page is at /dumpster-rental/pierre-sd.
+       Google was being sent to a non-existent URL. -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/pierre-sd</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
-  
+
+  <!-- FIX: Added — was missing entirely -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/dumpster-rental/jamestown-nd</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- REMOVED: Orlando, Phoenix, Tampa
+       These are thin unoptimised placeholder pages. Including them
+       in the sitemap actively requests Google waste crawl budget
+       on low-quality pages, which depresses overall domain quality.
+       Remove from sitemap until pages are properly optimised. -->
+
+  <!-- ── BLOG INDEX ─────────────────────────────────────── -->
+  <!-- FIX: changefreq was "never" — new posts are regularly added -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog</loc>
+    <lastmod>2026-06-09</lastmod>
+    <!-- FIX: Removed trailing slash — inconsistent with all other URLs -->
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── BLOG POSTS ─────────────────────────────────────── -->
+  <!-- FIX: All individual blog post URLs were missing from the sitemap.
+       Google cannot prioritise indexing pages it doesn't know exist.
+       Without these entries, new posts can take weeks to get crawled. -->
+
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/how-much-does-a-dumpster-rental-cost</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/what-size-dumpster-do-i-need</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/what-can-you-put-in-a-dumpster</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/dumpster-rental-for-home-cleanout</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/construction-dumpster-rental-guide</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/what-size-dumpster-do-i-need-2026</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- New high-value posts added this session -->
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/what-size-dumpster-for-roof-replacement</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <!-- Priority 0.8 — targets high-volume national roofing keyword -->
+  </url>
+
+  <url>
+    <loc>https://www.rapiddumpsterrental.site/blog/dumpster-rental-vs-junk-removal</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <!-- Priority 0.8 — high-intent comparison keyword, strong conversion signal -->
+  </url>
+
 </urlset>

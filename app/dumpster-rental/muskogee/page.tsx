@@ -169,7 +169,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -745,16 +745,8 @@ export default function MuskogeeDumpsterPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               {
-                label: "Dumpster Rental Tulsa, OK",
-                href: "/dumpster-rental/tulsa-ok",
-              },
-              {
                 label: "Dumpster Rental Bartlesville, OK",
                 href: "/dumpster-rental/bartlesville-ok",
-              },
-              {
-                label: "Dumpster Rental Dallas, TX",
-                href: "/dumpster-rental/dallas",
               },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
