@@ -168,7 +168,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/locations",
+      item: "https://www.rapiddumpsterrental.site/services",
     },
     {
       "@type": "ListItem",
@@ -329,7 +329,7 @@ export default function PierreDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/locations"
+                href="/services"
                 className="hover:text-primary transition-colors"
               >
                 Locations
