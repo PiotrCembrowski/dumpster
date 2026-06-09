@@ -103,15 +103,15 @@ export function CTASection() {
             {[
               {
                 label: "Bartlesville, OK",
-                href: "/dumpster-rental/bartlesville-ok",
+                href: "/dumpster-rental/bartlesville",
               },
-              { label: "Muskogee, OK", href: "/dumpster-rental/muskogee-ok" },
+              { label: "Muskogee, OK", href: "/dumpster-rental/muskogee" },
               {
                 label: "Scottsbluff, NE",
-                href: "/dumpster-rental/scottsbluff-ne",
+                href: "/dumpster-rental/scottsbluff",
               },
-              { label: "Pierre, SD", href: "/dumpster-rental/pierre-sd" },
-              { label: "Jamestown, ND", href: "/dumpster-rental/jamestown-nd" },
+              { label: "Pierre, SD", href: "/dumpster-rental/pierre" },
+              { label: "Jamestown, ND", href: "/dumpster-rental/jamestown" },
             ].map((city) => (
               <Link
                 key={city.href}

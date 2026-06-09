@@ -391,17 +391,6 @@ export const blogPosts: BlogPost[] = [
 `,
   },
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // NEW POST — "What Size Dumpster Do I Need for a Roof Replacement?"
-  //
-  // WHY THIS POST:
-  //   • "dumpster for roof replacement" gets ~3,600 searches/mo nationally — low competition
-  //   • Roofing is the #1 most common dumpster use case; targets contractors + homeowners
-  //   • Naturally links to /dumpster-rental/tulsa-ok and /dumpster-rental/dallas
-  //   • Long-form content (1,800+ words in the HTML) with a pricing table — featured snippet bait
-  //   • FAQPage schema added inline via data attributes so the blog renderer can extract it
-  //   • Every H2 targets a standalone long-tail query Google can rank independently
-  // ─────────────────────────────────────────────────────────────────────────────
   {
     slug: "what-size-dumpster-for-roof-replacement",
     title: "What Size Dumpster Do I Need for a Roof Replacement? (2026 Guide)",

@@ -27,20 +27,20 @@ const navigation = {
   locations: [
     {
       name: "Bartlesville, OK Dumpster Rental",
-      href: "/dumpster-rental/bartlesville-ok",
+      href: "/dumpster-rental/bartlesville",
     },
     {
       name: "Muskogee, OK Dumpster Rental",
-      href: "/dumpster-rental/muskogee-ok",
+      href: "/dumpster-rental/muskogee",
     },
     {
       name: "Scottsbluff, NE Dumpster Rental",
-      href: "/dumpster-rental/scottsbluff-ne",
+      href: "/dumpster-rental/scottsbluff",
     },
-    { name: "Pierre, SD Dumpster Rental", href: "/dumpster-rental/pierre-sd" },
+    { name: "Pierre, SD Dumpster Rental", href: "/dumpster-rental/pierre" },
     {
       name: "Jamestown, ND Dumpster Rental",
-      href: "/dumpster-rental/jamestown-nd",
+      href: "/dumpster-rental/jamestown",
     },
     { name: "View all locations", href: "/locations" },
   ],
@@ -213,28 +213,28 @@ export function Footer() {
             Rapid Dumpster Rental provides residential, construction, and
             commercial roll off dumpster rental with same-day delivery in ,{" "}
             <Link
-              href="/dumpster-rental/bartlesville-ok"
+              href="/dumpster-rental/bartlesville"
               className="hover:text-foreground transition-colors underline underline-offset-2"
             >
               Bartlesville, OK
             </Link>
             ,{" "}
             <Link
-              href="/dumpster-rental/muskogee-ok"
+              href="/dumpster-rental/muskogee"
               className="hover:text-foreground transition-colors underline underline-offset-2"
             >
               Muskogee, OK
             </Link>
             ,{" "}
             <Link
-              href="/dumpster-rental/scottsbluff-ne"
+              href="/dumpster-rental/scottsbluff"
               className="hover:text-foreground transition-colors underline underline-offset-2"
             >
               Scottsbluff, NE
             </Link>
             ,{" "}
             <Link
-              href="/dumpster-rental/pierre-sd"
+              href="/dumpster-rental/pierre"
               className="hover:text-foreground transition-colors underline underline-offset-2"
             >
               Pierre, SD

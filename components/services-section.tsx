@@ -146,23 +146,23 @@ export function ServicesSection() {
                 {[
                   {
                     label: "Dumpster rental Bartlesville, OK",
-                    href: "/dumpster-rental/bartlesville-ok",
+                    href: "/dumpster-rental/bartlesville",
                   },
                   {
                     label: "Dumpster rental Muskogee, OK",
-                    href: "/dumpster-rental/muskogee-ok",
+                    href: "/dumpster-rental/muskogee",
                   },
                   {
                     label: "Dumpster rental Scottsbluff, NE",
-                    href: "/dumpster-rental/scottsbluff-ne",
+                    href: "/dumpster-rental/scottsbluff",
                   },
                   {
                     label: "Dumpster rental Pierre, SD",
-                    href: "/dumpster-rental/pierre-sd",
+                    href: "/dumpster-rental/pierre",
                   },
                   {
                     label: "Dumpster rental Jamestown, ND",
-                    href: "/dumpster-rental/jamestown-nd",
+                    href: "/dumpster-rental/jamestown",
                   },
                 ].map((city) => (
                   <li key={city.href}>

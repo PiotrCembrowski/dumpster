@@ -66,11 +66,11 @@ const sizes = [
 // homepage to all city pages pass authority and help Google understand
 // the site's geographic scope.
 const cities = [
-  { label: "Bartlesville, OK", href: "/dumpster-rental/bartlesville-ok" },
-  { label: "Muskogee, OK", href: "/dumpster-rental/muskogee-ok" },
-  { label: "Scottsbluff, NE", href: "/dumpster-rental/scottsbluff-ne" },
-  { label: "Pierre, SD", href: "/dumpster-rental/pierre-sd" },
-  { label: "Jamestown, ND", href: "/dumpster-rental/jamestown-nd" },
+  { label: "Bartlesville, OK", href: "/dumpster-rental/bartlesville" },
+  { label: "Muskogee, OK", href: "/dumpster-rental/muskogee" },
+  { label: "Scottsbluff, NE", href: "/dumpster-rental/scottsbluff" },
+  { label: "Pierre, SD", href: "/dumpster-rental/pierre" },
+  { label: "Jamestown, ND", href: "/dumpster-rental/jamestown" },
 ];
 
 export function SizesSection() {

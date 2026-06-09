@@ -32,7 +32,7 @@
   "action_items": [
     "Add explicit per-page canonical tags (alternates.canonical or equivalent) because current HTML renders no canonical link tags.",
     "If business requirement is strict both-host inclusion (www + non-www) in sitemap itself, clarify policy: current setup canonicalizes non-www to www via 307 and sitemap only lists www URLs.",
-    "Optional cleanup: multiple in-page internal links still point to non-existent routes (/locations, slug variants like /dumpster-rental/*-ok/-nd/-sd/-ne, /dumpster-rental/tulsa-ok, /dumpster-rental/dallas). Not in sitemap, but these links can create crawl noise."
+    "Optional cleanup: multiple in-page internal links still point to non-existent routes (/locations, slug variants like /dumpster-rental/*-ok/-nd/-sd/-ne). Not in sitemap, but these links can create crawl noise."
   ],
   "critical_code_review_comments": [
     "Sitemap is well-formed XML and contains 17 URLs with current lastmod date and no duplicates.",
@@ -41,9 +41,7 @@
     "Indexability check passed for sitemap URLs: no robots noindex detected.",
     "Canonical alignment gap: rendered pages currently do not output explicit <link rel=\"canonical\"> tags, so strict canonical validation cannot be fully satisfied despite correct host canonicalization behavior."
   ],
-  "updated_files": [
-    "/app/test_reports/iteration_1.json"
-  ],
+  "updated_files": ["/app/test_reports/iteration_1.json"],
   "success_rate": {
     "backend": "N/A (no backend workspace present)",
     "frontend": "90%"

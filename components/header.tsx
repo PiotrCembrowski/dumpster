@@ -10,11 +10,11 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 // Removed fake placeholder cities (OKC, Houston, Austin, Kansas City)
 // that had no pages. Added all 5 new cities built this session.
 const locations = [
-  { name: "Bartlesville, OK", href: "/dumpster-rental/bartlesville-ok" },
-  { name: "Muskogee, OK", href: "/dumpster-rental/muskogee-ok" },
-  { name: "Scottsbluff, NE", href: "/dumpster-rental/scottsbluff-ne" },
-  { name: "Pierre, SD", href: "/dumpster-rental/pierre-sd" },
-  { name: "Jamestown, ND", href: "/dumpster-rental/jamestown-nd" },
+  { name: "Bartlesville, OK", href: "/dumpster-rental/bartlesville" },
+  { name: "Muskogee, OK", href: "/dumpster-rental/muskogee" },
+  { name: "Scottsbluff, NE", href: "/dumpster-rental/scottsbluff" },
+  { name: "Pierre, SD", href: "/dumpster-rental/pierre" },
+  { name: "Jamestown, ND", href: "/dumpster-rental/jamestown" },
 ];
 
 export function Header() {
