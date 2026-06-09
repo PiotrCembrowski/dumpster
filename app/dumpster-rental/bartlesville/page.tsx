@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     "Dumpster Rental Bartlesville OK | From $289 · Same-Day Delivery Available",
   description:
     "Roll off dumpster rental in Bartlesville, OK starting at $289. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Bartlesville, Dewey, Nowata, Copan & surrounding areas. Call now.",
+  alternates: {
+    canonical: "/dumpster-rental/bartlesville",
+  },
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
@@ -15,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   name: "Rapid Dumpster Rental — Bartlesville",
-  url: "https://www.rapiddumpsterrental.site/dumpster-rental/bartlesville-ok",
+  url: "https://www.rapiddumpsterrental.site/dumpster-rental/bartlesville",
   telephone: "+18005553867",
   priceRange: "$$",
   image:
@@ -169,13 +172,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/locations",
+      item: "https://www.rapiddumpsterrental.site/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Bartlesville, OK",
-      item: "https://www.rapiddumpsterrental.site/dumpster-rental/bartlesville-ok",
+      item: "https://www.rapiddumpsterrental.site/dumpster-rental/bartlesville",
     },
   ],
 };
@@ -330,7 +333,7 @@ export default function BartlesvilleDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/locations"
+                href="/services"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -746,11 +749,11 @@ export default function BartlesvilleDumpsterPage() {
             {[
               {
                 label: "Dumpster Rental Muskogee, OK",
-                href: "/dumpster-rental/muskogee-ok",
+                href: "/dumpster-rental/muskogee",
               },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/locations" },
+              { label: "All Locations", href: "/services" },
             ].map((l) => (
               <Link
                 key={l.href}

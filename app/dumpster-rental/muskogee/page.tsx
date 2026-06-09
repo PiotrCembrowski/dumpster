@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     "Dumpster Rental Muskogee OK | From $289 · Same-Day Delivery Available",
   description:
     "Roll off dumpster rental in Muskogee, OK starting at $289. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Muskogee, Fort Gibson, Wagoner, Tahlequah & surrounding areas. Call now.",
+  alternates: {
+    canonical: "/dumpster-rental/muskogee",
+  },
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
@@ -15,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   name: "Rapid Dumpster Rental — Muskogee",
-  url: "https://www.rapiddumpsterrental.site/dumpster-rental/muskogee-ok",
+  url: "https://www.rapiddumpsterrental.site/dumpster-rental/muskogee",
   telephone: "+18005553867",
   priceRange: "$$",
   image:
@@ -169,13 +172,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/locations",
+      item: "https://www.rapiddumpsterrental.site/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Muskogee, OK",
-      item: "https://www.rapiddumpsterrental.site/dumpster-rental/muskogee-ok",
+      item: "https://www.rapiddumpsterrental.site/dumpster-rental/muskogee",
     },
   ],
 };
@@ -746,11 +749,11 @@ export default function MuskogeeDumpsterPage() {
             {[
               {
                 label: "Dumpster Rental Bartlesville, OK",
-                href: "/dumpster-rental/bartlesville-ok",
+                href: "/dumpster-rental/bartlesville",
               },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/locations" },
+              { label: "All Locations", href: "/services" },
             ].map((l) => (
               <Link
                 key={l.href}

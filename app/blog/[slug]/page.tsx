@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { blogPosts, getBlogPost, getRelatedPosts } from "@/lib/blog-data";
 import {
@@ -25,19 +26,25 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
 
   if (!post) {
     return {
       title: "Post Not Found | Dumpster Direct Services",
+      alternates: {
+        canonical: "/blog",
+      },
     };
   }
 
   return {
     title: `${post.title} | Dumpster Direct Services Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
   };
 }
 

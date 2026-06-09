@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     "Dumpster Rental Jamestown ND | From $269 · Same-Day Delivery Available",
   description:
     "Roll off dumpster rental in Jamestown, ND starting at $269. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Jamestown, Valley City, Carrington, Medina & surrounding areas. Call now.",
+  alternates: {
+    canonical: "/dumpster-rental/jamestown",
+  },
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
@@ -15,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   name: "Rapid Dumpster Rental — Jamestown",
-  url: "https://www.rapiddumpsterrental.site/dumpster-rental/jamestown-nd",
+  url: "https://www.rapiddumpsterrental.site/dumpster-rental/jamestown",
   telephone: "+18005553867",
   priceRange: "$$",
   image:
@@ -169,13 +172,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/locations",
+      item: "https://www.rapiddumpsterrental.site/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Jamestown, ND",
-      item: "https://www.rapiddumpsterrental.site/dumpster-rental/jamestown-nd",
+      item: "https://www.rapiddumpsterrental.site/dumpster-rental/jamestown",
     },
   ],
 };
@@ -330,7 +333,7 @@ export default function JamestownDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/locations"
+                href="/services"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -745,19 +748,19 @@ export default function JamestownDumpsterPage() {
             {[
               {
                 label: "Dumpster Rental Pierre, SD",
-                href: "/dumpster-rental/pierre-sd",
+                href: "/dumpster-rental/pierre",
               },
               {
                 label: "Dumpster Rental Scottsbluff, NE",
-                href: "/dumpster-rental/scottsbluff-ne",
+                href: "/dumpster-rental/scottsbluff",
               },
               {
                 label: "Dumpster Rental Tulsa, OK",
-                href: "/dumpster-rental/tulsa-ok",
+                href: "/services",
               },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/locations" },
+              { label: "All Locations", href: "/services" },
             ].map((l) => (
               <Link
                 key={l.href}

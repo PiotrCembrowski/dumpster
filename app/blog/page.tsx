@@ -1,13 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/lib/blog-data";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Blog | Dumpster Direct Services",
   description:
     "Expert tips, guides, and industry insights on dumpster rental, waste management, and construction projects.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogPage() {

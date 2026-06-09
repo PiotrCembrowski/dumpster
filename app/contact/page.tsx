@@ -508,20 +508,20 @@ export default function ContactPage({ city }: ContactPageProps) {
                   {[
                     {
                       label: "Bartlesville, OK",
-                      href: "/dumpster-rental/bartlesville-ok",
+                      href: "/dumpster-rental/bartlesville",
                     },
                     {
                       label: "Muskogee, OK",
-                      href: "/dumpster-rental/muskogee-ok",
+                      href: "/dumpster-rental/muskogee",
                     },
                     {
                       label: "Scottsbluff, NE",
-                      href: "/dumpster-rental/scottsbluff-ne",
+                      href: "/dumpster-rental/scottsbluff",
                     },
-                    { label: "Pierre, SD", href: "/dumpster-rental/pierre-sd" },
+                    { label: "Pierre, SD", href: "/dumpster-rental/pierre" },
                     {
                       label: "Jamestown, ND",
-                      href: "/dumpster-rental/jamestown-nd",
+                      href: "/dumpster-rental/jamestown",
                     },
                   ].map((city) => (
                     <li key={city.href}>
@@ -536,7 +536,7 @@ export default function ContactPage({ city }: ContactPageProps) {
                   ))}
                   <li>
                     <Link
-                      href="/locations"
+                      href="/services"
                       className="flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-1"
                     >
                       <ChevronRight className="h-3.5 w-3.5 flex-shrink-0" />

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Dumpster Rental Pierre SD | From $269 · Same-Day Delivery Available",
   description:
     "Roll off dumpster rental in Pierre, SD starting at $269. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Pierre, Fort Pierre, Blunt, Onida & surrounding areas. Call now.",
+  alternates: {
+    canonical: "/dumpster-rental/pierre",
+  },
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
@@ -14,7 +17,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   name: "Rapid Dumpster Rental — Pierre",
-  url: "https://www.rapiddumpsterrental.site/dumpster-rental/pierre-sd",
+  url: "https://www.rapiddumpsterrental.site/dumpster-rental/pierre",
   telephone: "+18005553867",
   priceRange: "$$",
   image:
@@ -174,7 +177,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 3,
       name: "Pierre, SD",
-      item: "https://www.rapiddumpsterrental.site/dumpster-rental/pierre-sd",
+      item: "https://www.rapiddumpsterrental.site/dumpster-rental/pierre",
     },
   ],
 };
@@ -744,11 +747,11 @@ export default function PierreDumpsterPage() {
             {[
               {
                 label: "Dumpster Rental Scottsbluff, NE",
-                href: "/dumpster-rental/scottsbluff-ne",
+                href: "/dumpster-rental/scottsbluff",
               },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/locations" },
+              { label: "All Locations", href: "/services" },
             ].map((l) => (
               <Link
                 key={l.href}

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     "Dumpster Rental Scottsbluff NE | From $279 · Same-Day Delivery Available",
   description:
     "Roll off dumpster rental in Scottsbluff, NE starting at $279. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Scottsbluff, Gering, Mitchell, Morrill & surrounding areas. Call now.",
+  alternates: {
+    canonical: "/dumpster-rental/scottsbluff",
+  },
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
@@ -15,7 +18,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   name: "Rapid Dumpster Rental — Scottsbluff",
-  url: "https://www.rapiddumpsterrental.site/dumpster-rental/scottsbluff-ne",
+  url: "https://www.rapiddumpsterrental.site/dumpster-rental/scottsbluff",
   telephone: "+18005553867",
   priceRange: "$$",
   image:
@@ -169,13 +172,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/locations",
+      item: "https://www.rapiddumpsterrental.site/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Scottsbluff, NE",
-      item: "https://www.rapiddumpsterrental.site/dumpster-rental/scottsbluff-ne",
+      item: "https://www.rapiddumpsterrental.site/dumpster-rental/scottsbluff",
     },
   ],
 };
@@ -332,7 +335,7 @@ export default function ScottsbluffDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/locations"
+                href="/services"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -750,7 +753,7 @@ export default function ScottsbluffDumpsterPage() {
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "How Dumpster Rental Works", href: "/#how-it-works" },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/locations" },
+              { label: "All Locations", href: "/services" },
             ].map((l) => (
               <Link
                 key={l.href}

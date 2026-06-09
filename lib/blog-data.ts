@@ -555,7 +555,7 @@ export const blogPosts: BlogPost[] = [
   </tbody>
 </table>
 
-<p>Prices vary by city and market. In competitive markets like Dallas, TX, you may find lower pricing due to competition between providers. In smaller markets, prices can run slightly higher. <a href="/dumpster-rental/dallas">Check our Dallas dumpster rental pricing</a> or <a href="/dumpster-rental/tulsa-ok">Tulsa dumpster rental pricing</a> for exact quotes in those areas.</p>
+<p>Prices vary by city and market. In competitive metro areas you may find lower pricing due to competition between providers. In smaller markets, prices can run slightly higher. <a href="/services">Check current service area pricing</a> for exact quotes in your area.</p>
 
 <h2>The Weight Limit Problem — Why Roofing Is Different</h2>
 
@@ -587,7 +587,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The one exception worth planning for: if your home doesn't have a driveway and the dumpster must go on the street, check with your city's public works department before delivery day. In most cities this is a $25 to $75 permit and takes 24 to 48 hours to process.</p>
 
-<p>For specific permit guidance in our primary service areas, see our <a href="/dumpster-rental/tulsa-ok">Tulsa, OK dumpster rental page</a> and <a href="/dumpster-rental/dallas">Dallas, TX dumpster rental page</a>, both of which include the relevant city permit contact information.</p>
+<p>For specific permit guidance in our primary service areas, review your local city public works requirements and contact us through our <a href="/services">service areas page</a> for location-specific help.</p>
 
 <h2>Can I Rent a Dumpster Directly Instead of Through My Roofer?</h2>
 
@@ -597,7 +597,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The tradeoff: your contractor may be used to coordinating delivery timing themselves, and taking that off their plate adds a coordination step for you. For most straightforward residential re-roofs, the logistics are simple enough that renting directly makes sense. For large commercial jobs with tight scheduling, letting the contractor handle it may be worth the markup.</p>
 
-<p>If you rent directly, give your roofing crew at least 24 hours' advance notice of the dumpster's arrival so they can plan their start time accordingly. <a href="/dumpster-rental/tulsa-ok">Same-day dumpster delivery is available in Tulsa</a> and <a href="/dumpster-rental/dallas">same-day delivery in Dallas</a> if your schedule changes last minute.</p>
+<p>If you rent directly, give your roofing crew at least 24 hours' advance notice of the dumpster's arrival so they can plan their start time accordingly. <a href="/services">Same-day delivery is available in many service areas</a> if your schedule changes last minute.</p>
 
 <h2>5 Mistakes to Avoid When Renting a Dumpster for Roofing</h2>
 
@@ -646,7 +646,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Ready to Rent a Dumpster for Your Roofing Project?</h2>
 
-<p>Whether you're a homeowner managing a single-family re-roof or a roofing contractor scheduling multiple jobs, Rapid Dumpster Rental makes the logistics simple. Same-day delivery is available in most of our service areas, including <a href="/dumpster-rental/tulsa-ok">Tulsa, OK</a> and <a href="/dumpster-rental/dallas">Dallas, TX</a>.</p>
+<p>Whether you're a homeowner managing a single-family re-roof or a roofing contractor scheduling multiple jobs, Rapid Dumpster Rental makes the logistics simple. Same-day delivery is available in most of our active service areas listed on <a href="/services">our services page</a>.</p>
 
 <p>Call us before the crew shows up and we'll help you choose the right size, confirm the weight allowance matches your project, and get the container placed exactly where you need it — before the first shingle hits the ground.</p>
 `,
@@ -783,7 +783,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>For any project producing more than three to four pickup truck loads of material, dumpster rental is almost always cheaper than junk removal. The math is straightforward: a full junk removal truck costs $450 to $700, and that's one load. A 20 yard dumpster at $399 to $499 holds the equivalent of two to three full junk removal trucks.</p>
 
-<p>If you're in the Tulsa or Dallas area, check our pricing pages for exact figures: <a href="/dumpster-rental/tulsa-ok">Tulsa dumpster rental pricing</a> and <a href="/dumpster-rental/dallas">Dallas dumpster rental pricing</a>.</p>
+<p>Check our <a href="/services">service area pricing and availability</a> for exact figures in your location.</p>
 
 <h2>When Junk Removal Is the Right Choice</h2>
 
@@ -797,7 +797,7 @@ export const blogPosts: BlogPost[] = [
 
 <h3>You need same-day or emergency removal</h3>
 
-<p>Junk removal companies typically offer same-day or next-day service with a two-hour arrival window. While many dumpster rental companies — including <a href="/dumpster-rental/tulsa-ok">Rapid Dumpster Rental in Tulsa</a> — also offer same-day delivery, junk removal has one advantage: the truck comes, loads, and leaves in the same visit. There's no container sitting in your driveway for a week. If you need a property cleared quickly before a listing, a showing, or a move-in date, junk removal's single-visit model can be faster.</p>
+<p>Junk removal companies typically offer same-day or next-day service with a two-hour arrival window. While many dumpster rental companies also offer same-day delivery, junk removal has one advantage: the truck comes, loads, and leaves in the same visit. There's no container sitting in your driveway for a week. If you need a property cleared quickly before a listing, a showing, or a move-in date, junk removal's single-visit model can be faster.</p>
 
 <h3>You have debris in difficult-to-access locations</h3>
 
@@ -855,7 +855,7 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Use both</strong> if you have a large estate or whole-home cleanout with multiple categories of material — bulk junk, heavy items, and donatable pieces.</li>
 </ul>
 
-<p>For homeowners and contractors in the Tulsa, Oklahoma area, <a href="/dumpster-rental/tulsa-ok">Rapid Dumpster Rental's Tulsa page</a> has pricing, dumpster sizes, and same-day delivery details. For the Dallas-Fort Worth area, see our <a href="/dumpster-rental/dallas">Dallas dumpster rental page</a>. Both pages include weight allowances and per-ton overage rates upfront — which is the number you need before you can make an honest comparison with junk removal quotes in your area.</p>
+<p>For homeowners and contractors, our <a href="/services">service areas page</a> has pricing guidance, dumpster sizes, and same-day delivery details for active markets, including weight allowance considerations for accurate junk removal comparisons.</p>
 
 <p>Either way, the goal is the same: debris out, project done, no second bill from a second company to fix the first decision. Pick the right tool for the job and that's exactly what happens.</p>
 `,
