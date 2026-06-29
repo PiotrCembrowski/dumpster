@@ -45,7 +45,7 @@ const navigation = {
     { name: "View all locations", href: "/locations" },
   ],
 
-  // FIX: "About Dumpster Direct" renamed to match correct brand
+  // FIX: "About" company link renamed to match the correct brand
   company: [
     { name: "About Rapid Dumpster Rental", href: "/about" },
     { name: "Dumpster Rental Blog", href: "/blog" },
@@ -75,7 +75,7 @@ export function Footer() {
                 </span>
               </div>
               <div>
-                {/* FIX: Brand name corrected from "Dumpster Direct" */}
+                {/* FIX: Brand name corrected to the current brand */}
                 <span className="text-lg font-semibold tracking-tight text-foreground block">
                   Rapid Dumpster Rental
                 </span>
@@ -103,7 +103,7 @@ export function Footer() {
               (800) 555-3867
             </a>
 
-            {/* FIX: Copyright updated from "Dumpster Direct Services" */}
+            {/* FIX: Copyright updated to the current brand */}
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Rapid Dumpster Rental
               <br />
@@ -211,7 +211,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
             Rapid Dumpster Rental provides residential, construction, and
-            commercial roll off dumpster rental with same-day delivery in ,{" "}
+            commercial roll off dumpster rental with same-day delivery in{" "}
             <Link
               href="/dumpster-rental/bartlesville"
               className="hover:text-foreground transition-colors underline underline-offset-2"
@@ -241,7 +241,7 @@ export function Footer() {
             </Link>
             , and{" "}
             <Link
-              href="/dumpster-rental/jamestown-nd"
+              href="/dumpster-rental/jamestown"
               className="hover:text-foreground transition-colors underline underline-offset-2"
             >
               Jamestown, ND

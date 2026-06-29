@@ -19,13 +19,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPosts = [
     "how-much-does-a-dumpster-rental-cost",
-    "what-size-dumpster-do-i-need",
     "what-can-you-put-in-a-dumpster",
     "dumpster-rental-for-home-cleanout",
     "construction-dumpster-rental-guide",
     "what-size-dumpster-do-i-need-2026",
     "what-size-dumpster-for-roof-replacement",
     "dumpster-rental-vs-junk-removal",
+    "how-long-can-you-keep-a-rental-dumpster",
   ].map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified,

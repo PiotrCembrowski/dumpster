@@ -56,7 +56,7 @@ const webSiteSchema = {
 
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  // FIX: Brand name corrected from "Dumpster Direct Services"
+  // FIX: Brand name corrected to the current brand (Rapid Dumpster Rental)
   // FIX: Price anchor added for CTR improvement in SERPs
   title: "Rapid Dumpster Rental | Same-Day Roll Off Dumpsters From $269",
 

@@ -10,6 +10,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/dumpster-rental/pierre",
   },
+  // FIX (Task 4): og:url set to this page's own canonical URL instead of
+  // inheriting the homepage root from the layout's openGraph.
+  openGraph: {
+    type: "website",
+    siteName: "Rapid Dumpster Rental",
+    title:
+      "Dumpster Rental Pierre SD | From $269 · Same-Day Delivery Available",
+    description:
+      "Roll off dumpster rental in Pierre, SD starting at $269. 10, 20, 30 & 40 yard dumpsters. Same-day delivery to Pierre, Fort Pierre, Blunt, Onida & surrounding areas.",
+    url: "https://www.rapiddumpsterrental.site/dumpster-rental/pierre",
+    images: [
+      {
+        url: "https://www.rapiddumpsterrental.site/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dumpster Rental Pierre, SD — Rapid Dumpster Rental",
+      },
+    ],
+  },
 };
 
 // ─── SCHEMA DATA ─────────────────────────────────────────────────────────────
@@ -760,6 +779,46 @@ export default function PierreDumpsterPage() {
               >
                 <ChevronRight className="h-4 w-4 flex-shrink-0" />
                 {l.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── RELATED GUIDES (Task 9) ─────────────────────────────────────── */}
+      <section className="py-16 bg-muted border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-bold mb-2 text-gray-900">
+            Related Guides
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Planning your project? These guides help you size, fill, and
+            schedule your dumpster rental.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              {
+                label: "What Size Dumpster Do I Need?",
+                href: "/blog/what-size-dumpster-do-i-need-2026",
+              },
+              {
+                label: "What Can You Put in a Dumpster?",
+                href: "/blog/what-can-you-put-in-a-dumpster",
+              },
+              {
+                label: "How Long Can You Keep a Rental Dumpster?",
+                href: "/blog/how-long-can-you-keep-a-rental-dumpster",
+              },
+            ].map((g) => (
+              <Link
+                key={g.href}
+                href={g.href}
+                className="block border border-gray-200 rounded-xl p-5 bg-white hover:border-primary hover:shadow-sm transition-all"
+              >
+                <span className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <ChevronRight className="h-4 w-4 flex-shrink-0" />
+                  {g.label}
+                </span>
               </Link>
             ))}
           </div>
