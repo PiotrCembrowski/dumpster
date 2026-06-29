@@ -6,11 +6,30 @@ import { blogPosts } from "@/lib/blog-data";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | Dumpster Direct Services",
+  // FIX: Brand name corrected to the current brand (Rapid Dumpster Rental)
+  title: "Dumpster Rental Blog | Rapid Dumpster Rental",
   description:
-    "Expert tips, guides, and industry insights on dumpster rental, waste management, and construction projects.",
+    "Expert guides on dumpster rental pricing, sizing, permits, and project planning — from the team at Rapid Dumpster Rental. Serving Bartlesville, Muskogee, Scottsbluff, Pierre, and Jamestown.",
   alternates: {
     canonical: "/blog",
+  },
+  // FIX (Task 4): og:url now points to this page's own canonical URL,
+  // not the inherited homepage root from the layout's openGraph.
+  openGraph: {
+    type: "website",
+    siteName: "Rapid Dumpster Rental",
+    title: "Dumpster Rental Blog | Rapid Dumpster Rental",
+    description:
+      "Expert guides on dumpster rental pricing, sizing, permits, and project planning — from the team at Rapid Dumpster Rental. Serving Bartlesville, Muskogee, Scottsbluff, Pierre, and Jamestown.",
+    url: "https://www.rapiddumpsterrental.site/blog",
+    images: [
+      {
+        url: "https://www.rapiddumpsterrental.site/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rapid Dumpster Rental Blog",
+      },
+    ],
   },
 };
 
@@ -224,7 +243,7 @@ export default function BlogPage() {
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               Get a free quote today and see why thousands of customers trust
-              Dumpster Direct Services.
+              Rapid Dumpster Rental.
             </p>
             <Button size="lg" variant="secondary" asChild>
               <Link href="/contact">

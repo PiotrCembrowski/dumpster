@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
         <li>Schedule efficiently</li>
       </ul>
 
-      <p>Contact Dumpster Direct Services today for a fast quote.</p>
+      <p>Contact Rapid Dumpster Rental today for a fast quote.</p>
     `,
     image: "/images/blog/dumpster-sizes-guide.jpg",
     category: "Pricing",
@@ -58,49 +58,9 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
   },
 
-  {
-    slug: "what-size-dumpster-do-i-need",
-    title: "What Size Dumpster Do I Need? Complete Guide",
-    excerpt:
-      "Not sure which dumpster size to rent? This guide helps you choose the right dumpster for your project.",
-    content: `
-      <p>Choosing the right dumpster size ensures your project runs smoothly and avoids additional costs.</p>
-
-      <h2>10 Yard Dumpster</h2>
-      <ul>
-        <li>Small cleanouts</li>
-        <li>Garage cleanups</li>
-      </ul>
-
-      <h2>20 Yard Dumpster</h2>
-      <ul>
-        <li>Roofing projects</li>
-        <li>Home renovations</li>
-      </ul>
-
-      <h2>30 Yard Dumpster</h2>
-      <ul>
-        <li>Construction debris</li>
-        <li>Large home cleanouts</li>
-      </ul>
-
-      <h2>40 Yard Dumpster</h2>
-      <ul>
-        <li>Commercial jobs</li>
-        <li>Demolition projects</li>
-      </ul>
-
-      <p>Need help choosing? Contact Dumpster Direct Services today.</p>
-    `,
-    image: "/images/blog/dumpster-size-guide.jpg",
-    category: "Guides",
-    author: {
-      name: "Jessica Parker",
-      role: "Rental Specialist",
-    },
-    publishedAt: "2026-03-28",
-    readTime: "7 min read",
-  },
+  // NOTE: The old "what-size-dumpster-do-i-need" post was a thin duplicate of
+  // "what-size-dumpster-do-i-need-2026". It has been retired and its URL now
+  // 301-redirects to the 2026 guide (see redirects() in next.config.mjs).
 
   {
     slug: "what-can-you-put-in-a-dumpster",
@@ -126,7 +86,7 @@ export const blogPosts: BlogPost[] = [
         <li>Tires</li>
       </ul>
 
-      <p>Always check with Dumpster Direct Services for restrictions.</p>
+      <p>Always check with Rapid Dumpster Rental for restrictions.</p>
     `,
     image: "/images/blog/eco-friendly-disposal.jpg",
     category: "Guides",
@@ -160,7 +120,7 @@ export const blogPosts: BlogPost[] = [
         <li>Cost efficient</li>
       </ul>
 
-      <p>Contact Dumpster Direct Services today.</p>
+      <p>Contact Rapid Dumpster Rental today.</p>
     `,
     image: "/images/blog/home-renovation-tips.jpg",
     category: "Residential",
@@ -195,7 +155,7 @@ export const blogPosts: BlogPost[] = [
         <li>Concrete</li>
       </ul>
 
-      <p>Dumpster Direct Services offers fast delivery.</p>
+      <p>Rapid Dumpster Rental offers fast delivery.</p>
     `,
     image: "/images/blog/construction-safety.jpg",
     category: "Construction",
@@ -216,7 +176,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-01-10",
     readTime: "12 min read",
     author: {
-      name: "Dumpster Direct Team",
+      name: "Rapid Dumpster Rental Team",
       role: "Waste Management Experts",
     },
     content: `
@@ -847,6 +807,162 @@ export const blogPosts: BlogPost[] = [
 <p>For homeowners and contractors, our <a href="/services">service areas page</a> has pricing guidance, dumpster sizes, and same-day delivery details for active markets, including weight allowance considerations for accurate junk removal comparisons.</p>
 
 <p>Either way, the goal is the same: debris out, project done, no second bill from a second company to fix the first decision. Pick the right tool for the job and that's exactly what happens.</p>
+`,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // NEW POST — "How Long Can You Keep a Rental Dumpster?"
+  //   • Targets "how long can you keep a rental dumpster" + rental-period / extension
+  //     long-tail queries
+  //   • Five internal links to active city pages + cross-link to the roofing guide
+  //   • Includes the rental-period-by-size comparison table for snippet capture
+  // ─────────────────────────────────────────────────────────────────────────────
+  {
+    slug: "how-long-can-you-keep-a-rental-dumpster",
+    title:
+      "How Long Can You Keep a Rental Dumpster? Rental Periods, Extensions & Fees Explained",
+    excerpt:
+      "Most dumpster rentals run 7 to 14 days, but extensions are common and affordable if you know what to ask. Here's exactly how rental periods work — and how to avoid surprise fees.",
+    image: "/images/og-image.jpg",
+    category: "Guides",
+    publishedAt: "2026-06-30",
+    readTime: "9 min read",
+    author: {
+      name: "Rapid Dumpster Rental Team",
+      role: "Rental Periods & Logistics Specialists",
+    },
+    content: `
+<p>Most dumpster rentals come with a standard rental period — typically somewhere between 7 and 14 days. That window covers the majority of residential cleanouts, roofing jobs, and kitchen remodels without anyone needing to think about extensions. But plenty of projects run long, schedules change, and life intervenes. Knowing exactly how rental periods work before you book saves you from surprise charges at pickup.</p>
+
+<p>This guide covers what a rental period actually is, how extensions work, what daily fees look like, and how to plan your rental window so you're not paying for time you don't use or scrambling for more.</p>
+
+<h2>What Is a Dumpster Rental Period?</h2>
+
+<p>A rental period is the number of days you're allowed to keep the dumpster at your property from the moment of delivery to the scheduled pickup. It's included in the base rental price — you're not charged a per-day rate within that window.</p>
+
+<p>Standard rental periods across the industry fall into two ranges:</p>
+
+<ul>
+  <li><strong>Short-term rentals:</strong> 7 days, common for small projects like garage cleanouts, single-room remodels, or roofing tear-offs</li>
+  <li><strong>Standard rentals:</strong> 10 to 14 days, common for larger jobs like full-home renovations, construction debris, or estate cleanouts</li>
+</ul>
+
+<p>At Rapid Dumpster Rental, rental periods run from 7 days on a 10 yard dumpster to 14 days on a 30 or 40 yard container. The specific period tied to each size is listed on each city pricing page for <a href="/dumpster-rental/bartlesville">Bartlesville</a>, <a href="/dumpster-rental/muskogee">Muskogee</a>, <a href="/dumpster-rental/scottsbluff">Scottsbluff</a>, <a href="/dumpster-rental/pierre">Pierre</a>, and <a href="/dumpster-rental/jamestown">Jamestown</a>.</p>
+
+<h2>How Extensions Work — and What They Cost</h2>
+
+<p>Extensions are common, routine, and usually straightforward to arrange. You call your dumpster rental company before the pickup date, ask to extend, and they add days to your rental at a daily rate. The container stays where it is.</p>
+
+<p>Typical daily extension rates across the industry run <strong>$15 to $30 per day</strong>, though this varies by company and container size. Some companies charge a flat weekly extension rate instead of a daily one — worth asking about if you expect to need more than a few extra days.</p>
+
+<p>A few things to know about extensions:</p>
+
+<p><strong>You need to call before the scheduled pickup, not after.</strong> Once a driver is dispatched, rerouting or stopping the pickup may not be possible. Call at least 24 hours before your scheduled date to give the company time to adjust the schedule.</p>
+
+<p><strong>Extensions are based on availability.</strong> If the container is needed at another job site, the company may not be able to hold it for you. This is rare during slower seasons but can happen during peak months (late spring and summer) in busier markets. If your project timeline is uncertain, book a longer period upfront rather than assuming an extension will always be available.</p>
+
+<p><strong>Weight doesn't change with extensions.</strong> Your weight allowance is tied to the dumpster size, not the rental period. Extending your rental doesn't give you more weight capacity.</p>
+
+<h2>What Happens If You Keep a Dumpster Past the Pickup Date Without Calling?</h2>
+
+<p>This varies by company. Some will automatically charge the daily extension rate once the scheduled pickup window passes. Others will dispatch the truck and charge a return-trip fee if you ask them to come back a second time. A few will contact you first.</p>
+
+<p>The safest approach: if you think you might need more time, call the day before your scheduled pickup — not the day of, and not after. Most companies are flexible when given advance notice. They are much less flexible when they've already sent a driver.</p>
+
+<h2>How Rental Periods Compare by Dumpster Size</h2>
+
+<p>Here's how standard rental windows typically align with container size:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dumpster Size</th>
+      <th>Standard Rental Period</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10 yard</td>
+      <td>7 days</td>
+      <td>Garage cleanouts, small remodels</td>
+    </tr>
+    <tr>
+      <td>20 yard</td>
+      <td>10 days</td>
+      <td>Roofing, kitchen remodels, medium cleanouts</td>
+    </tr>
+    <tr>
+      <td>30 yard</td>
+      <td>14 days</td>
+      <td>Large renovations, full home cleanouts</td>
+    </tr>
+    <tr>
+      <td>40 yard</td>
+      <td>14 days</td>
+      <td>Construction, demolition, commercial projects</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>At Rapid Dumpster Rental, these are the standard periods. Extensions are available on all sizes.</p>
+
+<h2>How to Pick the Right Rental Period for Your Project</h2>
+
+<h3>Residential cleanouts</h3>
+
+<p>Most garage cleanouts and single-room remodels wrap within a week. A 7-day period on a 10 yard dumpster is usually sufficient. Estate cleanouts, where people sort through belongings over multiple weekends, often need 10 to 14 days even when the physical volume isn't enormous. If you're not sure you can work through it in a week, book a 20 yard with a 10-day period rather than a 10 yard you'll need to extend.</p>
+
+<h3>Roofing projects</h3>
+
+<p>Most roofing tear-offs and replacements generate all their debris in one to two days — the tear-off itself. The dumpster often sits nearly full and unused for the rest of the week while the installation happens overhead. A 7-day rental is almost always enough. The issue on roofing jobs is usually weight, not time: shingles are much heavier than they look, and a 20 yard dumpster can hit its weight limit before it's visually full. <a href="/blog/what-size-dumpster-for-roof-replacement">Read more about sizing a dumpster for a roof replacement</a>.</p>
+
+<h3>Construction and renovation projects</h3>
+
+<p>These projects generate debris in waves — demo phase, framing phase, drywall phase, flooring phase. A 14-day rental period accommodates most residential renovation projects that span two weeks of active work. For longer jobs or phased construction with extended timelines, a rolling extension is more cost-effective than booking two separate rentals (which means two delivery fees and two pickup fees).</p>
+
+<h3>Moving</h3>
+
+<p>Moving-related dumpster rentals are the most schedule-sensitive. Moves have hard deadlines: closing dates, lease end dates, new occupancy dates. If there's any chance your move-out gets delayed, book a longer rental period upfront. A return-trip fee because you needed the dumpster two days longer than expected is an avoidable expense.</p>
+
+<h2>Should You Book a Longer Period Upfront or Extend Later?</h2>
+
+<p>The math typically favors booking longer upfront if you have any uncertainty about your timeline.</p>
+
+<p><strong>Example:</strong> A 20 yard dumpster with a 10-day period at $389. The daily extension rate is $20/day.</p>
+
+<ul>
+  <li>If you need 12 days and you extend: $389 + $40 = $429</li>
+  <li>If you book a 14-day period upfront: in most markets, this is a $389 to $419 base price</li>
+</ul>
+
+<p>The difference is usually small. The advantage of booking longer upfront is that you don't have to make a call mid-project, the pickup is already scheduled for the right date, and you're not at the mercy of extension availability.</p>
+
+<p>The exception: if you're confident your project wraps in 7 days, don't book 14 days out of caution. You typically don't get a refund for unused days (though it doesn't hurt to ask — some companies do offer a partial credit).</p>
+
+<h2>What If You Finish Early?</h2>
+
+<p>Call for an early pickup. Most dumpster rental companies will pick up the container before your scheduled date if you're done — and you're freed from worrying about it sitting in your driveway.</p>
+
+<p>Some companies offer an early-pickup discount. Most don't, but they'll accommodate the schedule change without a penalty. Early pickup also helps the company route their trucks more efficiently, so most are happy to do it.</p>
+
+<h2>Common Mistakes Around Dumpster Rental Periods</h2>
+
+<p><strong>Booking the shortest period available to save money.</strong> The savings are small (a 7-day period versus a 10-day period might differ by $0 to $30 at most companies), but the cost of needing an emergency extension can be higher than the base difference.</p>
+
+<p><strong>Forgetting to factor in weekends.</strong> If your rental starts on a Thursday and runs 7 days, your pickup window falls on the following Thursday. If you're doing weekend work, you may want the extra days. Many companies don't pick up on Sundays, so plan your end date against actual operating days.</p>
+
+<p><strong>Assuming the rental clock starts when you start filling it.</strong> It starts at delivery, not at first use. If you schedule delivery for Monday but don't start your cleanout until Wednesday, you've already used two of your rental days.</p>
+
+<p><strong>Not confirming pickup scheduling.</strong> Some companies pick up automatically on day 14. Others require a call to schedule pickup. Knowing which system your company uses prevents the dumpster from sitting for an extra week because nobody scheduled its removal.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>Most residential projects fit comfortably within a 7 to 14-day rental period. Extensions are available at a predictable daily rate when you need them — the key is calling before your scheduled pickup, not after.</p>
+
+<p>If your project has any schedule uncertainty, book one size longer or one period longer than you think you need. The cost difference is modest. The cost of a late call, a second delivery fee, or being left without a container mid-project is not.</p>
+
+<p>For same-day and next-day dumpster delivery in <a href="/dumpster-rental/bartlesville">Bartlesville</a>, <a href="/dumpster-rental/muskogee">Muskogee</a>, <a href="/dumpster-rental/scottsbluff">Scottsbluff</a>, <a href="/dumpster-rental/pierre">Pierre</a>, and <a href="/dumpster-rental/jamestown">Jamestown</a>, call before noon and a dumpster will be on your property the same day. Rental periods run 7 to 14 days and extensions are available across all sizes.</p>
 `,
   },
 ];

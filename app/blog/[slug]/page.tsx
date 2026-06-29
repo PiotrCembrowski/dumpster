@@ -32,18 +32,38 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Post Not Found | Dumpster Direct Services",
+      title: "Post Not Found | Rapid Dumpster Rental",
       alternates: {
         canonical: "/blog",
       },
     };
   }
 
+  const canonicalUrl = `https://www.rapiddumpsterrental.site/blog/${slug}`;
+
   return {
-    title: `${post.title} | Dumpster Direct Services Blog`,
+    title: `${post.title} | Rapid Dumpster Rental Blog`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${slug}`,
+    },
+    // FIX (Task 4): og:url is derived from this post's own slug so each post
+    // reports its own canonical URL instead of inheriting the homepage root.
+    openGraph: {
+      type: "article",
+      siteName: "Rapid Dumpster Rental",
+      title: post.title,
+      description: post.excerpt,
+      url: canonicalUrl,
+      publishedTime: post.publishedAt,
+      images: [
+        {
+          url: `https://www.rapiddumpsterrental.site${post.image}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }
@@ -62,8 +82,35 @@ export default async function BlogPostPage({
 
   const relatedPosts = getRelatedPosts(slug);
 
+  // ─── BLOGPOSTING SCHEMA (Task 7) ──────────────────────────────────────────
+  // Tells Google this is an article, with author/publisher attribution and
+  // publish/modified dates. Earns rich-result eligibility for blog content.
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://www.rapiddumpsterrental.site${post.image}`,
+    url: `https://www.rapiddumpsterrental.site/blog/${slug}`,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      "@type": "Organization",
+      name: "Rapid Dumpster Rental",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Rapid Dumpster Rental",
+      url: "https://www.rapiddumpsterrental.site",
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative py-16 lg:py-24">
@@ -189,7 +236,7 @@ export default async function BlogPostPage({
                 </h3>
                 <p className="text-sm text-primary mb-2">{post.author.role}</p>
                 <p className="text-sm text-muted-foreground">
-                  Part of the Dumpster Direct Services team, dedicated to
+                  Part of the Rapid Dumpster Rental team, dedicated to
                   helping customers find the best waste management solutions for
                   their projects.
                 </p>
