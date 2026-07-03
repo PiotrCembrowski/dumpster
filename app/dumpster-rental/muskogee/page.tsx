@@ -765,8 +765,16 @@ export default function MuskogeeDumpsterPage() {
                 href: "/dumpster-rental/bartlesville",
               },
               { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              {
+                label: "Construction dumpster rental",
+                href: "/services/construction-dumpster-rental",
+              },
+              {
+                label: "Residential cleanout dumpsters",
+                href: "/services/residential-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}

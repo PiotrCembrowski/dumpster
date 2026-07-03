@@ -772,8 +772,16 @@ export default function JamestownDumpsterPage() {
                 href: "/dumpster-rental/bartlesville",
               },
               { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              {
+                label: "Construction site dumpsters",
+                href: "/services/construction-dumpster-rental",
+              },
+              {
+                label: "Residential dumpster rental",
+                href: "/services/residential-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}

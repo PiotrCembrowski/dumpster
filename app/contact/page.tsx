@@ -555,7 +555,7 @@ export default function ContactPage({ city }: ContactPageProps) {
           Each answer targets a real long-tail query and is specific
           enough to qualify as a featured snippet candidate.
       */}
-      <section className="py-20 bg-muted">
+      <section id="faq" className="py-20 bg-muted scroll-mt-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
             Dumpster Rental — Frequently Asked Questions

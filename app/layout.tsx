@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { StickyCallBar } from "@/components/sticky-call-bar";
 import {
   graph,
   jsonLdProps,
@@ -109,11 +110,12 @@ export default function RootLayout({
       </head>
       {/* FIX: Font CSS variables applied to body so Tailwind font-sans picks them up */}
       <body
-        className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${geist.variable} ${geistMono.variable} font-sans antialiased pb-16 md:pb-0`}
       >
         <Header />
         {children}
         <Footer />
+        <StickyCallBar />
         <Analytics />
         <SpeedInsights />
       </body>

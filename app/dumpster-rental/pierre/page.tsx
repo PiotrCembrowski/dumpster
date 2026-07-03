@@ -763,8 +763,16 @@ export default function PierreDumpsterPage() {
                 href: "/dumpster-rental/scottsbluff",
               },
               { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              {
+                label: "Commercial & business dumpsters",
+                href: "/services/commercial-dumpster-rental",
+              },
+              {
+                label: "Roofing tear-off dumpsters",
+                href: "/services/roofing-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}

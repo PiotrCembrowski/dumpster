@@ -764,9 +764,17 @@ export default function ScottsbluffDumpsterPage() {
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
-              { label: "How Dumpster Rental Works", href: "/#how-it-works" },
+              { label: "How Dumpster Rental Works", href: "/#process" },
+              {
+                label: "Commercial dumpster rental",
+                href: "/services/commercial-dumpster-rental",
+              },
+              {
+                label: "Construction dumpster service",
+                href: "/services/construction-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
