@@ -430,6 +430,40 @@ export default function BartlesvilleDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Dumpster Rental in Bartlesville &amp; Washington County
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Bartlesville sits at the center of Washington County, and its
+            housing tells the story of an old energy town. Neighborhoods near
+            downtown include homes built during the region&apos;s oil boom —
+            solid, older construction with plaster walls, hardwood, and the
+            occasional cast-iron plumbing run. Remodeling those homes produces
+            dense, heavy debris, which is exactly the kind of load where a 10 or
+            20 yard container reaches its weight allowance before it looks full.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            The city&apos;s industrial heritage also means commercial and
+            facility cleanouts are a regular part of the work here. Offices,
+            shops, and light-industrial buildings around Bartlesville generate
+            mixed loads that a 30 or 40 yard container handles in a single haul.
+            For rural properties out in Washington County, the extra capacity is
+            usually worth it — the drive is longer, so you don&apos;t want to run
+            short and need a second delivery.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We deliver throughout Bartlesville and the surrounding communities,
+            including Dewey just north, and Nowata and Copan a short drive out.
+            If you&apos;re not sure whether your project leans heavy or bulky,
+            that&apos;s the first thing to sort out — it decides the size more
+            than the volume does.
+          </p>
+        </div>
+      </section>
+
       {/* ── DUMPSTER SIZES ──────────────────────────────────────────────── */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">

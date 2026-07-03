@@ -667,6 +667,37 @@ export default function PierreDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Serving South Dakota&apos;s Capital
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Pierre is South Dakota&apos;s capital, and that shapes the mix of
+            work. Alongside residential cleanouts and remodels, there&apos;s a
+            steady stream of commercial and government-adjacent projects — office
+            turnovers, facility clear-outs, and the occasional larger
+            institutional job. That range means we keep the full lineup of sizes
+            moving, from a 10 yard for a single room to a 40 yard for a building
+            clear-out.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            The city sits on the Missouri River, with Fort Pierre directly across
+            the water. It&apos;s a compact market, which has an upside:
+            scheduling tends to be personal and flexible, and same-day delivery
+            is realistic when you call early. For residents, the driveway handles
+            most containers; for downtown and commercial placements, we&apos;ll
+            flag whether a right-of-way permit applies.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We serve Pierre, Fort Pierre, and the nearby communities of Blunt,
+            Onida, and Harrold. Not sure what size fits? Describe the project and
+            we&apos;ll size it — the goal is one container and one trip.
+          </p>
+        </div>
+      </section>
+
       {/* ── SERVICE AREA + ZIP CODES ─────────────────────────────────────── */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

@@ -585,6 +585,37 @@ export default function MuskogeeDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            What Makes Muskogee Projects Different
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Muskogee anchors the Three Rivers region, where the Arkansas,
+            Verdigris, and Grand rivers come together. That river-valley setting
+            brings weather — storms roll through Muskogee County regularly, and a
+            lot of local dumpster rentals start with a roof. Roofing is a weight
+            job more than a volume job, so the sizing conversation here almost
+            always centers on how many shingle layers are coming off.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            The city&apos;s older neighborhoods include brick and mixed-material
+            homes where remodels turn up heavy debris, while newer construction
+            on the edges of town runs lighter and bulkier. Out in the county —
+            toward Fort Gibson, Wagoner, and up toward Tahlequah — acreage
+            properties and outbuildings often justify a larger container, since a
+            single 30 yard beats two trips.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Whatever the project, we deliver across Muskogee and the surrounding
+            communities. Tell us whether you&apos;re tearing off a roof, gutting
+            a kitchen, or clearing a property, and we&apos;ll match the container
+            to the load — weight first, space second.
+          </p>
+        </div>
+      </section>
+
       {/* ── USE CASES ───────────────────────────────────────────────────── */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

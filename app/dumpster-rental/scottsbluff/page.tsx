@@ -622,6 +622,37 @@ export default function ScottsbluffDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Dumpster Rental Across the Nebraska Panhandle
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Scottsbluff sits in the Nebraska Panhandle, in the North Platte
+            River valley, and the work here reflects ag country. Farm and ranch
+            cleanouts, outbuilding teardowns, and equipment-shed clear-outs are
+            common, and they tend to produce heavy, mixed debris. When old
+            lumber, metal, and dirt go into the same container, weight adds up
+            fast — which is why we size Panhandle loads by tonnage, not just by
+            how much room is left.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Placement is rarely a problem out here. Lots in and around
+            Scottsbluff and its twin city of Gering are generally wide, with room
+            for a 30 or 40 yard container and a clear approach for the delivery
+            truck. That makes the larger sizes practical for the big clear-outs
+            that tighter lots elsewhere can&apos;t accommodate.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We cover Scottsbluff, Gering, and the surrounding Panhandle
+            communities including Mitchell, Morrill, and Bayard. If your project
+            involves a lot of dense material, say so up front and we&apos;ll keep
+            you out of an overage.
+          </p>
+        </div>
+      </section>
+
       {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
       <section className="py-20 bg-muted">
         <div className="max-w-6xl mx-auto px-6">

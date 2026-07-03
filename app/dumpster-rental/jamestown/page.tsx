@@ -728,6 +728,37 @@ export default function JamestownDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Dumpster Rental in the James River Valley
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Jamestown sits in the James River Valley along the I-94 corridor, and
+            the northern climate leaves its mark on local projects. Freeze-thaw
+            cycles are hard on concrete, foundations, and basements, so a fair
+            share of local rentals involve heavy material — broken-up slab,
+            foundation repair debris, and the dense waste that comes with it.
+            That&apos;s classic weight-limited work, where a smaller container
+            sized for tonnage beats a big one you can&apos;t fill.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            As a regional hub and a college town, Jamestown also sees steady
+            residential turnover and cleanouts, which run lighter and bulkier — a
+            good fit for a 20 or 30 yard. The I-94 location makes the surrounding
+            county easy to reach, so rural properties around Stutsman County get
+            the same same-day service as addresses in town.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We deliver across Jamestown and out to Valley City, Carrington,
+            Medina, and the surrounding communities. Tell us whether your debris
+            is heavy or bulky and we&apos;ll pick the size around that — it&apos;s
+            the detail that prevents a surprise fee.
+          </p>
+        </div>
+      </section>
+
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
       <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-6">
