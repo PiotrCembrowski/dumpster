@@ -771,7 +771,7 @@ export default function JamestownDumpsterPage() {
                 label: "Dumpster Rental Bartlesville, OK",
                 href: "/dumpster-rental/bartlesville",
               },
-              { label: "Dumpster Sizes Guide", href: "/#sizes" },
+              { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
               { label: "All Locations", href: "/services" },
             ].map((l) => (

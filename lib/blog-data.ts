@@ -965,6 +965,206 @@ export const blogPosts: BlogPost[] = [
 <p>For same-day and next-day dumpster delivery in <a href="/dumpster-rental/bartlesville">Bartlesville</a>, <a href="/dumpster-rental/muskogee">Muskogee</a>, <a href="/dumpster-rental/scottsbluff">Scottsbluff</a>, <a href="/dumpster-rental/pierre">Pierre</a>, and <a href="/dumpster-rental/jamestown">Jamestown</a>, call before noon and a dumpster will be on your property the same day. Rental periods run 7 to 14 days and extensions are available across all sizes.</p>
 `,
   },
+
+  // ─── PHASE 7 POST 1 — Dumpster permit guide ─────────────────────────────────
+  {
+    slug: "dumpster-permit-guide",
+    title: "Do You Need a Permit for a Dumpster? Street Placement Rules Explained",
+    excerpt:
+      "You almost never need a permit to put a dumpster in your own driveway. Street or right-of-way placement is different. Here's how permits work — and what to do in each of our service cities.",
+    image: "/images/og-image.jpg",
+    category: "Guides",
+    publishedAt: "2026-06-24",
+    readTime: "8 min read",
+    author: {
+      name: "Rapid Dumpster Rental Team",
+      role: "Permitting & Logistics Specialists",
+    },
+    content: `
+<p>Here's the short answer most people are looking for: if the dumpster sits on your own private property — almost always the driveway — you do not need a permit. If it has to sit on a public street, alley, or city right-of-way, you usually do.</p>
+
+<p>That single distinction covers the vast majority of dumpster rentals. This guide explains when a permit is required, how to get one, and what the rule looks like in each of the cities we serve.</p>
+
+<h2>The rule: private property vs. public right-of-way</h2>
+
+<p>A dumpster on land you own or control needs no permit. Your driveway, your parking lot, a private yard — that's your call, and it's how most residential and commercial rentals work.</p>
+
+<p>The moment the container touches public property, a city has a say. Streets, curbside parking lanes, alleys, and sidewalks are public right-of-way. Cities regulate placement there for safety and traffic reasons — a container in a travel lane or blocking sight lines is a hazard, so they want it permitted, marked, and sometimes reflectorized.</p>
+
+<h2>When you actually need a street permit</h2>
+
+<p>You typically need a right-of-way permit only when you have no usable private space. The most common cases:</p>
+
+<ul>
+  <li>Homes with no driveway, or a driveway too short or steep for a roll off</li>
+  <li>Dense neighborhoods where the only flat spot is the street</li>
+  <li>Downtown and commercial blocks where placement is curbside by necessity</li>
+</ul>
+
+<p>If you have a driveway that can hold the container, use it. It's free, it's faster, and it avoids the permit entirely. A 10 or 20 yard fits most driveways — see our <a href="/dumpster-sizes/10-yard-dumpster-rental">10 yard dumpster</a> and <a href="/dumpster-sizes/20-yard-dumpster-rental">20 yard dumpster</a> pages for footprints.</p>
+
+<h2>How to get a street placement permit</h2>
+
+<p>The process is similar in most cities:</p>
+
+<ol>
+  <li><strong>Contact the city's public works or engineering department.</strong> Right-of-way permits are handled locally, not by the rental company.</li>
+  <li><strong>Apply before delivery.</strong> Most permits take 24 to 72 hours to process, so don't wait until the truck is scheduled.</li>
+  <li><strong>Expect a modest fee.</strong> Street permits are generally inexpensive, though the exact amount varies by city and by how long the container stays.</li>
+  <li><strong>Follow the marking rules.</strong> Cities often require reflective markers or cones so the container is visible at night.</li>
+</ol>
+
+<p>Call us before delivery and tell us the container has to go on the street. We'll help you plan the timing around the permit so nothing gets delivered before it's approved.</p>
+
+<h2>Permit guidance by city</h2>
+
+<h3>Bartlesville, OK</h3>
+<p>Driveway placement in <a href="/dumpster-rental/bartlesville">Bartlesville</a> requires no permit. For placement on a public street, contact Bartlesville Public Works at (918) 338-4130 before delivery. Washington County communities like Dewey and Nowata may have their own rules — ask us and we'll advise for your address.</p>
+
+<h3>Muskogee, OK</h3>
+<p>A permit is only needed for right-of-way placement in <a href="/dumpster-rental/muskogee">Muskogee</a>. Contact the City of Muskogee before placing a container on a public street. Driveway drop-offs, which cover most jobs, need nothing.</p>
+
+<h3>Scottsbluff, NE</h3>
+<p>In <a href="/dumpster-rental/scottsbluff">Scottsbluff</a> and neighboring Gering, private-property placement is permit-free. For street placement, check with the City of Scottsbluff public works office ahead of delivery.</p>
+
+<h3>Pierre, SD</h3>
+<p><a href="/dumpster-rental/pierre">Pierre</a> follows the same standard: no permit on your own property, a right-of-way permit if the container must sit on a public street. Contact the City of Pierre before street placement.</p>
+
+<h3>Jamestown, ND</h3>
+<p>In <a href="/dumpster-rental/jamestown">Jamestown</a>, driveway placement needs no permit. For a container on a public street or alley, contact the City of Jamestown before your delivery date.</p>
+
+<h2>What happens if you skip the permit?</h2>
+
+<p>Placing a container on the street without the required permit can mean a fine, and in some cities the container may have to be moved at your expense. It's a small step that prevents a much bigger headache. When in doubt, a two-minute call to the city clears it up.</p>
+
+<h2>The bottom line</h2>
+
+<p>Most dumpster rentals never touch a permit — the driveway does the job. Reserve the permit conversation for the cases where private space genuinely isn't available. If that's you, apply a few days ahead, mark the container as required, and you're set. Not sure which applies to your address? Call us and we'll walk through it before we schedule delivery.</p>
+`,
+  },
+
+  // ─── PHASE 7 POST 2 — Prohibited items disposal guide ───────────────────────
+  {
+    slug: "prohibited-items-disposal-guide",
+    title: "What You Can't Put in a Dumpster (and What to Do Instead)",
+    excerpt:
+      "Some things can't legally go in a roll off dumpster — paint, tires, batteries, appliances, electronics. Here's what's prohibited and the right way to get rid of each one.",
+    image: "/images/blog/eco-friendly-disposal.jpg",
+    category: "Guides",
+    publishedAt: "2026-06-27",
+    readTime: "9 min read",
+    author: {
+      name: "Rapid Dumpster Rental Team",
+      role: "Waste & Disposal Specialists",
+    },
+    content: `
+<p>A roll off dumpster handles most of what a project throws off — wood, drywall, furniture, roofing, general junk. But a handful of items are prohibited almost everywhere, and putting them in the container can mean a rejected load, a surcharge, or a trip back to sort it out.</p>
+
+<p>The reason is simple: landfills won't accept certain materials because they're hazardous, flammable, or recyclable by law. Here's what to keep out, and what to do with each instead.</p>
+
+<h2>Why some items are banned</h2>
+
+<p>Prohibited items fall into a few buckets: hazardous chemicals that can contaminate a landfill, pressurized or flammable items that are dangerous to compact, and materials that regulations require to be recycled or handled specially. When one of these ends up in a mixed load, the whole container can be turned away at the facility — which is why rental companies ask you to keep them out from the start.</p>
+
+<h2>The common prohibited items</h2>
+
+<h3>Paint and liquid finishes</h3>
+<p>Wet paint, stain, solvents, and thinners are not allowed. <strong>What to do instead:</strong> dried-out latex paint is often accepted as regular trash once fully solid — leave the lid off, add cat litter or a paint hardener, and let it dry. Oil-based paints and solvents are hazardous waste; take them to a household hazardous waste collection event or drop-off. Many paint retailers also run take-back programs.</p>
+
+<h3>Tires</h3>
+<p>Tires are banned from most landfills because they trap gases and resurface over time. <strong>What to do instead:</strong> most tire retailers accept old tires for a small recycling fee, often waived when you buy replacements. Some county collection sites take them directly.</p>
+
+<h3>Batteries</h3>
+<p>Car batteries, lithium batteries, and rechargeables are prohibited — they leak acid and can spark fires when compacted. <strong>What to do instead:</strong> auto parts stores take lead-acid car batteries, usually with a core credit. Many hardware and electronics retailers have drop-off bins for household and rechargeable batteries.</p>
+
+<h3>Appliances with refrigerant</h3>
+<p>Refrigerators, freezers, air conditioners, and dehumidifiers contain refrigerant that must be professionally removed before disposal. <strong>What to do instead:</strong> have the refrigerant evacuated by a certified technician, then the metal shell can often go in the dumpster — or a scrap metal recycler will take the whole unit. Tell us what appliances you have and we'll confirm what's allowed before delivery.</p>
+
+<h3>Electronics</h3>
+<p>TVs, monitors, computers, and other e-waste are banned in many places because of the lead and heavy metals inside. <strong>What to do instead:</strong> electronics retailers and county e-waste events accept them, frequently for free. Working equipment can be donated.</p>
+
+<h3>Other items to keep out</h3>
+<ul>
+  <li>Motor oil, antifreeze, and other automotive fluids</li>
+  <li>Propane tanks and other pressurized cylinders</li>
+  <li>Asbestos-containing materials (requires licensed abatement)</li>
+  <li>Medical waste, needles, and pharmaceuticals</li>
+  <li>Wet concrete or hazardous sludge</li>
+</ul>
+
+<h2>What you can put in</h2>
+
+<p>The good news is the list of allowed materials is much longer: lumber, drywall, cabinetry, furniture, flooring, roofing shingles, yard waste, general household junk, and most construction debris are all fine. For a full breakdown, see our guide on <a href="/blog/what-can-you-put-in-a-dumpster">what you can put in a dumpster</a>.</p>
+
+<p>Heavy materials like concrete and brick are allowed too, but they carry weight rules that make sizing matter — a small container is often the right call. Our <a href="/dumpster-sizes/10-yard-dumpster-rental">10 yard dumpster</a> is usually the best fit for dense debris.</p>
+
+<h2>When a load gets rejected</h2>
+
+<p>If a prohibited item is found during loading or at the transfer facility, the load can be refused or charged a sorting fee. The fix is prevention: keep the banned items separate as you work, and when you're unsure whether something qualifies, ask before it goes in. A quick question costs nothing; a rejected load costs a return trip.</p>
+
+<h2>Getting it right</h2>
+
+<p>Keep hazardous, pressurized, and recyclable-by-law items out of the container, and route each to the right place — retailers, county events, and scrap recyclers handle nearly all of them, often for free. Everything else goes in the dumpster. Renting in <a href="/dumpster-rental/muskogee">Muskogee</a>, <a href="/dumpster-rental/pierre">Pierre</a>, or one of our other markets? Call us with your list and we'll tell you exactly what can and can't go in before we deliver.</p>
+`,
+  },
+
+  // ─── PHASE 7 POST 3 — Heavy debris guide ────────────────────────────────────
+  {
+    slug: "heavy-debris-dumpster-guide",
+    title: "Heavy Debris: Renting a Dumpster for Concrete, Brick, Dirt & Shingles",
+    excerpt:
+      "Concrete, brick, dirt, and shingles are so dense they hit a dumpster's weight limit before it looks full. Here's the weight math, how overage fees work, and when a dedicated heavy-debris container makes sense.",
+    image: "/images/blog/construction-safety.jpg",
+    category: "Guides",
+    publishedAt: "2026-07-01",
+    readTime: "9 min read",
+    author: {
+      name: "Rapid Dumpster Rental Team",
+      role: "Heavy Debris & Weight Specialists",
+    },
+    content: `
+<p>Most dumpster mistakes come down to one thing: confusing volume with weight. For furniture and general junk, volume is what runs out first. For concrete, brick, dirt, and shingles, weight runs out long before the container looks full — and that's where surprise fees come from.</p>
+
+<p>This guide covers the weight math for heavy materials, how overage fees actually work, and when it's smarter to rent a smaller, dedicated heavy-debris container.</p>
+
+<h2>Why heavy debris is different</h2>
+
+<p>Every roll off comes with a weight allowance measured in tons. A <a href="/dumpster-sizes/20-yard-dumpster-rental">20 yard dumpster</a> might include four tons; a <a href="/dumpster-sizes/10-yard-dumpster-rental">10 yard</a> typically includes two. With light debris you'll fill the space before you ever reach that weight. With dense material it's the opposite — you hit the tonnage with the container a third full, and the remaining space is unusable because the load is already at its legal haul weight.</p>
+
+<h2>The weight math</h2>
+
+<p>Rough figures for common heavy materials help you plan:</p>
+
+<ul>
+  <li><strong>Concrete and asphalt:</strong> roughly 2 tons per cubic yard. Even one cubic yard is near a small container's limit.</li>
+  <li><strong>Brick and block:</strong> similar to concrete — about 1.5 to 2 tons per cubic yard.</li>
+  <li><strong>Dirt, soil, and sod:</strong> around 1 to 1.5 tons per cubic yard, heavier when wet.</li>
+  <li><strong>Asphalt shingles:</strong> about 250 to 400 pounds per roofing square (100 sq ft); a full tear-off adds up fast.</li>
+</ul>
+
+<p>Put that together and the pattern is clear: a couple of cubic yards of concrete can weigh as much as an entire container of household junk. That's why heavy loads need small containers.</p>
+
+<h2>How overage fees work</h2>
+
+<p>If your load exceeds the included weight allowance, you're charged a per-ton overage — typically $75 to $100 per ton over the limit. It's not a penalty so much as the cost of the extra weight at the disposal facility, but it adds up quickly on dense debris.</p>
+
+<p>The way to avoid it isn't to guess — it's to estimate the weight before you book. Measure roughly how many cubic yards of heavy material you have, apply the figures above, and match that to a container whose allowance covers it. When the estimate is close to a limit, size the weight tier up, not the volume.</p>
+
+<h2>When a dedicated heavy-debris container makes sense</h2>
+
+<p>For clean loads of a single heavy material — a concrete patio, a brick walkway, a pile of dirt — a small dedicated container is almost always the right answer. You're paying for weight capacity, not space, so a 10 yard with a solid weight allowance beats a 40 yard you could never legally fill.</p>
+
+<p>Some materials also recycle better when kept clean. Concrete and brick can go to crushing and reuse if they're not mixed with trash, which can mean a better rate. If you have a clean heavy load, tell us — it may qualify for dedicated heavy-debris handling. Our <a href="/services/construction-dumpster-rental">construction dumpster rental</a> service handles these loads regularly.</p>
+
+<h2>Mixing heavy and light debris</h2>
+
+<p>On renovation jobs you often have both — drywall and framing alongside a busted-up slab. You can mix them, but the heavy material still counts against your weight allowance, so a mixed load can hit the limit sooner than expected. If the heavy portion is large, splitting it into its own container is usually cheaper than paying overage on a big mixed box.</p>
+
+<h2>Getting it right the first time</h2>
+
+<p>Heavy debris rewards planning. Estimate the weight, pick the container by tonnage rather than volume, keep clean loads clean, and split off large amounts of dense material. Do that and you'll avoid the overage fee that catches most first-timers. Renting in <a href="/dumpster-rental/scottsbluff">Scottsbluff</a> or <a href="/dumpster-rental/bartlesville">Bartlesville</a>? Call before you book and we'll size the container to your load's weight, not just its volume.</p>
+`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

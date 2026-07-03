@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const links = [
-  { label: "Dumpster Sizes", href: "/#sizes" },
+  { label: "Dumpster Sizes", href: "/dumpster-sizes" },
   { label: "Service Locations", href: "/locations" },
   { label: "Our Services", href: "/services" },
   { label: "Dumpster Rental Blog", href: "/blog" },

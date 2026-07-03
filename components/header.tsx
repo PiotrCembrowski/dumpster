@@ -46,7 +46,7 @@ export function Header() {
               Services
             </Link>
             <Link
-              href="/#sizes"
+              href="/dumpster-sizes"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Dumpster Sizes
@@ -153,7 +153,7 @@ export function Header() {
               Services
             </Link>
             <Link
-              href="/#sizes"
+              href="/dumpster-sizes"
               className="block text-sm text-muted-foreground hover:text-foreground"
               onClick={() => setMobileMenuOpen(false)}
             >

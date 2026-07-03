@@ -762,7 +762,7 @@ export default function PierreDumpsterPage() {
                 label: "Dumpster Rental Scottsbluff, NE",
                 href: "/dumpster-rental/scottsbluff",
               },
-              { label: "Dumpster Sizes Guide", href: "/#sizes" },
+              { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
               { label: "All Locations", href: "/services" },
             ].map((l) => (
