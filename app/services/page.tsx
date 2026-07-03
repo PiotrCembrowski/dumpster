@@ -26,6 +26,23 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/services",
   },
+  openGraph: {
+    type: "website",
+    siteName: "Rapid Dumpster Rental",
+    title:
+      "Dumpster Rental Services | From $269 · Residential, Commercial & Construction",
+    description:
+      "Roll off dumpster rental services starting at $269. Residential, commercial, construction, and demolition dumpsters with same-day delivery.",
+    url: "https://www.rapiddumpsterrental.site/services",
+    images: [
+      {
+        url: "https://www.rapiddumpsterrental.site/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rapid Dumpster Rental services",
+      },
+    ],
+  },
 };
 
 // ─── SCHEMA ───────────────────────────────────────────────────────────────────
@@ -223,7 +240,7 @@ export default function ServicesPage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                {/* FIX: Was tel:1-800-555-DUMP — standardised */}
+                {/* FIX: legacy vanity number replaced with the standard tel href */}
                 <Button size="lg" variant="outline" asChild>
                   <a href="tel:+18005553867">
                     <Phone className="mr-2 h-5 w-5" />
@@ -375,13 +392,13 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* SEO section with city links — no Dallas/Tulsa per instruction */}
+        {/* SEO section with city links — only the five real service markets */}
         <section className="py-16 bg-card border-t border-border">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-10">
               <div>
                 <h2 className="text-xl font-semibold mb-3 text-foreground">
-                  Same-day dumpster rental across five states
+                  Same-day dumpster rental across four states
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   We provide 10, 20, 30, and 40 yard roll off dumpsters for
@@ -426,7 +443,7 @@ export default function ServicesPage() {
                   ))}
                   <li>
                     <Link
-                      href="/services"
+                      href="/locations"
                       className="flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-1"
                     >
                       <ChevronRight className="h-3.5 w-3.5 flex-shrink-0" />

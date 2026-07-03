@@ -40,7 +40,7 @@ const localBusinessSchema = {
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/pierre-sd-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/og-image.jpg",
   description:
     "Affordable roll off dumpster rental in Pierre, SD. Same-day delivery for residential and commercial projects. Serving Pierre, Fort Pierre, Blunt, Onida, and surrounding Hughes County communities.",
   address: {
@@ -69,12 +69,6 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "31",
-    bestRating: "5",
-  },
   areaServed: [
     { "@type": "City", name: "Pierre" },
     { "@type": "City", name: "Fort Pierre" },
@@ -190,7 +184,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -351,7 +345,7 @@ export default function PierreDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/services"
+                href="/locations"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -403,7 +397,7 @@ export default function PierreDumpsterPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:18005553867"
+                href="tel:+18005553867"
                 className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 font-medium hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-4 w-4" />
@@ -489,7 +483,7 @@ export default function PierreDumpsterPage() {
                   {s.best}
                 </p>
                 <a
-                  href="tel:18005553867"
+                  href="tel:+18005553867"
                   className="mt-4 block text-center text-sm bg-muted hover:bg-muted/70 py-2 rounded-md font-medium transition-colors"
                 >
                   Book Now
@@ -838,7 +832,7 @@ export default function PierreDumpsterPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:18005553867"
+              href="tel:+18005553867"
               className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center gap-2 font-semibold hover:bg-gray-50 transition-colors"
             >
               <Phone className="h-4 w-4" />

@@ -452,7 +452,7 @@ export default function ContactPage({ city }: ContactPageProps) {
                     <p className="text-muted-foreground text-sm">
                       {city
                         ? `Same-day delivery available in ${city} and surrounding areas`
-                        : "Oklahoma · Texas · Nebraska · South Dakota · North Dakota"}
+                        : "Oklahoma · Nebraska · South Dakota · North Dakota"}
                     </p>
                   </div>
                   <div className="flex items-start gap-3">

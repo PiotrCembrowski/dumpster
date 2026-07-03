@@ -20,10 +20,9 @@ const navigation = {
     { name: "40 Yard Dumpster Rental", href: "/#sizes" },
   ],
 
-  // FIX: Replaced fake/placeholder cities (Orlando, Phoenix, Tampa) with
-  // all 7 real city pages that have been built and deployed.
-  // Orlando, Phoenix, and Tampa were the original thin placeholder pages —
-  // they are not optimised and should not be promoted in the footer.
+  // FIX: Replaced the original template's placeholder cities with the five
+  // real service markets. Only these five city pages exist and should be
+  // promoted in the footer.
   locations: [
     {
       name: "Bartlesville, OK Dumpster Rental",

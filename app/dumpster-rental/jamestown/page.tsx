@@ -41,7 +41,7 @@ const localBusinessSchema = {
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/jamestown-nd-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/og-image.jpg",
   description:
     "Affordable roll off dumpster rental in Jamestown, ND. Same-day delivery for residential and commercial projects. Serving Jamestown, Valley City, Carrington, Medina, and surrounding Stutsman County communities.",
   address: {
@@ -70,12 +70,6 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "28",
-    bestRating: "5",
-  },
   areaServed: [
     { "@type": "City", name: "Jamestown" },
     { "@type": "City", name: "Valley City" },
@@ -191,7 +185,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -352,7 +346,7 @@ export default function JamestownDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/services"
+                href="/locations"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -404,7 +398,7 @@ export default function JamestownDumpsterPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:18005553867"
+                href="tel:+18005553867"
                 className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 font-medium hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-4 w-4" />
@@ -490,7 +484,7 @@ export default function JamestownDumpsterPage() {
                   {s.best}
                 </p>
                 <a
-                  href="tel:18005553867"
+                  href="tel:+18005553867"
                   className="mt-4 block text-center text-sm bg-muted hover:bg-muted/70 py-2 rounded-md font-medium transition-colors"
                 >
                   Book Now
@@ -774,8 +768,8 @@ export default function JamestownDumpsterPage() {
                 href: "/dumpster-rental/scottsbluff",
               },
               {
-                label: "Dumpster Rental Tulsa, OK",
-                href: "/services",
+                label: "Dumpster Rental Bartlesville, OK",
+                href: "/dumpster-rental/bartlesville",
               },
               { label: "Dumpster Sizes Guide", href: "/#sizes" },
               { label: "Contact & Free Quote", href: "/contact" },
@@ -847,7 +841,7 @@ export default function JamestownDumpsterPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:18005553867"
+              href="tel:+18005553867"
               className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center gap-2 font-semibold hover:bg-gray-50 transition-colors"
             >
               <Phone className="h-4 w-4" />

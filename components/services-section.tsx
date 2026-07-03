@@ -11,7 +11,7 @@ const services = [
     icon: Home,
     title: "Residential Dumpster Rental",
     description:
-      "Affordable roll off dumpsters for home cleanouts, remodeling, yard waste, garage cleanups, and estate cleanouts. Same-day delivery available in Tulsa, Bartlesville, Muskogee, and across our full service area.",
+      "Affordable roll off dumpsters for home cleanouts, remodeling, yard waste, garage cleanups, and estate cleanouts. Same-day delivery available in Bartlesville, Muskogee, and across our full service area.",
     image: "/images/residential-service.jpg",
     alt: "Residential dumpster rental for home renovation and cleanup",
     href: "/contact",
@@ -128,7 +128,7 @@ export function ServicesSection() {
           <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">
-                Serving homes and job sites across five states
+                Serving homes and job sites across four states
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Same-day roll off dumpster delivery is available in

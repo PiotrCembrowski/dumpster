@@ -5,6 +5,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import {
+  graph,
+  jsonLdProps,
+  organizationNode,
+  websiteNode,
+} from "@/lib/schema";
 
 // ─── FONTS ────────────────────────────────────────────────────────────────────
 // FIX: Fonts were prefixed with _ (intentionally unused convention) but still
@@ -21,38 +27,10 @@ const geistMono = Geist_Mono({
 });
 
 // ─── SITEWIDE SCHEMA ─────────────────────────────────────────────────────────
-// Organization schema belongs in the layout — it applies to every page and
-// tells Google the canonical identity of the business across the entire domain.
-// WebSite schema enables the sitelinks search box in Google Knowledge Panels.
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Rapid Dumpster Rental",
-  url: "https://www.rapiddumpsterrental.site",
-  logo: "https://www.rapiddumpsterrental.site/images/logo.png",
-  telephone: "+18005553867",
-  email: "info@rapiddumpsterrental.site",
-  description:
-    "Affordable roll off dumpster rental with same-day delivery. Serving Oklahoma, Texas, Nebraska, South Dakota, and North Dakota.",
-  areaServed: ["Oklahoma", "Texas", "Nebraska", "South Dakota", "North Dakota"],
-  sameAs: [],
-};
-
-const webSiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Rapid Dumpster Rental",
-  url: "https://www.rapiddumpsterrental.site",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate:
-        "https://www.rapiddumpsterrental.site/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
-};
+// Organization + WebSite apply to every page and establish the canonical
+// business identity across the domain. Built from the shared lib/schema.ts
+// builders so every page shares one definition.
+const sitewideSchema = graph(organizationNode(), websiteNode());
 
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -112,14 +90,9 @@ export const metadata: Metadata = {
     },
   },
 
-  icons: {
-    icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-icon.png",
-  },
+  // Favicon is provided by app/icon.svg (Next file convention); the manifest is
+  // provided by app/manifest.ts. The previous PNG icon paths pointed to files
+  // that do not exist in /public and have been removed to avoid 404s.
 };
 
 // ─── LAYOUT ───────────────────────────────────────────────────────────────────
@@ -131,19 +104,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Sitewide schema — injected once on every page via the layout */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(webSiteSchema),
-          }}
-        />
+        {/* Sitewide Organization + WebSite schema — injected on every page */}
+        <script {...jsonLdProps(sitewideSchema)} />
       </head>
       {/* FIX: Font CSS variables applied to body so Tailwind font-sans picks them up */}
       <body

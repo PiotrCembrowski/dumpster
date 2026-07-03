@@ -611,7 +611,7 @@ export const blogPosts: BlogPost[] = [
   //   • Every H2 targets a standalone long-tail query Google can rank independently:
   //       "is junk removal worth it", "how much does junk removal cost",
   //       "when to rent a dumpster vs junk removal", "dumpster rental for one day"
-  //   • Two internal links to /tulsa-ok and /dallas feed PageRank to city pages
+  //   • Internal links to the /services hub and city pages feed PageRank
   //   • Pricing comparison table structured for featured snippet capture
   //   • ~2,050 words of original content — no padding, every section answers a real question
   // ─────────────────────────────────────────────────────────────────────────────
