@@ -1,6 +1,9 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  // Optional concise <title> tag. When set, it is used verbatim for the SEO
+  // title and og:title; `title` is still what renders as the on-page H1.
+  metaTitle?: string;
   excerpt: string;
   content: string;
   image: string;
@@ -1001,7 +1004,7 @@ export const blogPosts: BlogPost[] = [
   <li>Downtown and commercial blocks where placement is curbside by necessity</li>
 </ul>
 
-<p>If you have a driveway that can hold the container, use it. It's free, it's faster, and it avoids the permit entirely. A 10 or 20 yard fits most driveways — see our <a href="/dumpster-sizes/10-yard-dumpster-rental">10 yard dumpster</a> and <a href="/dumpster-sizes/20-yard-dumpster-rental">20 yard dumpster</a> pages for footprints.</p>
+<p>If you have a driveway that can hold the container, use it. It's free, it's faster, and it avoids the permit entirely. A 10 or 20 yard fits most driveways — see our <a href="/dumpster-sizes/10-yard-dumpster-rental">10 yard dumpster</a> and <a href="/dumpster-sizes/20-yard-dumpster-rental">20 yard dumpster</a> pages for footprints. For how to pick the exact spot and protect your surface, see our guide on <a href="/blog/dumpster-placement-guide">where to put a dumpster</a>.</p>
 
 <h2>How to get a street placement permit</h2>
 
@@ -1163,6 +1166,137 @@ export const blogPosts: BlogPost[] = [
 <h2>Getting it right the first time</h2>
 
 <p>Heavy debris rewards planning. Estimate the weight, pick the container by tonnage rather than volume, keep clean loads clean, and split off large amounts of dense material. Do that and you'll avoid the overage fee that catches most first-timers. Renting in <a href="/dumpster-rental/scottsbluff">Scottsbluff</a> or <a href="/dumpster-rental/bartlesville">Bartlesville</a>? Call before you book and we'll size the container to your load's weight, not just its volume.</p>
+`,
+  },
+
+  // ─── PLACEMENT GUIDE — Where to put a dumpster ──────────────────────────────
+  {
+    slug: "dumpster-placement-guide",
+    title:
+      "Where to Put a Dumpster: Placement, Space Requirements & Driveway Protection",
+    metaTitle: "Where to Put a Dumpster: Placement & Driveway Protection",
+    excerpt:
+      "Driveway, street, or job site — where you put a dumpster affects permits, driveway damage, and delivery day. Here's how to pick the spot and prep for it.",
+    image: "/images/og-image.jpg",
+    category: "Guides",
+    publishedAt: "2026-07-04",
+    readTime: "9 min read",
+    author: {
+      name: "Rapid Dumpster Rental Team",
+      role: "Delivery & Placement Specialists",
+    },
+    content: `
+<p>The delivery itself takes about ten minutes. The decision about where the container sits lasts the entire rental — one to two weeks of walking around it, loading into it, and living with whatever spot you picked. Choose badly and you're looking at a blocked garage, a cracked driveway apron, or a citation for unpermitted street placement. All of it is avoidable with about ten minutes of planning before the truck arrives.</p>
+
+<p>This guide covers how much space a roll-off delivery actually requires, the realistic placement options, how to protect your driveway, and the hazards — overhead and underground — that are easy to miss until they become expensive.</p>
+
+<h2>How Much Space a Roll-Off Delivery Actually Needs</h2>
+
+<p>The container footprint is only part of the space question. The delivery truck backs in and tilts the container off its bed, which means it needs three clearances most people don't think about:</p>
+
+<ul>
+  <li><strong>A straight approach.</strong> The truck needs a clear, straight run to back into position — up to 60 feet for the largest containers when you include the truck itself and the container sliding off at an angle. Tight turns, parked cars, and narrow gates are the most common delivery-day problems.</li>
+  <li><strong>Clear width.</strong> Plan on 10 to 12 feet of unobstructed width along the approach and at the placement spot. The container is 8 feet wide; the truck and its mirrors are wider.</li>
+  <li><strong>Overhead clearance.</strong> The truck bed tilts upward during drop-off and pickup. Plan on roughly 20 feet of vertical clearance or more — power lines, tree limbs, carport roofs, and low eaves are all disqualifying obstacles directly above the placement spot.</li>
+</ul>
+
+<p>Here's how the footprint breaks down by container size, with the extra space you should plan for the door swing. Full dimensions for every container are on our <a href="/dumpster-sizes">dumpster size guide</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Container</th>
+      <th>Footprint</th>
+      <th>Plan For (footprint + door swing)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10 yard</td>
+      <td>14′ × 8′</td>
+      <td>~24′ × 8′</td>
+    </tr>
+    <tr>
+      <td>20 yard</td>
+      <td>22′ × 8′</td>
+      <td>~32′ × 8′</td>
+    </tr>
+    <tr>
+      <td>30 yard</td>
+      <td>22′ × 8′</td>
+      <td>~32′ × 8′</td>
+    </tr>
+    <tr>
+      <td>40 yard</td>
+      <td>22′ × 8′</td>
+      <td>~32′ × 8′</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The door on a roll-off container is at one end and swings outward. Leave 8 to 10 feet of clearance at the door end, and know which end you want facing your work area before the driver arrives — repositioning a placed container means another truck visit.</p>
+
+<h2>The Three Realistic Placement Options</h2>
+
+<p><strong>Your driveway.</strong> The default for residential rentals, and the right answer for most of them. No permit required, the surface is built to carry vehicles, and the container is steps from your garage or house. The only real considerations are surface protection (covered below) and making sure the spot doesn't block a garage bay or vehicle you'll need during the rental.</p>
+
+<p><strong>A private lot or side yard.</strong> Common for commercial properties and larger residential lots. Paved lots are straightforward. Unpaved ground introduces two issues: soft soil after rain can rut badly under a loaded truck, and you need to know what's underneath — more on that below.</p>
+
+<p><strong>The street.</strong> Almost always requires a permit from the city, and the rules vary by municipality — placement duration limits, reflector or barricade requirements, and fees differ from town to town. Our <a href="/blog/dumpster-permit-guide">dumpster permit guide</a> covers the process, and our city pages for <a href="/dumpster-rental/pierre">Pierre</a> and <a href="/dumpster-rental/scottsbluff">Scottsbluff</a> include local placement notes. The short version: if you have a driveway, use it and skip the permit process entirely.</p>
+
+<h2>Will a Dumpster Damage Your Driveway?</h2>
+
+<p>Honest answer: it can, and pretending otherwise is how driveways get cracked.</p>
+
+<p>An empty roll-off container weighs several thousand pounds. Filled — especially with dense material like shingles, concrete, or dirt — the total load can exceed the weight of several passenger vehicles concentrated on two steel rails, plus the truck's axle weight during drop-off and pickup. Our <a href="/blog/heavy-debris-dumpster-guide">heavy debris guide</a> covers the weight math in detail, but the placement takeaway is simple: this is a point load your driveway was not specifically designed for.</p>
+
+<p>How the common surfaces handle it:</p>
+
+<p><strong>Concrete</strong> is the best surface for a dumpster. It distributes load well and resists the rails. Still use protection — older slabs, existing cracks, and thin residential pours can chip or crack at the rail contact points.</p>
+
+<p><strong>Asphalt</strong> is more vulnerable than most people expect, and dramatically more vulnerable in summer. Hot asphalt softens, and the container rails can press visible dents into the surface. On warm days, board protection isn't optional.</p>
+
+<p><strong>Pavers and gravel</strong> take the most damage. Rails dig in, pavers crack or shift, and gravel ruts under the rolling container. Expect some surface repair or regrading afterward unless the load path is fully boarded.</p>
+
+<p>The protection method is cheap and standard: lay sheets of ¾-inch plywood or runs of dimensional lumber where the container rails will sit, before the truck arrives. Tell the office where the boards are when you book so the driver places the container on them. Total cost is a few sheets of plywood; the crack it prevents costs considerably more.</p>
+
+<p>One more habit worth adopting: photograph your driveway before delivery. A quick set of photos documenting pre-existing condition protects both you and the rental company if there's ever a question about damage.</p>
+
+<h2>Overhead and Underground Hazards</h2>
+
+<p>The overhead check takes ten seconds: stand where the container will sit and look straight up. Power lines, cable drops, tree limbs, eaves, and carport roofs within roughly 20 feet vertical are all problems — the truck bed rises well above the container's resting height during drop-off and pickup.</p>
+
+<p>Underground is easier to forget:</p>
+
+<ul>
+  <li><strong>Septic tanks and leach fields:</strong> never place a container or run a loaded truck over them. The load can crack a tank or crush field lines, and that repair bill dwarfs anything else in this article.</li>
+  <li><strong>Irrigation lines and shallow utilities:</strong> a concern on unpaved placement. If the only workable spot is bare ground and you're not certain what's under it, <a href="https://call811.com" rel="noopener">811</a> will mark buried utility lines for free — it's the same call-before-you-dig service used for excavation, and it works for this.</li>
+  <li><strong>Soft ground:</strong> after heavy rain, even a firm-looking lawn can rut deeply under the truck. If the forecast is bad and your placement is unpaved, it's often worth shifting the delivery a day.</li>
+</ul>
+
+<h2>Position It for the Work, Not Just the Truck</h2>
+
+<p>A spot that's easy for the driver but 80 feet from your debris pile is a bad spot. Every extra 20 feet of carry distance compounds across the dozens of trips a real cleanout involves.</p>
+
+<p>Beyond distance, three placement details save real frustration:</p>
+
+<ul>
+  <li><strong>Door orientation.</strong> Decide which end faces your work area and tell the driver. Walking material through the swing door beats lifting everything over a 4-to-8-foot wall.</li>
+  <li><strong>Don't block what you'll need.</strong> The garage bay with your tools in it. The path your trash cans take to the curb. Utility meters a reader needs to reach.</li>
+  <li><strong>Mind the mailbox.</strong> A container blocking mailbox access can mean skipped mail delivery — carriers aren't required to get out and walk around an obstruction.</li>
+</ul>
+
+<h2>Before the Truck Arrives</h2>
+
+<p>The delivery-day checklist is short: confirm your spot and mark it with chalk or cones if you won't be home, move vehicles clear of the approach on both sides, stage your protection boards where the rails will land, and give the office any gate codes or access instructions when you book. Remember that your <a href="/blog/how-long-can-you-keep-a-rental-dumpster">rental window</a> starts at delivery, not at first use — so schedule the drop for when you're actually ready to start loading.</p>
+
+<p>If you're in an HOA, check the rules before delivery rather than after. Many HOAs regulate container placement, duration, and sometimes visibility screening — a two-minute email to the board beats a violation letter. And if street parking near your home is tight, a heads-up to the neighbors costs nothing and buys a lot of goodwill for the week the container is there.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>For most residential rentals, the answer is: your driveway, on boards, door facing the work, nothing overhead, nothing blocked. That combination requires no permit, protects your surface, and makes the loading week as painless as it can be. Street placement is the fallback when there's no driveway option — plan the permit lead time before you book delivery.</p>
+
+<p>We deliver roll-off dumpsters same-day when you call before noon in <a href="/dumpster-rental/bartlesville">Bartlesville</a>, <a href="/dumpster-rental/muskogee">Muskogee</a>, and <a href="/dumpster-rental/jamestown">Jamestown</a>, as well as Scottsbluff and Pierre. Tell us where you want it placed when you call — our drivers work with your boards, your door orientation, and your access constraints every day.</p>
 `,
   },
 ];

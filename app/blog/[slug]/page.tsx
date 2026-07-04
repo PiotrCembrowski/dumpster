@@ -47,8 +47,12 @@ export async function generateMetadata({
 
   const canonicalUrl = `https://www.rapiddumpsterrental.site/blog/${slug}`;
 
+  // Posts may supply a concise metaTitle for the <title> tag; otherwise fall
+  // back to the H1 title with the brand suffix.
+  const metaTitle = post.metaTitle ?? `${post.title} | Rapid Dumpster Rental Blog`;
+
   return {
-    title: `${post.title} | Rapid Dumpster Rental Blog`,
+    title: metaTitle,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${slug}`,
@@ -58,7 +62,7 @@ export async function generateMetadata({
     openGraph: {
       type: "article",
       siteName: "Rapid Dumpster Rental",
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       url: canonicalUrl,
       publishedTime: post.publishedAt,
