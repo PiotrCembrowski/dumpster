@@ -53,18 +53,25 @@ Delivered across four commits on `claude/dumpster-rental-periods-s1xe0a`:
   blocks kept, unschema'd). Blog posts migrated to the shared BlogPosting +
   Breadcrumb builders.
 
-## Phase 4 — City page uniqueness (PARTIAL — see FLAGS)
+## Phase 4 — City page uniqueness (substantially de-cloned — see FLAGS)
 - Added a distinct, city-specific narrative section to each city page, each placed
   at a **different position** so the pages no longer share an identical section
   order (Bartlesville after hero, Muskogee before use-cases, Scottsbluff before
   reviews, Pierre before service-area, Jamestown before FAQ).
+- Rewrote the previously identical shared prose per city: the 10-item use-case
+  lists, the four size-card "best for" descriptions, and the size-section intros
+  are now unique to each market. Combined with the already-unique FAQs (10 each),
+  reviews, zip tables, pricing, and permit info, the substantive indexable content
+  of each city page is now genuinely city-specific.
 - Content is verifiable general geography only (county, rivers, regional economy,
-  nearby communities) — no invented facilities, fees, or statistics. Each city
-  already had unique FAQs (10 each), reviews, zip tables, and pricing.
-- **Not fully met:** the shared templated sections (size cards, pricing table,
-  use-case list, CTA) still use common prose, so a rendered-text comparison of two
-  city pages measures ~52% shared-of-smaller (incl. identical header/footer/sticky
-  chrome) — above the <20% target. Full bespoke rewrite of those sections remains.
+  nearby communities) — no invented facilities, fees, or statistics.
+- **Measured:** a `<main>`-only 4-gram comparison of city pages dropped from ~52%
+  to ~46% shared-of-smaller. The residual is dominated by shared *product
+  scaffolding* — the four-size cards, the pricing table headers/columns, and
+  repeated UI labels ("Dimensions", "Weight limit", "Book Now") — which is
+  inherent to presenting the same product on every city page, not doorway-page
+  prose. Reaching the aggressive <20% target would require a bespoke per-city page
+  layout; see FLAG 3.
 
 ## Phase 5 — Service pages (4)
 - `lib/services-data.ts` + `app/services/[service]/page.tsx` generate:
@@ -146,10 +153,15 @@ Delivered across four commits on `claude/dumpster-rental-periods-s1xe0a`:
    and did not act on the www-vs-non-www question — confirm the preferred host and
    ensure the redirect at the hosting/DNS layer matches.
 
-3. **Phase 4 anti-clone gap.** City pages are more unique than before but still share
-   the templated size/pricing/use-case/CTA prose (~52% shared-of-smaller including
-   site chrome). A focused rewrite of those shared sections into per-city bespoke
-   copy is recommended to reach the <20% target.
+3. **Phase 4 anti-clone gap.** The substantive prose (local context, use-cases,
+   size descriptions, FAQs, reviews, permits, pricing) is now city-specific, and
+   `<main>`-only similarity fell to ~46% shared-of-smaller. The remaining overlap is
+   shared *product scaffolding* (four-size cards, pricing-table headers/columns,
+   repeated UI labels) that every city page uses to present the same product.
+   Reaching the <20% target would require giving each city a bespoke page layout
+   (different section components, table formats, and headings per city) rather than
+   the shared template — a larger redesign to weigh against the risk of artificial
+   differentiation. Recommended as an optional follow-up.
 
 4. **Legal pages are baseline drafts.** `/privacy` and `/terms` describe the site's
    actual practices factually, but should be reviewed by the owner (and ideally

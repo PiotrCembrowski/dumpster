@@ -203,7 +203,7 @@ const sizes = [
     price: "$269",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Single rooms and heavy-material loads",
   },
   {
     yards: "20",
@@ -211,7 +211,7 @@ const sizes = [
     price: "$369",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing, remodels, and office turnovers",
     popular: true,
   },
   {
@@ -220,7 +220,7 @@ const sizes = [
     price: "$469",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, commercial sites",
+    best: "Whole-home and facility clear-outs",
   },
   {
     yards: "40",
@@ -228,7 +228,7 @@ const sizes = [
     price: "$569",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Building clear-outs and demolition",
   },
 ];
 
@@ -436,8 +436,8 @@ export default function PierreDumpsterPage() {
             Roll Off Dumpster Sizes in Pierre
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            Residential, commercial, or a facility clear-out — here's how the
+            four sizes compare in Pierre. Not sure which fits? We'll size it.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -595,16 +595,16 @@ export default function PierreDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
+              "Office and government facility clear-outs",
+              "Residential cleanouts and remodels",
               "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Government and commercial facility cleanouts",
-              "Flooring and drywall disposal",
-              "Moving and downsizing projects",
+              "Retail and commercial turnovers",
+              "Garage, shed, and basement cleanups",
+              "Riverfront property and cabin cleanouts",
+              "Concrete and heavy-material removal",
+              "Kitchen and bathroom renovation debris",
+              "Yard and landscaping cleanup",
+              "Moving cleanouts in Fort Pierre and Blunt",
             ].map((item) => (
               <div
                 key={item}

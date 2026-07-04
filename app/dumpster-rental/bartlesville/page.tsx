@@ -204,7 +204,7 @@ const sizes = [
     price: "$289",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Single-room cleanouts and dense remodel debris",
   },
   {
     yards: "20",
@@ -212,7 +212,7 @@ const sizes = [
     price: "$389",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing tear-offs and kitchen remodels",
     popular: true,
   },
   {
@@ -221,7 +221,7 @@ const sizes = [
     price: "$489",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, commercial sites",
+    best: "Whole-home cleanouts and Washington County acreage",
   },
   {
     yards: "40",
@@ -229,7 +229,7 @@ const sizes = [
     price: "$589",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, industrial cleanouts, large-scale debris removal",
+    best: "Industrial and commercial facility clear-outs",
   },
 ];
 
@@ -471,8 +471,8 @@ export default function BartlesvilleDumpsterPage() {
             Roll Off Dumpster Sizes in Bartlesville
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            From single-room cleanouts to industrial jobs, here's how the four
+            roll off sizes match up in Bartlesville. Not sure? We'll size it.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -631,16 +631,16 @@ export default function BartlesvilleDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
+              "Estate cleanouts in older downtown-area homes",
               "Roofing tear-offs and shingle disposal",
+              "Plaster, lath, and cast-iron remodel debris",
+              "Office and light-industrial facility cleanouts",
+              "Garage, attic, and basement clear-outs",
+              "Rental turnovers across Washington County",
+              "Concrete, brick, and other heavy materials",
               "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Commercial and industrial facility cleanouts",
-              "Flooring and drywall disposal",
-              "Moving and downsizing projects",
+              "Yard cleanup and storm debris",
+              "Moving cleanouts in Dewey, Nowata, and Copan",
             ].map((item) => (
               <div
                 key={item}

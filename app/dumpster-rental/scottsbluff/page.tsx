@@ -204,7 +204,7 @@ const sizes = [
     price: "$279",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Small cleanouts and dense farm debris",
   },
   {
     yards: "20",
@@ -212,7 +212,7 @@ const sizes = [
     price: "$379",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing and mid-size property cleanouts",
     popular: true,
   },
   {
@@ -221,7 +221,7 @@ const sizes = [
     price: "$479",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, farm outbuildings",
+    best: "Outbuilding teardowns and large clear-outs",
   },
   {
     yards: "40",
@@ -229,7 +229,7 @@ const sizes = [
     price: "$579",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Ranch, commercial, and demolition projects",
   },
 ];
 
@@ -439,8 +439,8 @@ export default function ScottsbluffDumpsterPage() {
             Roll Off Dumpster Sizes in Scottsbluff
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            From a shop cleanout to an outbuilding teardown, here's how the
+            sizes compare across the Panhandle. Call and we'll match your load.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -599,16 +599,16 @@ export default function ScottsbluffDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
-              "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Farm and agricultural property cleanouts",
-              "Barn and outbuilding demolition debris",
-              "Moving and downsizing projects",
+              "Farm and ranch property cleanouts",
+              "Outbuilding and equipment-shed teardowns",
+              "Roofing tear-offs and hail-damage debris",
+              "Home remodels and basement clear-outs",
+              "Heavy mixed debris — lumber, metal, and dirt",
+              "Garage and shop cleanouts",
+              "Construction and contractor waste",
+              "Yard, tree, and shelterbelt cleanup",
+              "Commercial cleanouts in Gering and Scottsbluff",
+              "Downsizing and estate cleanouts across the Panhandle",
             ].map((item) => (
               <div
                 key={item}

@@ -204,7 +204,7 @@ const sizes = [
     price: "$269",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Concrete, slab, and dense debris",
   },
   {
     yards: "20",
@@ -212,7 +212,7 @@ const sizes = [
     price: "$369",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing and rental-turnover cleanouts",
     popular: true,
   },
   {
@@ -221,7 +221,7 @@ const sizes = [
     price: "$469",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, farm outbuildings",
+    best: "Renovations and rural property clear-outs",
   },
   {
     yards: "40",
@@ -229,7 +229,7 @@ const sizes = [
     price: "$569",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Construction and large demolition",
   },
 ];
 
@@ -437,8 +437,8 @@ export default function JamestownDumpsterPage() {
             Roll Off Dumpster Sizes in Jamestown
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            From a concrete slab to a full renovation, here's how the sizes
+            stack up in the James River Valley. Call and we'll recommend the fit.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -596,16 +596,16 @@ export default function JamestownDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
+              "Concrete slab and foundation-repair debris",
+              "Basement and freeze-thaw remodel cleanups",
               "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Farm and agricultural property cleanouts",
-              "Barn, bin, and outbuilding demolition",
-              "Moving and downsizing projects",
+              "College-town rental turnovers",
+              "Home renovations and kitchen remodels",
+              "Farm and rural property clear-outs in Stutsman County",
+              "Construction and contractor job-site waste",
+              "Garage, bin, and outbuilding cleanups",
+              "Yard, tree, and storm debris",
+              "Moving cleanouts in Valley City and Carrington",
             ].map((item) => (
               <div
                 key={item}

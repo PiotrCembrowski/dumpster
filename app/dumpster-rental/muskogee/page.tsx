@@ -204,7 +204,7 @@ const sizes = [
     price: "$289",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Small cleanouts and heavy, dense debris",
   },
   {
     yards: "20",
@@ -212,7 +212,7 @@ const sizes = [
     price: "$389",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Storm roof tear-offs and remodels",
     popular: true,
   },
   {
@@ -221,7 +221,7 @@ const sizes = [
     price: "$489",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, construction sites",
+    best: "Whole-home renovations and acreage cleanouts",
   },
   {
     yards: "40",
@@ -229,7 +229,7 @@ const sizes = [
     price: "$589",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Commercial jobs and large demolition",
   },
 ];
 
@@ -437,8 +437,8 @@ export default function MuskogeeDumpsterPage() {
             Roll Off Dumpster Sizes in Muskogee
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            Storm roofs, remodels, or an acreage clear-out — here's how the
+            sizes line up in Muskogee. When in doubt, we'll pick the fit.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -627,16 +627,16 @@ export default function MuskogeeDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
-              "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Commercial and port facility cleanouts",
-              "Flooring and drywall disposal",
-              "Moving and downsizing projects",
+              "Storm and wind-damage roof tear-offs",
+              "Brick and mixed-material home remodels",
+              "Whole-home and estate cleanouts",
+              "Acreage and outbuilding clear-outs near Fort Gibson",
+              "Kitchen, bath, and flooring debris",
+              "Construction and contractor job-site waste",
+              "Garage and shed cleanups",
+              "Yard, brush, and landscaping debris",
+              "Commercial, port, and retail turnovers",
+              "Moving cleanouts in Wagoner and Tahlequah",
             ].map((item) => (
               <div
                 key={item}
