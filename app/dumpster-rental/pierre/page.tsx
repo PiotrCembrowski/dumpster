@@ -758,6 +758,10 @@ export default function PierreDumpsterPage() {
                 label: "How Long Can You Keep a Rental Dumpster?",
                 href: "/blog/how-long-can-you-keep-a-rental-dumpster",
               },
+              {
+                label: "Where to Put a Dumpster",
+                href: "/blog/dumpster-placement-guide",
+              },
             ].map((g) => (
               <Link
                 key={g.href}
