@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Phone, MapPin, ChevronRight, Star, CheckCircle } from "lucide-react";
+import { Phone, MapPin, ChevronRight, CheckCircle } from "lucide-react";
 
 // ─── META ────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -233,27 +233,6 @@ const sizes = [
   },
 ];
 
-const reviews = [
-  {
-    name: "Dale H.",
-    location: "Scottsbluff, NE",
-    rating: 5,
-    text: "Used them for a full roof tear-off on our house in Scottsbluff. Dumpster showed up early, driver placed it exactly where we needed it. Price matched the quote. No games.",
-  },
-  {
-    name: "Karen W.",
-    location: "Gering, NE",
-    rating: 5,
-    text: "Cleared out my parents' farm property near Gering. Needed a big container for a lot of old equipment and debris. They delivered to a rural address without any issue and picked up on schedule.",
-  },
-  {
-    name: "Tom B.",
-    location: "Mitchell, NE",
-    rating: 5,
-    text: "Called on a Tuesday morning for same-day delivery in Mitchell. They had it there by noon. Easy process, fair price, would use again for our next renovation.",
-  },
-];
-
 // Zip code table — ranks for "[suburb] dumpster rental" and "dumpster rental [zip]" queries
 const serviceAreas = [
   { city: "Scottsbluff", zips: "69361–69363" },
@@ -376,20 +355,6 @@ export default function ScottsbluffDumpsterPage() {
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
               Dumpster Rental Scottsbluff NE
             </h1>
-
-            <div className="flex items-center gap-2 mt-4 mb-2">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">
-                4.9 / 5 from 43 Scottsbluff-area customers
-              </span>
-            </div>
 
             <p className="mt-4 text-lg text-muted-foreground">
               Roll off dumpster rental in Scottsbluff from <strong>$279</strong>
@@ -650,55 +615,6 @@ export default function ScottsbluffDumpsterPage() {
             involves a lot of dense material, say so up front and we&apos;ll keep
             you out of an overage.
           </p>
-        </div>
-      </section>
-
-      {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-3">
-            What Scottsbluff Customers Say
-          </h2>
-          <div className="flex justify-center items-center gap-2 mb-12">
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-            <span className="text-muted-foreground text-sm">
-              4.9 average · 43 reviews
-            </span>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <div
-                key={r.name}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(r.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  "{r.text}"
-                </p>
-                <div>
-                  <p className="font-semibold text-sm text-gray-900">
-                    {r.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground">{r.location}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

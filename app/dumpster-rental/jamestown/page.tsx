@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Phone, MapPin, ChevronRight, Star, CheckCircle } from "lucide-react";
+import { Phone, MapPin, ChevronRight, CheckCircle } from "lucide-react";
 
 // ─── META ────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -233,27 +233,6 @@ const sizes = [
   },
 ];
 
-const reviews = [
-  {
-    name: "Steve K.",
-    location: "Jamestown, ND",
-    rating: 5,
-    text: "Used them for a full kitchen and bathroom gut on our older home in Jamestown. They delivered fast, placed it exactly where we needed it, and picked up on schedule. Fair price with no surprises on the final bill.",
-  },
-  {
-    name: "Donna R.",
-    location: "Valley City, ND",
-    rating: 5,
-    text: "Needed a dumpster in Valley City for a large estate cleanout. They had no problem delivering out there. Professional driver, good pricing, and easy scheduling. Would recommend to anyone in the area.",
-  },
-  {
-    name: "Brian L.",
-    location: "Jamestown, ND",
-    rating: 5,
-    text: "Called on a Friday morning for a roofing project starting that afternoon. They had a 20 yard dumpster to us before noon. Exactly what we needed and exactly what they quoted.",
-  },
-];
-
 // Zip code table — ranks for "[community] dumpster rental" and "dumpster rental [zip]" queries
 const serviceAreas = [
   { city: "Jamestown", zips: "58401–58402" },
@@ -374,20 +353,6 @@ export default function JamestownDumpsterPage() {
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
               Dumpster Rental Jamestown ND
             </h1>
-
-            <div className="flex items-center gap-2 mt-4 mb-2">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">
-                4.9 / 5 from 28 Jamestown-area customers
-              </span>
-            </div>
 
             <p className="mt-4 text-lg text-muted-foreground">
               Roll off dumpster rental in Jamestown from <strong>$269</strong>.
@@ -613,55 +578,6 @@ export default function JamestownDumpsterPage() {
               >
                 <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                 {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-3">
-            What Jamestown Customers Say
-          </h2>
-          <div className="flex justify-center items-center gap-2 mb-12">
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-            <span className="text-muted-foreground text-sm">
-              4.9 average · 28 reviews
-            </span>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <div
-                key={r.name}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(r.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  "{r.text}"
-                </p>
-                <div>
-                  <p className="font-semibold text-sm text-gray-900">
-                    {r.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground">{r.location}</p>
-                </div>
               </div>
             ))}
           </div>

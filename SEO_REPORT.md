@@ -142,11 +142,11 @@ Delivered across four commits on `claude/dumpster-rental-periods-s1xe0a`:
 
 ## FLAGS — need a human decision
 
-1. **Testimonial / rating blocks (kept, unschema'd).** On-page review arrays and
-   "What {City} Customers Say" sections remain in all five city pages —
-   `app/dumpster-rental/{bartlesville,muskogee,scottsbluff,pierre,jamestown}/page.tsx`.
-   They were left in place, not extended, not copied elsewhere, and not marked up in
-   schema (rule 3/4). **Removing them is the owner's call** if they aren't real.
+1. **Testimonial / rating blocks — REMOVED per owner instruction.** The fabricated
+   review quotes, the `reviews` arrays, and the "4.9 / 5" star ratings and review
+   counts (hero + "What {City} Customers Say" sections) were removed from all five
+   city pages. This aligns with the content rule against presenting fabricated
+   reviews/ratings. Fully reversible via git if any were real and should return.
 
 2. **Canonical host is `www`.** All canonicals, OG urls, sitemap entries, and schema
    use `https://www.rapiddumpsterrental.site`. Per instructions this run kept `www`

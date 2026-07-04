@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Phone, MapPin, ChevronRight, Star, CheckCircle } from "lucide-react";
+import { Phone, MapPin, ChevronRight, CheckCircle } from "lucide-react";
 
 // ─── META ────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -233,27 +233,6 @@ const sizes = [
   },
 ];
 
-const reviews = [
-  {
-    name: "Paul H.",
-    location: "Bartlesville, OK",
-    rating: 5,
-    text: "Used them for a full roof tear-off on our home near downtown Bartlesville. Called in the morning and had a 20 yard dumpster by early afternoon. Price was fair and they picked it up on time. No hidden fees.",
-  },
-  {
-    name: "Carla M.",
-    location: "Dewey, OK",
-    rating: 5,
-    text: "Needed a dumpster for a major cleanout in Dewey. They delivered without any issue and were flexible when I needed an extra two days. Great service and honest pricing.",
-  },
-  {
-    name: "Greg T.",
-    location: "Bartlesville, OK",
-    rating: 5,
-    text: "We've used them twice now for renovation jobs in Bartlesville. Consistent, on time, and always the same price they quote. Exactly what you want from a local service.",
-  },
-];
-
 // Zip code table — ranks for "[community] dumpster rental" and "dumpster rental [zip]" queries
 const serviceAreas = [
   { city: "Bartlesville", zips: "74003–74006" },
@@ -374,20 +353,6 @@ export default function BartlesvilleDumpsterPage() {
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
               Dumpster Rental Bartlesville OK
             </h1>
-
-            <div className="flex items-center gap-2 mt-4 mb-2">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">
-                4.9 / 5 from 52 Bartlesville-area customers
-              </span>
-            </div>
 
             <p className="mt-4 text-lg text-muted-foreground">
               Roll off dumpster rental in Bartlesville from{" "}
@@ -648,55 +613,6 @@ export default function BartlesvilleDumpsterPage() {
               >
                 <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                 {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-3">
-            What Bartlesville Customers Say
-          </h2>
-          <div className="flex justify-center items-center gap-2 mb-12">
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-            <span className="text-muted-foreground text-sm">
-              4.9 average · 52 reviews
-            </span>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <div
-                key={r.name}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(r.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  "{r.text}"
-                </p>
-                <div>
-                  <p className="font-semibold text-sm text-gray-900">
-                    {r.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground">{r.location}</p>
-                </div>
               </div>
             ))}
           </div>

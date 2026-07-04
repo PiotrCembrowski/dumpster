@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Phone, MapPin, ChevronRight, Star, CheckCircle } from "lucide-react";
+import { Phone, MapPin, ChevronRight, CheckCircle } from "lucide-react";
 
 // ─── META ────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -233,27 +233,6 @@ const sizes = [
   },
 ];
 
-const reviews = [
-  {
-    name: "Travis W.",
-    location: "Muskogee, OK",
-    rating: 5,
-    text: "Called first thing in the morning for a full home cleanout in Muskogee. Dumpster was delivered same day and the driver was professional and courteous. Exactly what they quoted, no extra charges at pickup.",
-  },
-  {
-    name: "Rhonda S.",
-    location: "Fort Gibson, OK",
-    rating: 5,
-    text: "Needed a dumpster delivered to Fort Gibson for a big estate cleanout. They handled the rural delivery without any issue. Great pricing and easy scheduling. Definitely recommend.",
-  },
-  {
-    name: "Dennis K.",
-    location: "Muskogee, OK",
-    rating: 5,
-    text: "Used them for a roofing project on a rental property I own in Muskogee. The 20 yard container handled all the shingles with room to spare. On-time pickup and the whole process was simple.",
-  },
-];
-
 // Zip code table — ranks for "[community] dumpster rental" and "dumpster rental [zip]" queries
 const serviceAreas = [
   { city: "Muskogee", zips: "74401–74403" },
@@ -374,20 +353,6 @@ export default function MuskogeeDumpsterPage() {
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
               Dumpster Rental Muskogee OK
             </h1>
-
-            <div className="flex items-center gap-2 mt-4 mb-2">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-              <span className="text-sm text-muted-foreground">
-                4.9 / 5 from 47 Muskogee-area customers
-              </span>
-            </div>
 
             <p className="mt-4 text-lg text-muted-foreground">
               Roll off dumpster rental in Muskogee from <strong>$289</strong>.
@@ -644,55 +609,6 @@ export default function MuskogeeDumpsterPage() {
               >
                 <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                 {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-3">
-            What Muskogee Customers Say
-          </h2>
-          <div className="flex justify-center items-center gap-2 mb-12">
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-            <span className="text-muted-foreground text-sm">
-              4.9 average · 47 reviews
-            </span>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <div
-                key={r.name}
-                className="bg-white border border-gray-200 rounded-xl p-6"
-              >
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(r.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  "{r.text}"
-                </p>
-                <div>
-                  <p className="font-semibold text-sm text-gray-900">
-                    {r.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground">{r.location}</p>
-                </div>
               </div>
             ))}
           </div>
