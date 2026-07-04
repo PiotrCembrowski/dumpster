@@ -41,7 +41,7 @@ const localBusinessSchema = {
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/bartlesville-ok-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/og-image.jpg",
   description:
     "Affordable roll off dumpster rental in Bartlesville, OK. Same-day delivery for residential and commercial projects. Serving Bartlesville, Dewey, Nowata, Copan, and surrounding Washington County communities.",
   address: {
@@ -70,12 +70,6 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "52",
-    bestRating: "5",
-  },
   areaServed: [
     { "@type": "City", name: "Bartlesville" },
     { "@type": "City", name: "Dewey" },
@@ -191,7 +185,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -210,7 +204,7 @@ const sizes = [
     price: "$289",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Single-room cleanouts and dense remodel debris",
   },
   {
     yards: "20",
@@ -218,7 +212,7 @@ const sizes = [
     price: "$389",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing tear-offs and kitchen remodels",
     popular: true,
   },
   {
@@ -227,7 +221,7 @@ const sizes = [
     price: "$489",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, commercial sites",
+    best: "Whole-home cleanouts and Washington County acreage",
   },
   {
     yards: "40",
@@ -235,7 +229,7 @@ const sizes = [
     price: "$589",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, industrial cleanouts, large-scale debris removal",
+    best: "Industrial and commercial facility clear-outs",
   },
 ];
 
@@ -352,7 +346,7 @@ export default function BartlesvilleDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/services"
+                href="/locations"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -404,7 +398,7 @@ export default function BartlesvilleDumpsterPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:18005553867"
+                href="tel:+18005553867"
                 className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 font-medium hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-4 w-4" />
@@ -436,6 +430,40 @@ export default function BartlesvilleDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Dumpster Rental in Bartlesville &amp; Washington County
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Bartlesville sits at the center of Washington County, and its
+            housing tells the story of an old energy town. Neighborhoods near
+            downtown include homes built during the region&apos;s oil boom —
+            solid, older construction with plaster walls, hardwood, and the
+            occasional cast-iron plumbing run. Remodeling those homes produces
+            dense, heavy debris, which is exactly the kind of load where a 10 or
+            20 yard container reaches its weight allowance before it looks full.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            The city&apos;s industrial heritage also means commercial and
+            facility cleanouts are a regular part of the work here. Offices,
+            shops, and light-industrial buildings around Bartlesville generate
+            mixed loads that a 30 or 40 yard container handles in a single haul.
+            For rural properties out in Washington County, the extra capacity is
+            usually worth it — the drive is longer, so you don&apos;t want to run
+            short and need a second delivery.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We deliver throughout Bartlesville and the surrounding communities,
+            including Dewey just north, and Nowata and Copan a short drive out.
+            If you&apos;re not sure whether your project leans heavy or bulky,
+            that&apos;s the first thing to sort out — it decides the size more
+            than the volume does.
+          </p>
+        </div>
+      </section>
+
       {/* ── DUMPSTER SIZES ──────────────────────────────────────────────── */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -443,8 +471,8 @@ export default function BartlesvilleDumpsterPage() {
             Roll Off Dumpster Sizes in Bartlesville
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            From single-room cleanouts to industrial jobs, here's how the four
+            roll off sizes match up in Bartlesville. Not sure? We'll size it.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -490,7 +518,7 @@ export default function BartlesvilleDumpsterPage() {
                   {s.best}
                 </p>
                 <a
-                  href="tel:18005553867"
+                  href="tel:+18005553867"
                   className="mt-4 block text-center text-sm bg-muted hover:bg-muted/70 py-2 rounded-md font-medium transition-colors"
                 >
                   Book Now
@@ -603,16 +631,16 @@ export default function BartlesvilleDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
+              "Estate cleanouts in older downtown-area homes",
               "Roofing tear-offs and shingle disposal",
+              "Plaster, lath, and cast-iron remodel debris",
+              "Office and light-industrial facility cleanouts",
+              "Garage, attic, and basement clear-outs",
+              "Rental turnovers across Washington County",
+              "Concrete, brick, and other heavy materials",
               "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Commercial and industrial facility cleanouts",
-              "Flooring and drywall disposal",
-              "Moving and downsizing projects",
+              "Yard cleanup and storm debris",
+              "Moving cleanouts in Dewey, Nowata, and Copan",
             ].map((item) => (
               <div
                 key={item}
@@ -770,9 +798,17 @@ export default function BartlesvilleDumpsterPage() {
                 label: "Dumpster Rental Muskogee, OK",
                 href: "/dumpster-rental/muskogee",
               },
-              { label: "Dumpster Sizes Guide", href: "/#sizes" },
+              { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              {
+                label: "Roofing dumpster rental",
+                href: "/services/roofing-dumpster-rental",
+              },
+              {
+                label: "Residential dumpster rental",
+                href: "/services/residential-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -840,7 +876,7 @@ export default function BartlesvilleDumpsterPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:18005553867"
+              href="tel:+18005553867"
               className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center gap-2 font-semibold hover:bg-gray-50 transition-colors"
             >
               <Phone className="h-4 w-4" />

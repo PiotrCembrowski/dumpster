@@ -41,7 +41,7 @@ const localBusinessSchema = {
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/jamestown-nd-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/og-image.jpg",
   description:
     "Affordable roll off dumpster rental in Jamestown, ND. Same-day delivery for residential and commercial projects. Serving Jamestown, Valley City, Carrington, Medina, and surrounding Stutsman County communities.",
   address: {
@@ -70,12 +70,6 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "28",
-    bestRating: "5",
-  },
   areaServed: [
     { "@type": "City", name: "Jamestown" },
     { "@type": "City", name: "Valley City" },
@@ -191,7 +185,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -210,7 +204,7 @@ const sizes = [
     price: "$269",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Concrete, slab, and dense debris",
   },
   {
     yards: "20",
@@ -218,7 +212,7 @@ const sizes = [
     price: "$369",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing and rental-turnover cleanouts",
     popular: true,
   },
   {
@@ -227,7 +221,7 @@ const sizes = [
     price: "$469",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, farm outbuildings",
+    best: "Renovations and rural property clear-outs",
   },
   {
     yards: "40",
@@ -235,7 +229,7 @@ const sizes = [
     price: "$569",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Construction and large demolition",
   },
 ];
 
@@ -352,7 +346,7 @@ export default function JamestownDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/services"
+                href="/locations"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -404,7 +398,7 @@ export default function JamestownDumpsterPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:18005553867"
+                href="tel:+18005553867"
                 className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 font-medium hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-4 w-4" />
@@ -443,8 +437,8 @@ export default function JamestownDumpsterPage() {
             Roll Off Dumpster Sizes in Jamestown
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            From a concrete slab to a full renovation, here's how the sizes
+            stack up in the James River Valley. Call and we'll recommend the fit.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -490,7 +484,7 @@ export default function JamestownDumpsterPage() {
                   {s.best}
                 </p>
                 <a
-                  href="tel:18005553867"
+                  href="tel:+18005553867"
                   className="mt-4 block text-center text-sm bg-muted hover:bg-muted/70 py-2 rounded-md font-medium transition-colors"
                 >
                   Book Now
@@ -602,16 +596,16 @@ export default function JamestownDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
+              "Concrete slab and foundation-repair debris",
+              "Basement and freeze-thaw remodel cleanups",
               "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Farm and agricultural property cleanouts",
-              "Barn, bin, and outbuilding demolition",
-              "Moving and downsizing projects",
+              "College-town rental turnovers",
+              "Home renovations and kitchen remodels",
+              "Farm and rural property clear-outs in Stutsman County",
+              "Construction and contractor job-site waste",
+              "Garage, bin, and outbuilding cleanups",
+              "Yard, tree, and storm debris",
+              "Moving cleanouts in Valley City and Carrington",
             ].map((item) => (
               <div
                 key={item}
@@ -734,6 +728,37 @@ export default function JamestownDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Dumpster Rental in the James River Valley
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Jamestown sits in the James River Valley along the I-94 corridor, and
+            the northern climate leaves its mark on local projects. Freeze-thaw
+            cycles are hard on concrete, foundations, and basements, so a fair
+            share of local rentals involve heavy material — broken-up slab,
+            foundation repair debris, and the dense waste that comes with it.
+            That&apos;s classic weight-limited work, where a smaller container
+            sized for tonnage beats a big one you can&apos;t fill.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            As a regional hub and a college town, Jamestown also sees steady
+            residential turnover and cleanouts, which run lighter and bulkier — a
+            good fit for a 20 or 30 yard. The I-94 location makes the surrounding
+            county easy to reach, so rural properties around Stutsman County get
+            the same same-day service as addresses in town.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We deliver across Jamestown and out to Valley City, Carrington,
+            Medina, and the surrounding communities. Tell us whether your debris
+            is heavy or bulky and we&apos;ll pick the size around that — it&apos;s
+            the detail that prevents a surprise fee.
+          </p>
+        </div>
+      </section>
+
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
       <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-6">
@@ -774,12 +799,20 @@ export default function JamestownDumpsterPage() {
                 href: "/dumpster-rental/scottsbluff",
               },
               {
-                label: "Dumpster Rental Tulsa, OK",
-                href: "/services",
+                label: "Dumpster Rental Bartlesville, OK",
+                href: "/dumpster-rental/bartlesville",
               },
-              { label: "Dumpster Sizes Guide", href: "/#sizes" },
+              { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              {
+                label: "Construction site dumpsters",
+                href: "/services/construction-dumpster-rental",
+              },
+              {
+                label: "Residential dumpster rental",
+                href: "/services/residential-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -847,7 +880,7 @@ export default function JamestownDumpsterPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:18005553867"
+              href="tel:+18005553867"
               className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center gap-2 font-semibold hover:bg-gray-50 transition-colors"
             >
               <Phone className="h-4 w-4" />

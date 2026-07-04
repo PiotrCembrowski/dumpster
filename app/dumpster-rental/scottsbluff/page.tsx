@@ -41,7 +41,7 @@ const localBusinessSchema = {
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/scottsbluff-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/og-image.jpg",
   description:
     "Affordable roll off dumpster rental in Scottsbluff, NE. Same-day delivery for residential and commercial projects. Serving Scottsbluff, Gering, Mitchell, Morrill, Minatare, and surrounding Panhandle communities.",
   address: {
@@ -70,12 +70,6 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "43",
-    bestRating: "5",
-  },
   areaServed: [
     { "@type": "City", name: "Scottsbluff" },
     { "@type": "City", name: "Gering" },
@@ -191,7 +185,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -210,7 +204,7 @@ const sizes = [
     price: "$279",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Small cleanouts and dense farm debris",
   },
   {
     yards: "20",
@@ -218,7 +212,7 @@ const sizes = [
     price: "$379",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing and mid-size property cleanouts",
     popular: true,
   },
   {
@@ -227,7 +221,7 @@ const sizes = [
     price: "$479",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, farm outbuildings",
+    best: "Outbuilding teardowns and large clear-outs",
   },
   {
     yards: "40",
@@ -235,7 +229,7 @@ const sizes = [
     price: "$579",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Ranch, commercial, and demolition projects",
   },
 ];
 
@@ -354,7 +348,7 @@ export default function ScottsbluffDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/services"
+                href="/locations"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -406,7 +400,7 @@ export default function ScottsbluffDumpsterPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:18005553867"
+                href="tel:+18005553867"
                 className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 font-medium hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-4 w-4" />
@@ -445,8 +439,8 @@ export default function ScottsbluffDumpsterPage() {
             Roll Off Dumpster Sizes in Scottsbluff
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            From a shop cleanout to an outbuilding teardown, here's how the
+            sizes compare across the Panhandle. Call and we'll match your load.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -492,7 +486,7 @@ export default function ScottsbluffDumpsterPage() {
                   {s.best}
                 </p>
                 <a
-                  href="tel:18005553867"
+                  href="tel:+18005553867"
                   className="mt-4 block text-center text-sm bg-muted hover:bg-muted/70 py-2 rounded-md font-medium transition-colors"
                 >
                   Book Now
@@ -605,16 +599,16 @@ export default function ScottsbluffDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
-              "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Farm and agricultural property cleanouts",
-              "Barn and outbuilding demolition debris",
-              "Moving and downsizing projects",
+              "Farm and ranch property cleanouts",
+              "Outbuilding and equipment-shed teardowns",
+              "Roofing tear-offs and hail-damage debris",
+              "Home remodels and basement clear-outs",
+              "Heavy mixed debris — lumber, metal, and dirt",
+              "Garage and shop cleanouts",
+              "Construction and contractor waste",
+              "Yard, tree, and shelterbelt cleanup",
+              "Commercial cleanouts in Gering and Scottsbluff",
+              "Downsizing and estate cleanouts across the Panhandle",
             ].map((item) => (
               <div
                 key={item}
@@ -625,6 +619,37 @@ export default function ScottsbluffDumpsterPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Dumpster Rental Across the Nebraska Panhandle
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Scottsbluff sits in the Nebraska Panhandle, in the North Platte
+            River valley, and the work here reflects ag country. Farm and ranch
+            cleanouts, outbuilding teardowns, and equipment-shed clear-outs are
+            common, and they tend to produce heavy, mixed debris. When old
+            lumber, metal, and dirt go into the same container, weight adds up
+            fast — which is why we size Panhandle loads by tonnage, not just by
+            how much room is left.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Placement is rarely a problem out here. Lots in and around
+            Scottsbluff and its twin city of Gering are generally wide, with room
+            for a 30 or 40 yard container and a clear approach for the delivery
+            truck. That makes the larger sizes practical for the big clear-outs
+            that tighter lots elsewhere can&apos;t accommodate.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We cover Scottsbluff, Gering, and the surrounding Panhandle
+            communities including Mitchell, Morrill, and Bayard. If your project
+            involves a lot of dense material, say so up front and we&apos;ll keep
+            you out of an overage.
+          </p>
         </div>
       </section>
 
@@ -769,10 +794,18 @@ export default function ScottsbluffDumpsterPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              { label: "Dumpster Sizes Guide", href: "/#sizes" },
-              { label: "How Dumpster Rental Works", href: "/#how-it-works" },
+              { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              { label: "How Dumpster Rental Works", href: "/#process" },
+              {
+                label: "Commercial dumpster rental",
+                href: "/services/commercial-dumpster-rental",
+              },
+              {
+                label: "Construction dumpster service",
+                href: "/services/construction-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -840,7 +873,7 @@ export default function ScottsbluffDumpsterPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:18005553867"
+              href="tel:+18005553867"
               className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center gap-2 font-semibold hover:bg-gray-50 transition-colors"
             >
               <Phone className="h-4 w-4" />

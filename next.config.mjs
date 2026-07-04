@@ -15,6 +15,13 @@ const nextConfig = {
         destination: "/blog/what-size-dumpster-do-i-need-2026",
         permanent: true,
       },
+      // Phase 1: standardize the Jamestown slug — the historical "-nd" variant
+      // 301s to the canonical /dumpster-rental/jamestown.
+      {
+        source: "/dumpster-rental/jamestown-nd",
+        destination: "/dumpster-rental/jamestown",
+        permanent: true,
+      },
     ]
   },
 }

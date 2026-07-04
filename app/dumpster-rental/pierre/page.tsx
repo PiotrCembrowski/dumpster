@@ -40,7 +40,7 @@ const localBusinessSchema = {
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/pierre-sd-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/og-image.jpg",
   description:
     "Affordable roll off dumpster rental in Pierre, SD. Same-day delivery for residential and commercial projects. Serving Pierre, Fort Pierre, Blunt, Onida, and surrounding Hughes County communities.",
   address: {
@@ -69,12 +69,6 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "31",
-    bestRating: "5",
-  },
   areaServed: [
     { "@type": "City", name: "Pierre" },
     { "@type": "City", name: "Fort Pierre" },
@@ -190,7 +184,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -209,7 +203,7 @@ const sizes = [
     price: "$269",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Single rooms and heavy-material loads",
   },
   {
     yards: "20",
@@ -217,7 +211,7 @@ const sizes = [
     price: "$369",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Roofing, remodels, and office turnovers",
     popular: true,
   },
   {
@@ -226,7 +220,7 @@ const sizes = [
     price: "$469",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, commercial sites",
+    best: "Whole-home and facility clear-outs",
   },
   {
     yards: "40",
@@ -234,7 +228,7 @@ const sizes = [
     price: "$569",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Building clear-outs and demolition",
   },
 ];
 
@@ -351,7 +345,7 @@ export default function PierreDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/services"
+                href="/locations"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -403,7 +397,7 @@ export default function PierreDumpsterPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:18005553867"
+                href="tel:+18005553867"
                 className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 font-medium hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-4 w-4" />
@@ -442,8 +436,8 @@ export default function PierreDumpsterPage() {
             Roll Off Dumpster Sizes in Pierre
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            Residential, commercial, or a facility clear-out — here's how the
+            four sizes compare in Pierre. Not sure which fits? We'll size it.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -489,7 +483,7 @@ export default function PierreDumpsterPage() {
                   {s.best}
                 </p>
                 <a
-                  href="tel:18005553867"
+                  href="tel:+18005553867"
                   className="mt-4 block text-center text-sm bg-muted hover:bg-muted/70 py-2 rounded-md font-medium transition-colors"
                 >
                   Book Now
@@ -601,16 +595,16 @@ export default function PierreDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
+              "Office and government facility clear-outs",
+              "Residential cleanouts and remodels",
               "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Government and commercial facility cleanouts",
-              "Flooring and drywall disposal",
-              "Moving and downsizing projects",
+              "Retail and commercial turnovers",
+              "Garage, shed, and basement cleanups",
+              "Riverfront property and cabin cleanouts",
+              "Concrete and heavy-material removal",
+              "Kitchen and bathroom renovation debris",
+              "Yard and landscaping cleanup",
+              "Moving cleanouts in Fort Pierre and Blunt",
             ].map((item) => (
               <div
                 key={item}
@@ -670,6 +664,37 @@ export default function PierreDumpsterPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            Serving South Dakota&apos;s Capital
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Pierre is South Dakota&apos;s capital, and that shapes the mix of
+            work. Alongside residential cleanouts and remodels, there&apos;s a
+            steady stream of commercial and government-adjacent projects — office
+            turnovers, facility clear-outs, and the occasional larger
+            institutional job. That range means we keep the full lineup of sizes
+            moving, from a 10 yard for a single room to a 40 yard for a building
+            clear-out.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            The city sits on the Missouri River, with Fort Pierre directly across
+            the water. It&apos;s a compact market, which has an upside:
+            scheduling tends to be personal and flexible, and same-day delivery
+            is realistic when you call early. For residents, the driveway handles
+            most containers; for downtown and commercial placements, we&apos;ll
+            flag whether a right-of-way permit applies.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We serve Pierre, Fort Pierre, and the nearby communities of Blunt,
+            Onida, and Harrold. Not sure what size fits? Describe the project and
+            we&apos;ll size it — the goal is one container and one trip.
+          </p>
         </div>
       </section>
 
@@ -768,9 +793,17 @@ export default function PierreDumpsterPage() {
                 label: "Dumpster Rental Scottsbluff, NE",
                 href: "/dumpster-rental/scottsbluff",
               },
-              { label: "Dumpster Sizes Guide", href: "/#sizes" },
+              { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              {
+                label: "Commercial & business dumpsters",
+                href: "/services/commercial-dumpster-rental",
+              },
+              {
+                label: "Roofing tear-off dumpsters",
+                href: "/services/roofing-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -838,7 +871,7 @@ export default function PierreDumpsterPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:18005553867"
+              href="tel:+18005553867"
               className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center gap-2 font-semibold hover:bg-gray-50 transition-colors"
             >
               <Phone className="h-4 w-4" />

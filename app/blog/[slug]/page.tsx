@@ -5,6 +5,12 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { blogPosts, getBlogPost, getRelatedPosts } from "@/lib/blog-data";
 import {
+  graph,
+  jsonLdProps,
+  blogPostingNode,
+  breadcrumbNode,
+} from "@/lib/schema";
+import {
   ArrowLeft,
   ArrowRight,
   Calendar,
@@ -82,35 +88,25 @@ export default async function BlogPostPage({
 
   const relatedPosts = getRelatedPosts(slug);
 
-  // ─── BLOGPOSTING SCHEMA (Task 7) ──────────────────────────────────────────
-  // Tells Google this is an article, with author/publisher attribution and
-  // publish/modified dates. Earns rich-result eligibility for blog content.
-  const blogPostingSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: `https://www.rapiddumpsterrental.site${post.image}`,
-    url: `https://www.rapiddumpsterrental.site/blog/${slug}`,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    author: {
-      "@type": "Organization",
-      name: "Rapid Dumpster Rental",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Rapid Dumpster Rental",
-      url: "https://www.rapiddumpsterrental.site",
-    },
-  };
+  // BlogPosting + BreadcrumbList schema via the shared builders (lib/schema.ts).
+  const schema = graph(
+    blogPostingNode({
+      title: post.title,
+      description: post.excerpt,
+      path: `/blog/${slug}`,
+      image: post.image,
+      datePublished: post.publishedAt,
+    }),
+    breadcrumbNode([
+      { name: "Home", path: "/" },
+      { name: "Blog", path: "/blog" },
+      { name: post.title },
+    ]),
+  );
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
-      />
+      <script {...jsonLdProps(schema)} />
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative py-16 lg:py-24">
@@ -336,7 +332,7 @@ export default async function BlogPostPage({
                 className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
                 asChild
               >
-                <Link href="/#sizes">View Dumpster Sizes</Link>
+                <Link href="/dumpster-sizes">View Dumpster Sizes</Link>
               </Button>
             </div>
           </div>

@@ -88,7 +88,7 @@ export function ContactSection() {
                     Service Area
                   </h3>
                   <p className="text-muted-foreground">
-                    Oklahoma · Texas · Nebraska · South Dakota · North Dakota
+                    Oklahoma · Nebraska · South Dakota · North Dakota
                     <br />
                     Same-day delivery available in all service areas
                   </p>

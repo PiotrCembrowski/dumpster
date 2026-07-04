@@ -2,28 +2,49 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 
 const navigation = {
+  // Repointed to dedicated service pages (Phase 5).
   services: [
-    { name: "Residential Dumpster Rental", href: "/services#residential" },
-    { name: "Commercial Dumpster Rental", href: "/services#commercial" },
-    { name: "Construction Dumpster Rental", href: "/services#construction" },
-    { name: "Demolition Dumpster Rental", href: "/services#demolition" },
+    {
+      name: "Residential Dumpster Rental",
+      href: "/services/residential-dumpster-rental",
+    },
+    {
+      name: "Commercial Dumpster Rental",
+      href: "/services/commercial-dumpster-rental",
+    },
+    {
+      name: "Construction Dumpster Rental",
+      href: "/services/construction-dumpster-rental",
+    },
+    {
+      name: "Roofing Dumpster Rental",
+      href: "/services/roofing-dumpster-rental",
+    },
   ],
 
-  // FIX: All four size links pointed to /#sizes — same destination, zero
-  // differentiation, no unique PageRank signal per size.
-  // Pointed to individual anchors within the sizes section until a
-  // dedicated /dumpster-sizes page is built.
+  // Repointed from the /#sizes anchor to dedicated size pages (Phase 6).
   sizes: [
-    { name: "10 Yard Dumpster Rental", href: "/#sizes" },
-    { name: "20 Yard Dumpster Rental", href: "/#sizes" },
-    { name: "30 Yard Dumpster Rental", href: "/#sizes" },
-    { name: "40 Yard Dumpster Rental", href: "/#sizes" },
+    {
+      name: "10 Yard Dumpster Rental",
+      href: "/dumpster-sizes/10-yard-dumpster-rental",
+    },
+    {
+      name: "20 Yard Dumpster Rental",
+      href: "/dumpster-sizes/20-yard-dumpster-rental",
+    },
+    {
+      name: "30 Yard Dumpster Rental",
+      href: "/dumpster-sizes/30-yard-dumpster-rental",
+    },
+    {
+      name: "40 Yard Dumpster Rental",
+      href: "/dumpster-sizes/40-yard-dumpster-rental",
+    },
   ],
 
-  // FIX: Replaced fake/placeholder cities (Orlando, Phoenix, Tampa) with
-  // all 7 real city pages that have been built and deployed.
-  // Orlando, Phoenix, and Tampa were the original thin placeholder pages —
-  // they are not optimised and should not be promoted in the footer.
+  // FIX: Replaced the original template's placeholder cities with the five
+  // real service markets. Only these five city pages exist and should be
+  // promoted in the footer.
   locations: [
     {
       name: "Bartlesville, OK Dumpster Rental",

@@ -41,7 +41,7 @@ const localBusinessSchema = {
   telephone: "+18005553867",
   priceRange: "$$",
   image:
-    "https://www.rapiddumpsterrental.site/images/muskogee-ok-dumpster-delivery.jpg",
+    "https://www.rapiddumpsterrental.site/images/og-image.jpg",
   description:
     "Affordable roll off dumpster rental in Muskogee, OK. Same-day delivery for residential and commercial projects. Serving Muskogee, Fort Gibson, Wagoner, Tahlequah, and surrounding Muskogee County communities.",
   address: {
@@ -70,12 +70,6 @@ const localBusinessSchema = {
       closes: "16:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
-    bestRating: "5",
-  },
   areaServed: [
     { "@type": "City", name: "Muskogee" },
     { "@type": "City", name: "Fort Gibson" },
@@ -191,7 +185,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Locations",
-      item: "https://www.rapiddumpsterrental.site/services",
+      item: "https://www.rapiddumpsterrental.site/locations",
     },
     {
       "@type": "ListItem",
@@ -210,7 +204,7 @@ const sizes = [
     price: "$289",
     weight: "2 tons",
     days: "7",
-    best: "Garage cleanouts, small junk removal, single-room remodels",
+    best: "Small cleanouts and heavy, dense debris",
   },
   {
     yards: "20",
@@ -218,7 +212,7 @@ const sizes = [
     price: "$389",
     weight: "4 tons",
     days: "10",
-    best: "Roofing, kitchen remodels, medium home cleanouts",
+    best: "Storm roof tear-offs and remodels",
     popular: true,
   },
   {
@@ -227,7 +221,7 @@ const sizes = [
     price: "$489",
     weight: "6 tons",
     days: "14",
-    best: "Large renovations, full home cleanouts, construction sites",
+    best: "Whole-home renovations and acreage cleanouts",
   },
   {
     yards: "40",
@@ -235,7 +229,7 @@ const sizes = [
     price: "$589",
     weight: "8 tons",
     days: "14",
-    best: "Demolition, commercial projects, large-scale debris removal",
+    best: "Commercial jobs and large demolition",
   },
 ];
 
@@ -352,7 +346,7 @@ export default function MuskogeeDumpsterPage() {
             <ChevronRight className="h-3 w-3 mx-1 text-gray-400" />
             <li>
               <Link
-                href="/services"
+                href="/locations"
                 className="hover:text-primary transition-colors"
               >
                 Locations
@@ -404,7 +398,7 @@ export default function MuskogeeDumpsterPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="tel:18005553867"
+                href="tel:+18005553867"
                 className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 font-medium hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-4 w-4" />
@@ -443,8 +437,8 @@ export default function MuskogeeDumpsterPage() {
             Roll Off Dumpster Sizes in Muskogee
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
-            Choose the right dumpster for your project. Not sure? Call us and
-            we'll recommend the best fit.
+            Storm roofs, remodels, or an acreage clear-out — here's how the
+            sizes line up in Muskogee. When in doubt, we'll pick the fit.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -490,7 +484,7 @@ export default function MuskogeeDumpsterPage() {
                   {s.best}
                 </p>
                 <a
-                  href="tel:18005553867"
+                  href="tel:+18005553867"
                   className="mt-4 block text-center text-sm bg-muted hover:bg-muted/70 py-2 rounded-md font-medium transition-colors"
                 >
                   Book Now
@@ -591,6 +585,37 @@ export default function MuskogeeDumpsterPage() {
         </div>
       </section>
 
+      {/* ── LOCAL CONTEXT (Phase 4) ─────────────────────────────────────── */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">
+            What Makes Muskogee Projects Different
+          </h2>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            Muskogee anchors the Three Rivers region, where the Arkansas,
+            Verdigris, and Grand rivers come together. That river-valley setting
+            brings weather — storms roll through Muskogee County regularly, and a
+            lot of local dumpster rentals start with a roof. Roofing is a weight
+            job more than a volume job, so the sizing conversation here almost
+            always centers on how many shingle layers are coming off.
+          </p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">
+            The city&apos;s older neighborhoods include brick and mixed-material
+            homes where remodels turn up heavy debris, while newer construction
+            on the edges of town runs lighter and bulkier. Out in the county —
+            toward Fort Gibson, Wagoner, and up toward Tahlequah — acreage
+            properties and outbuildings often justify a larger container, since a
+            single 30 yard beats two trips.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Whatever the project, we deliver across Muskogee and the surrounding
+            communities. Tell us whether you&apos;re tearing off a roof, gutting
+            a kitchen, or clearing a property, and we&apos;ll match the container
+            to the load — weight first, space second.
+          </p>
+        </div>
+      </section>
+
       {/* ── USE CASES ───────────────────────────────────────────────────── */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
@@ -602,16 +627,16 @@ export default function MuskogeeDumpsterPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
-              "Home cleanouts and estate cleanups",
-              "Roofing tear-offs and shingle disposal",
-              "Kitchen and bathroom remodels",
-              "Construction and demolition debris",
-              "Garage, attic, and basement cleanouts",
-              "Yard waste and landscaping debris",
-              "Concrete, brick, and heavy materials",
-              "Commercial and port facility cleanouts",
-              "Flooring and drywall disposal",
-              "Moving and downsizing projects",
+              "Storm and wind-damage roof tear-offs",
+              "Brick and mixed-material home remodels",
+              "Whole-home and estate cleanouts",
+              "Acreage and outbuilding clear-outs near Fort Gibson",
+              "Kitchen, bath, and flooring debris",
+              "Construction and contractor job-site waste",
+              "Garage and shed cleanups",
+              "Yard, brush, and landscaping debris",
+              "Commercial, port, and retail turnovers",
+              "Moving cleanouts in Wagoner and Tahlequah",
             ].map((item) => (
               <div
                 key={item}
@@ -770,9 +795,17 @@ export default function MuskogeeDumpsterPage() {
                 label: "Dumpster Rental Bartlesville, OK",
                 href: "/dumpster-rental/bartlesville",
               },
-              { label: "Dumpster Sizes Guide", href: "/#sizes" },
+              { label: "Dumpster Sizes Guide", href: "/dumpster-sizes" },
+              {
+                label: "Construction dumpster rental",
+                href: "/services/construction-dumpster-rental",
+              },
+              {
+                label: "Residential cleanout dumpsters",
+                href: "/services/residential-dumpster-rental",
+              },
               { label: "Contact & Free Quote", href: "/contact" },
-              { label: "All Locations", href: "/services" },
+              { label: "All Locations", href: "/locations" },
             ].map((l) => (
               <Link
                 key={l.href}
@@ -840,7 +873,7 @@ export default function MuskogeeDumpsterPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:18005553867"
+              href="tel:+18005553867"
               className="bg-white text-primary px-6 py-3 rounded-md inline-flex items-center gap-2 font-semibold hover:bg-gray-50 transition-colors"
             >
               <Phone className="h-4 w-4" />

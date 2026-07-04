@@ -24,7 +24,7 @@ export function CTASection() {
         <p className="text-lg text-primary-foreground/90 max-w-3xl mx-auto mb-10 leading-relaxed">
           Same-day roll off dumpster delivery for home cleanouts, roofing
           projects, construction debris, and commercial jobs across Oklahoma,
-          Texas, Nebraska, South Dakota, and North Dakota. Call before noon for
+          Nebraska, South Dakota, and North Dakota. Call before noon for
           same-day drop-off.
         </p>
 
@@ -81,7 +81,7 @@ export function CTASection() {
             No hidden fees
           </div>
           <div className="flex items-center gap-2">
-            <MapPin className="h-4 w-4 flex-shrink-0" />7 cities across 5 states
+            <MapPin className="h-4 w-4 flex-shrink-0" />5 cities across 4 states
           </div>
         </div>
 
